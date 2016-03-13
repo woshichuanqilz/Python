@@ -1,0 +1,76 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+HuabanCrawler	GetPicFromHuaban.py	/^class HuabanCrawler():$/;"	c
+MarkdownURL	UploadfileQiniu.py	/^    MarkdownURL='![' + name + '](' + up_filename + ')'$/;"	v
+Qiniu	UploadfileQiniu.py	/^class Qiniu(object):$/;"	c
+SUCCESS_INFO	UploadfileQiniu.py	/^    SUCCESS_INFO = "上传成功！"$/;"	v	class:Qiniu
+__author__	UploadfileQiniu.py	/^__author__ = "lizhe"$/;"	v
+__init__	GetPicFromHuaban.py	/^    def __init__(self):$/;"	m	class:HuabanCrawler
+__init__	UploadfileQiniu.py	/^    def __init__(self, accessKey, secretkey):$/;"	m	class:Qiniu
+__load_homePage	GetPicFromHuaban.py	/^    def __load_homePage(self):$/;"	m	class:HuabanCrawler	file:
+__load_more	GetPicFromHuaban.py	/^    def __load_more(self, maxNo):$/;"	m	class:HuabanCrawler	file:
+__make_ajax_url	GetPicFromHuaban.py	/^    def __make_ajax_url(self, No):$/;"	m	class:HuabanCrawler	file:
+__process_data	GetPicFromHuaban.py	/^    def __process_data(self, htmlPage):$/;"	m	class:HuabanCrawler	file:
+__save_image	GetPicFromHuaban.py	/^    def __save_image(self, imageName, content):$/;"	m	class:HuabanCrawler	file:
+accessKey	UploadfileQiniu.py	/^accessKey = 'wpirGksfiaI_lpv8IuPhOfc5sQ0Fk1v78jePJlfA'$/;"	v
+bs4	ScrapyTest.py	/^import bs4$/;"	i
+bs4	TranslationPy.py	/^import bs4$/;"	i
+bucket	UploadfileQiniu.py	/^bucket = 'woshichuanqilz'  # 上传空间$/;"	v
+bucket_url	UploadfileQiniu.py	/^bucket_url = {$/;"	v
+codecs	TranslationPy.py	/^import codecs$/;"	i
+copy2clip	UploadfileQiniu.py	/^def copy2clip(txt):$/;"	f
+copy2clip	mylib\clipboard.py	/^def copy2clip(txt):$/;"	f
+datetime	UploadfileQiniu.py	/^import datetime$/;"	i
+down_images	GetPicFromHuaban.py	/^    def down_images(self):$/;"	m	class:HuabanCrawler
+files	UploadfileQiniu.py	/^    files = sys.argv[1:]$/;"	v
+getTimeStr	UploadfileQiniu.py	/^def getTimeStr():$/;"	f
+get_file_url	UploadfileQiniu.py	/^    def get_file_url(self, bucket, up_filename):$/;"	m	class:Qiniu
+get_image_info	GetPicFromHuaban.py	/^    def get_image_info(self, num=100):$/;"	m	class:HuabanCrawler
+get_video_page_urls	ScrapyTest.py	/^def get_video_page_urls():$/;"	f
+get_video_page_urls	TranslationPy.py	/^def get_video_page_urls():$/;"	f
+hc	GetPicFromHuaban.py	/^    hc = HuabanCrawler()$/;"	v	class:HuabanCrawler
+hello	moduletest.py	/^import hello$/;"	i
+img_suffix	UploadfileQiniu.py	/^img_suffix = ["jpg", "jpeg", "png", "bmp", "gif"]$/;"	v
+index_url	ScrapyTest.py	/^index_url = root_url + '\/category\/50\/pycon-us-2014'$/;"	v
+index_url	TranslationPy.py	/^index_url = 'http:\/\/dict.cn\/' + sys.argv[1]$/;"	v
+locale	TranslationPy.py	/^import locale$/;"	i
+m	Regex_Test.py	/^m = p.match(teststring)$/;"	v
+msvcrt	UploadfileQiniu.py	/^import msvcrt$/;"	i
+name	UploadfileQiniu.py	/^            name = os.path.split(file)[1]$/;"	v
+os	GetPicFromHuaban.py	/^import os$/;"	i
+os	GetPicFromHuaban.py	/^import os.path$/;"	i
+os	UploadfileQiniu.py	/^import os$/;"	i
+p	Regex_Test.py	/^p = re.compile('ab*')$/;"	v
+path	GetPicFromHuaban.py	/^import os.path$/;"	i
+plainstring1	UnicodeTest.py	/^plainstring1 = unicode(utf8string, "utf-8")$/;"	v
+q	UploadfileQiniu.py	/^    q = Qiniu(accessKey, secretkey)$/;"	v
+qiniu	UploadfileQiniu.py	/^import qiniu$/;"	i
+re	GetPicFromHuaban.py	/^import re$/;"	i
+re	Regex_Test.py	/^import re$/;"	i
+re	TranslationPy.py	/^import re$/;"	i
+requests	GetPicFromHuaban.py	/^import requests$/;"	i
+requests	ScrapyTest.py	/^import requests$/;"	i
+requests	TranslationPy.py	/^import requests$/;"	i
+result_file	UploadfileQiniu.py	/^result_file = "上传结果.txt"  # 保存上传结果$/;"	v
+root_url	ScrapyTest.py	/^root_url = 'http:\/\/pyvideo.org'$/;"	v
+save	UploadfileQiniu.py	/^def save(filename, url):$/;"	f
+secretkey	UploadfileQiniu.py	/^secretkey = 'tb1zs872KEMINV3zd0A8RzEtsdG8jnVypAcWdKxq'$/;"	v
+subprocess	UploadfileQiniu.py	/^import subprocess$/;"	i
+subprocess	mylib\clipboard.py	/^import subprocess$/;"	i
+suffix	UploadfileQiniu.py	/^            suffix = os.path.splitext(file)[1][1:]$/;"	v
+sys	GetPicFromHuaban.py	/^import sys$/;"	i
+sys	TranslationPy.py	/^import sys$/;"	i
+sys	UploadfileQiniu.py	/^import sys$/;"	i
+sys	moduletest.py	/^import sys$/;"	i
+teststring	Regex_Test.py	/^teststring = "abcc"$/;"	v
+timeStr	UploadfileQiniu.py	/^    timeStr = getTimeStr()$/;"	v
+up_filename	UploadfileQiniu.py	/^    up_filename=bucket_url['woshichuanqilz'] + name$/;"	v
+upload_file	UploadfileQiniu.py	/^    def upload_file(self, bucket, up_filename, file_path):$/;"	m	class:Qiniu
+urllib	UploadfileQiniu.py	/^import urllib$/;"	i
+utf8string	UnicodeTest.py	/^utf8string = "\\u64cd\\u4f5c\\uff1b\\u8fd0\\u8f6c\\uff1b\\u7ecf\\u8425\\uff1b\\u884c\\u52a8\\uff1b\\u624b\\u672f\\uff1b\\u8fd0\\u7b97\\uff1b\\u751f\\u6548\\uff1b\\uff08\\u590d\\uff09\\u8fd0\\u7b79\\u5b66"$/;"	v
+win32con	clipboard.py	/^import win32con$/;"	i
+wincb	clipboard.py	/^import win32clipboard as wincb$/;"	i

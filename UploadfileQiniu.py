@@ -100,10 +100,14 @@ def getTimeStr():
     tmp = map(str, tmp)
     return "/".join(tmp) + "/"
 
+def copy2clip(txt):
+    cmd='echo '+txt.strip()+'|clip'
+    return subprocess.check_call(cmd, shell=True)
+
 if __name__ == '__main__':
 
     if len(sys.argv) == 1:
-        print("请将文件拖曳到本脚本！")
+        print("请将文件拖曳到本脚本！").decode('utf-8').encode('gbk')
         sys.exit(0)
     files = sys.argv[1:]
 
@@ -120,8 +124,9 @@ if __name__ == '__main__':
             # prefix += timeStr
             name = os.path.split(file)[1]
             print('name ' + name)
-            up_filename = name
-            ret, info, url = q.upload_file(bucket, up_filename, file)
+            ret, info, url = q.upload_file(bucket, name, file)
             print("已上传： %s " % name)
             save(name, url)
-    subprocess.call(result_file, shell=True)  # 打开文件
+    up_filename=bucket_url['woshichuanqilz'] + name
+    MarkdownURL='![' + name + '](' + up_filename + ')'
+    copy2clip(MarkdownURL)

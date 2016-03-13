@@ -1,0 +1,1248 @@
+<!DOCTYPE html>
+
+
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head><link rel="canonical" href="https://msdn.microsoft.com/zh-cn/library/ms235636.aspx" /><script type="text/javascript" src="//c.webtrends.com/acs/account/mx643kesn3/js/wt.js"></script>
+    <title>演练：创建和使用动态链接库 (C++)</title>
+
+        
+
+
+
+
+
+
+<meta name="DCS.dcsuri" content="/zh-cn/library/ms235636(d=default,l=zh-cn,v=vs.140).aspx" />
+
+<meta name="NormalizedUrl" content="https://msdn.microsoft.com/zh-cn/library/ms235636(d=default,l=zh-cn,v=vs.140).aspx" />
+
+<meta name="ms.normalizedurl" content="https://msdn.microsoft.com/zh-cn/library/ms235636(d=default,l=zh-cn,v=vs.140).aspx" />
+
+<meta name="DCS.appliesToProduct" content="" />
+
+<meta name="DCS.appliesToTechnology" content="" />
+
+<meta name="DCS.appliesToVersion" content="" />
+
+<meta name="ms.prod" content="visual-studio-dev14" />
+
+<meta name="ms.service" content="" />
+
+<meta name="ms.devlang" content="cpp" />
+
+<meta name="ms.topic" content="article" />
+
+<meta name="VotingContextUrl" content="https://msdn.microsoft.com/zh-cn/library/ms235636(d=default,l=zh-cn,v=vs.140).aspx" />
+
+<meta name="MN" content="FB361397-6:45:52 PM" />
+
+<meta name="Search.ShortId" content="ms235636" />
+
+<meta name="ms.shortidmsdn" content="ms235636" />
+
+<meta name="Ms.Locale" content="zh-cn" />
+
+<meta name="ms.prodver" content="VS.140" />
+
+<meta name="ms.contentlang" content="ZH" />
+
+<meta name="ms.lang" content="ZH" />
+
+<meta name="ms.loc" content="CN" />
+
+<meta name="ms.sitever" content="2016.02.19.3" />
+
+<meta name="ms.assetid" content="3ae94848-44e7-4955-bbad-7d40f493e941" />
+
+<meta name="ms.auth" content="0" />
+
+<meta name="ms.technology" content="devlang-cpp" />
+
+<meta name="ms.custom" content="" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    
+    
+
+
+
+
+
+
+
+
+
+    <script type="text/javascript" data-do-not-move="true">
+        //<![CDATA[
+        var AmbientContext = null;
+
+        (function(){
+            var root = (function(){return this;}).call(null);
+
+            var GetCookie = function(name){
+                var cookies = root.document.cookie ? root.document.cookie.split('; ') : [];
+                for (var i = 0; i < cookies.length; i++) {
+                    var pos = cookies[i].indexOf('=');
+                    if (name === root.decodeURIComponent(cookies[i].slice(0, pos)))
+                    {
+                        var cookie = cookies[i].slice(pos + 1).replace(/\+/g, ' ');
+                        cookie = root.decodeURIComponent(cookie);
+                        return cookie;
+                    }
+                }
+            };
+
+            var JsonDeserialize = function(content) {
+                return root.JSON && root.JSON.parse ? root.JSON.parse(content) : (new Function('return (' + content + ')'))();
+            };
+
+            try {
+                AmbientContext = GetCookie('AmbientContext');
+                AmbientContext = AmbientContext && JsonDeserialize(AmbientContext);
+            } catch(ex) {
+            } finally {
+                AmbientContext = AmbientContext || null;
+            }
+        })();
+        //]]>
+    </script>
+
+    <script type="text/javascript" src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.9.1.min.js" data-do-not-move="true" data-provides="jQuery"></script>
+    
+<link rel="stylesheet" type="text/css" href="https://i-msdn.sec.s-msft.com/Combined.css?resources=0:ImageSprite,0:TopicResponsive,0:TopicResponsive.MediaQueries,1:CodeSnippet,1:ProgrammingSelector,1:ExpandableCollapsibleArea,0:CommunityContent,1:TopicNotInScope,1:FeedViewerBasic,1:ImageSprite,2:Header,2:HeaderFooterSprite,2:Header.MediaQueries,3:Banner.MediaQueries,0:Breadcrumbs,0:Breadcrumbs.MediaQueries,0:ResponsiveToc,0:ResponsiveToc.MediaQueries,0:TranslationWiki,0:jquery.popup,1:VersionSelector,0:LibraryMemberFilter,4:SkinnyRating,2:Footer,2:Footer.MediaQueries,5:NewFooterSock,5:NewFooterSock.MediaQueries,5:LinkList,0:BaseResponsive,6:MsdnResponsive,0:Tables.MediaQueries,1:Locale_zh-cn;/Areas/Library/Content:0,/Areas/Epx/Content/Css:1,/Areas/Centers/Themes/StandardDevCenter/Content:2,/Areas/Epx/Shared/Content:3,/Areas/Library/Themes/Base/Content:4,/Areas/Epx/Themes/Base/Content:5,/Areas/Library/Themes/Msdn/Content:6&amp;amp;v=58E84AF738EFC25567C94CF438D6A03E" /></head>
+<body class="library FF">
+    <div id="page">
+
+        
+
+        
+    
+
+    
+    <link type="text/css" rel="stylesheet" />
+    
+        
+        
+    <input type="hidden" id="isHeaderBleeding" value="true" />
+    <div id="ux-header" dir="ltr" class="ltr msdn">
+        
+
+      <header>
+        <span id="singleCol"></span>
+        <span id="doubleCol"></span>
+        <span id="isMobile"></span>
+        <div>
+          <div class="row topRow">
+            <div class="top">
+              <div class="left">
+                <a class="msdnLogoImg" href="https://msdn.microsoft.com/zh-cn" title="MSDN home">
+                  <div id="msft-logo" class="msft-logo"></div>
+                </a>
+                <div class="GrayPipe"></div>
+                  <a class="DevCenterFullNameNonMegaBlade" href="https://msdn.microsoft.com/zh-cn">Developer Network</a>
+                <a class="DevCenterFullName" href="https://msdn.microsoft.com/zh-cn">Developer Network</a>
+                <a class="DevCenterShortName" href="https://msdn.microsoft.com/zh-cn">Developer</a>
+              </div>
+              <div class="right">
+                <div id="signIn">
+
+  <img class="profileImage" src="https://i-msdn.sec.s-msft.com/Areas/Centers/Themes/StandardDevCenter/Content/Images/profile.jpg?v=635914614261253687" />
+
+
+
+<a class="scarabLink" href="https://login.live.com/login.srf?wa=wsignin1.0&amp;rpsnv=12&amp;ct=1457837152&amp;rver=6.0.5276.0&amp;wp=mcmbi&amp;wlcxt=msdn%24msdn%24msdn&amp;wreply=https%3a%2f%2fmsdn.microsoft.com%2fzh-cn%2flibrary%2fms235636.aspx&amp;lc=2052&amp;id=254354&amp;mkt=zh-cn" title="登录">登录</a></div>
+
+
+
+
+                <div class="auxNav">
+                  <div>
+                    <div data-fragmentName="Subscriptions" id="Fragment_Subscriptions" xmlns="http://www.w3.org/1999/xhtml">
+  <a href="https://msdn.microsoft.com/subscriptions/manage/hh442900" id="Subscriptions_2153_1" xmlns="http://www.w3.org/1999/xhtml">
+    <span style="line-height:18px;" xmlns="">MSDN 订阅</span>
+  </a>
+</div>
+                    <div data-fragmentName="GetTools" id="Fragment_GetTools" xmlns="http://www.w3.org/1999/xhtml">
+  <a href="http://go.microsoft.com/fwlink/?LinkId=309297&amp;clcid=0x804&amp;slcid=0x804&amp;campaign=o~msft~msdn~gettools-header~dn308572" id="GetTools_2153_3" xmlns="http://www.w3.org/1999/xhtml">
+    <span style="line-height:18px;" xmlns="">获取工具</span>
+  </a>
+</div>
+                  </div>                    
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <div class="row middleRow">
+            <div class="expandTop">
+              <div class="left"></div>
+              <div class="right"></div>
+            </div>
+          </div>
+        </div>
+        <div id="buttomRowWrapper" class="bg_default">
+          <div class="row buttomRow bg_default">
+            <div class="bottom">
+              <div class="left">
+                <a id="grip" class="menu-icon" href="javascript:void(0)"></a>
+                
+                <div id="drawer">
+                  <div class="toc">
+                    
+        <nav>
+            <ul class="navL1">
+                        <li class="inactive toggle">
+                            <a href="javascript:void(0)" title="技术">技术</a>
+                                <ul class="navL2">
+                                        <li class="inactive">
+                                            <a href="https://msdn.microsoft.com/cloud-app-development-msdn" title="云">云</a>
+
+                                                   
+                                        </li>
+                                        <li class="inactive">
+                                            <a href="https://msdn.microsoft.com/app-development-msdn" title="应用开发">应用开发</a>
+
+                                                   
+                                        </li>
+                                        <li class="inactive">
+                                            <a href="https://msdn.microsoft.com/web-app-development-msdn" title="Web">Web</a>
+
+                                                   
+                                        </li>
+                                        <li class="inactive">
+                                            <a href="https://msdn.microsoft.com/big-data-development-msdn" title="数据">数据</a>
+
+                                                   
+                                        </li>
+                                        <li class="inactive">
+                                            <a href="https://msdn.microsoft.com/games-development-msdn" title="游戏">游戏</a>
+
+                                                   
+                                        </li>
+                                        <li class="inactive">
+                                            <a href="https://msdn.microsoft.com/internetofthings" title="物联网">物联网</a>
+
+                                                   
+                                        </li>
+                                </ul>
+                        </li>
+                        <li class="inactive toggle">
+                            <a href="javascript:void(0)" title="下载">下载</a>
+                                <ul class="navL2">
+                                        <li class="inactive">
+                                            <a href="https://www.visualstudio.com/downloads/download-visual-studio-vs" title="Visual Studio">Visual Studio</a>
+
+                                                   
+                                        </li>
+                                        <li class="inactive">
+                                            <a href="https://msdn.microsoft.com/subscriptions/" title="MSDN 订阅访问">MSDN 订阅访问</a>
+
+                                                   
+                                        </li>
+                                        <li class="inactive">
+                                            <a href="https://msdn.microsoft.com/microsoft-sdks-msdn" title="SDK">SDK</a>
+
+                                                   
+                                        </li>
+                                        <li class="inactive toggle">
+                                            <a href="javascript:void(0)" title="试用软件">试用软件</a>
+
+                                                <ul class="navL3">
+                                                        <li class="inactive">
+                                                            <a href="https://msdn.microsoft.com/evalcenter" title="免费下载">免费下载</a>
+                                                        </li>
+                                                        <li class="inactive">
+                                                            <a href="https://msdn.microsoft.com/officeevaluationresources" title="Office 资源">Office 资源</a>
+                                                        </li>
+                                                        <li class="inactive">
+                                                            <a href="https://msdn.microsoft.com/sharepoint2013resources" title="SharePoint Server 2013 资源">SharePoint Server 2013 资源</a>
+                                                        </li>
+                                                        <li class="inactive">
+                                                            <a href="https://msdn.microsoft.com/sqlserver2014expressresources" title="SQL Server 2014 Express 资源">SQL Server 2014 Express 资源</a>
+                                                        </li>
+                                                        <li class="inactive">
+                                                            <a href="https://msdn.microsoft.com/windowsserver2012r2resources" title="Windows Server 2012 资源">Windows Server 2012 资源</a>
+                                                        </li>
+                                                </ul>
+                                                   
+                                        </li>
+                                </ul>
+                        </li>
+                        <li class="inactive toggle">
+                            <a href="javascript:void(0)" title="计划">计划</a>
+                                <ul class="navL2">
+                                        <li class="inactive toggle">
+                                            <a href="javascript:void(0)" title="MSDN 订阅">MSDN 订阅</a>
+
+                                                <ul class="navL3">
+                                                        <li class="inactive">
+                                                            <a href="https://msdn.microsoft.com/msdn-subscriptions-overview" title="概述">概述</a>
+                                                        </li>
+                                                        <li class="inactive">
+                                                            <a href="https://msdn.microsoft.com/benefits-overview" title="权益">权益</a>
+                                                        </li>
+                                                        <li class="inactive">
+                                                            <a href="https://msdn.microsoft.com/msdn-subscriptions-administration" title="Administrators">Administrators</a>
+                                                        </li>
+                                                </ul>
+                                                   
+                                        </li>
+                                        <li class="inactive toggle">
+                                            <a href="javascript:void(0)" title="学生">学生</a>
+
+                                                <ul class="navL3">
+                                                        <li class="inactive">
+                                                            <a href="https://msdn.microsoft.com/imagine/imagine-home" title="Microsoft Imagine">Microsoft Imagine</a>
+                                                        </li>
+                                                        <li class="inactive">
+                                                            <a href="https://msdn.microsoft.com/microsoftstudentpartners" title="Microsoft 学生合作伙伴">Microsoft 学生合作伙伴</a>
+                                                        </li>
+                                                </ul>
+                                                   
+                                        </li>
+                                        <li class="inactive toggle">
+                                            <a href="javascript:void(0)" title="架构师">架构师</a>
+
+                                                <ul class="navL3">
+                                                        <li class="inactive">
+                                                            <a href="https://msdn.microsoft.com/architects-overview-msdn" title="概述">概述</a>
+                                                        </li>
+                                                        <li class="inactive">
+                                                            <a href="https://msdn.microsoft.com/architects-case-studies-msdn" title="案例研究">案例研究</a>
+                                                        </li>
+                                                        <li class="inactive">
+                                                            <a href="https://msdn.microsoft.com/architects-blueprints-msdn" title="蓝图">蓝图</a>
+                                                        </li>
+                                                        <li class="inactive">
+                                                            <a href="http://blogs.msdn.com/b/msarchitecture/" title="博客">博客</a>
+                                                        </li>
+                                                        <li class="inactive">
+                                                            <a href="http://social.msdn.microsoft.com/forums/en-us/home?brandignore=true&amp;sort=relevancedesc&amp;searchterm=architecture+or+architect" title="论坛">论坛</a>
+                                                        </li>
+                                                </ul>
+                                                   
+                                        </li>
+                                        <li class="inactive">
+                                            <a href="https://msdn.microsoft.com/applicationbuilder" title="ISV">ISV</a>
+
+                                                   
+                                        </li>
+                                        <li class="inactive">
+                                            <a href="https://www.microsoft.com/bizspark" title="新手">新手</a>
+
+                                                   
+                                        </li>
+                                        <li class="inactive">
+                                            <a href="https://rewards.msdn.microsoft.com/" title="TechRewards">TechRewards</a>
+
+                                                   
+                                        </li>
+                                        <li class="inactive">
+                                            <a href="http://events.msdn.microsoft.com/zh-cn" title="Events（事件）">Events（事件）</a>
+
+                                                   
+                                        </li>
+                                </ul>
+                        </li>
+                        <li class="inactive toggle">
+                            <a href="javascript:void(0)" title="社区">社区</a>
+                                <ul class="navL2">
+                                        <li class="inactive">
+                                            <a href="https://msdn.microsoft.com/magazine/dd767791" title="Magazine">Magazine</a>
+
+                                                   
+                                        </li>
+                                        <li class="inactive">
+                                            <a href="https://social.msdn.microsoft.com/forums/" title="论坛">论坛</a>
+
+                                                   
+                                        </li>
+                                        <li class="inactive">
+                                            <a href="http://blogs.msdn.com/b/developer-tools/" title="博客">博客</a>
+
+                                                   
+                                        </li>
+                                        <li class="inactive">
+                                            <a href="http://tech-advisors.msdn.microsoft.com/zh-cn" title="技术顾问">技术顾问</a>
+
+                                                   
+                                        </li>
+                                        <li class="inactive">
+                                            <a href="http://channel9.msdn.com/" title="第 9 频道">第 9 频道</a>
+
+                                                   
+                                        </li>
+                                </ul>
+                        </li>
+                        <li class="inactive current toggle">
+                            <a href="javascript:void(0)" title="文档">文档</a>
+                                <ul class="navL2">
+                                        <li class="inactive current">
+                                            <a href="https://msdn.microsoft.com/library" title="API 和参考">API 和参考</a>
+
+                                                   
+                                        </li>
+                                        <li class="inactive">
+                                            <a href="https://msdn.microsoft.com/developer-centers-msdn" title="开发人员中心">开发人员中心</a>
+
+                                                   
+                                        </li>
+                                </ul>
+                        </li>
+                        <li class="inactive">
+                            <a href="https://code.msdn.microsoft.com/" title="示例">示例</a>
+                        </li>
+            </ul>
+        </nav>
+
+                  </div>
+                </div>
+              </div>
+              <div class="right">
+                <div data-fragmentName="SearchBox" id="Fragment_SearchBox" xmlns="http://www.w3.org/1999/xhtml">
+  <div class="SearchBox">
+    <form id="HeaderSearchForm" name="HeaderSearchForm" method="get">
+      <button id="FakeHeaderSearchButton" value="Search" type="submit" class="header-search-button">
+        <div id="search-finder" class="search-finder"></div>
+      </button>
+      <button id="HeaderSearchButton" style="display:none"></button>
+      <div id="searchSplitter"></div>
+      <div id="searchCloseIcon" class="search-clear-x"></div>
+      <div id="searchTextContainer" style="width: 0;">
+        <input id="HeaderSearchTextBox" name="query" type="text" maxlength="200" onfocus="Epx.Controls.SearchBox.watermarkFocus(event, this.title)" onblur="Epx.Controls.SearchBox.watermarkBlur(event, this.title)" />
+      </div>
+    </form>
+    
+    
+  </div>
+</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </header>
+
+    </div>
+
+    
+    
+
+
+
+
+
+<link type="text/css" rel="stylesheet" />
+<link type="text/css" rel="stylesheet" />
+
+
+    <div id="breadcrumbs">
+        <div id="breadcrumbDesktop" class="breadCrumb">
+                        <span class="breadcrumbEllipsis"><a href="https://msdn.microsoft.com/zh-cn/library/60k1461a.aspx" title="Visual C++"></a></span>
+                        <span><a href="https://msdn.microsoft.com/zh-cn/library/hh967574.aspx" title="IDE 和开发工具"><span>IDE 和开发工具</span></a></span>
+                        <span><a href="https://msdn.microsoft.com/zh-cn/library/z7kx322x.aspx" title="生成 C/C++ 程序"><span>生成 C/C++ 程序</span></a></span>
+                        <span class="breadcrumbDropSmall">
+                            <a id="breadcrumbDropDownButton" href="#" targethref="https://msdn.microsoft.com/zh-cn/library/z7kx322x.aspx" title="Visual C++ 中的 DLL"><span>Visual C++ 中的 DLL</span></a>
+                        </span>
+        </div>
+        <div id="breadcrumbDropDownMenu"></div>
+        <div id="tocDropDownMenu"></div>
+
+        <div id="breadcrumbTablet" class="breadCrumb">
+                        <span class="breadcrumbEllipsis"><a href="https://msdn.microsoft.com/zh-cn/library/z7kx322x.aspx" title="生成 C/C++ 程序"></a></span>
+                    <span><a href="https://msdn.microsoft.com/zh-cn/library/1ez7dh12.aspx" title="Visual C++ 中的 DLL"><span>Visual C++ 中的 DLL</span></a></span>
+                <span class="breadcrumbDropSmall"><a id="tocDropDownButton" href="#" title="演练：创建和使用动态链接库 (C++)"><span>演练：创建和使用动态链接库 (C++)</span></a></span>
+        </div>
+        <div id="breadcrumbMobile" class="breadCrumb">
+                <span class="breadcrumbEllipsis"><a href="https://msdn.microsoft.com/zh-cn/library/1ez7dh12.aspx" title="Visual C++ 中的 DLL"></a></span>
+            <span class="breadcrumbDropSmall"><a id="tocPopupButton" href="#" title="演练：创建和使用动态链接库 (C++)"><span>演练：创建和使用动态链接库 (C++)</span></a></span>
+        </div>
+    </div>
+    <div id="tocPopupMenu">
+        <div id="tocPopMenuClose" class="tocCloseLarge"></div>
+        <div id="tocTitle">演练：创建和使用动态链接库 (C++)</div>        
+    </div>
+
+    
+
+
+        <div id="body">
+            <span id="tabletView_large"></span>
+            <span id="tabletView_small"></span>
+            <span id="mobileView"></span>
+            
+
+
+
+
+
+
+
+
+
+    <div id="leftNav" class="">
+
+
+
+
+
+<div id="tocnav" class="hide-archive" ms.pgarea="left toc">
+
+
+    <div class="tocunselected">
+        <div id="tocExpandArea">
+            <span class="toc_empty"></span>
+            <span id="tocExpandButton"><a href="#"></a></span>
+        </div>
+        <div id="tocExpand"></div>
+    </div>
+    <div class="tocselected"></div>
+    <div class="tocunselected">
+                <div class="toclevel current" data-toclevel="1">
+<a href="https://msdn.microsoft.com/zh-cn/library/ms235636.aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="演练：创建和使用动态链接库 (C++)">演练：创建和使用动态链接库 (C++)</a>                </div>
+                <div class="toclevel " data-toclevel="1">
+<a href="https://msdn.microsoft.com/zh-cn/library/d1587c1h.aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="应用程序和 DLL 之间的区别">应用程序和 DLL 之间的区别</a>                </div>
+                <div class="toclevel " data-toclevel="1">
+<a href="https://msdn.microsoft.com/zh-cn/library/dtba4t8b.aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="使用 DLL 的优点">使用 DLL 的优点</a>                </div>
+                <div class="toclevel " data-toclevel="1">
+<a data-tochassubtree="true" href="https://msdn.microsoft.com/zh-cn/library/9se914de.aspx" id="mt458127_VS.140_zh-cn" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="DLL 类型">DLL 类型</a>                </div>
+                <div class="toclevel " data-toclevel="1">
+<a data-tochassubtree="true" href="https://msdn.microsoft.com/zh-cn/library/89es04xa.aspx" id="mt549959_VS.140_zh-cn" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="DLL 常见问题">DLL 常见问题</a>                </div>
+                <div class="toclevel " data-toclevel="1">
+<a data-tochassubtree="true" href="https://msdn.microsoft.com/zh-cn/library/9yd93633.aspx" id="mt549957_VS.140_zh-cn" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="将可执行文件链接到 DLL">将可执行文件链接到 DLL</a>                </div>
+                <div class="toclevel " data-toclevel="1">
+<a data-tochassubtree="true" href="https://msdn.microsoft.com/zh-cn/library/7h0a8139.aspx" id="mt458110_VS.140_zh-cn" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="初始化 DLL">初始化 DLL</a>                </div>
+                <div class="toclevel " data-toclevel="1">
+<a href="https://msdn.microsoft.com/zh-cn/library/988ye33t.aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="运行库行为">运行库行为</a>                </div>
+                <div class="toclevel " data-toclevel="1">
+<a href="https://msdn.microsoft.com/zh-cn/library/zzk20sxw.aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="LoadLibrary 和 AfxLoadLibrary">LoadLibrary 和 AfxLoadLibrary</a>                </div>
+                <div class="toclevel " data-toclevel="1">
+<a href="https://msdn.microsoft.com/zh-cn/library/64tkc9y5.aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="GetProcAddress">GetProcAddress</a>                </div>
+                <div class="toclevel " data-toclevel="1">
+<a href="https://msdn.microsoft.com/zh-cn/library/h4ff11tc.aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="FreeLibrary 和 AfxFreeLibrary">FreeLibrary 和 AfxFreeLibrary</a>                </div>
+                <div class="toclevel " data-toclevel="1">
+<a href="https://msdn.microsoft.com/zh-cn/library/7d83bc18.aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="Windows 用来定位 DLL 的搜索路径">Windows 用来定位 DLL 的搜索路径</a>                </div>
+                <div class="toclevel " data-toclevel="1">
+<a href="https://msdn.microsoft.com/zh-cn/library/w25be484.aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="动态链接到 MFC 的规则 DLL 的模块状态">动态链接到 MFC 的规则 DLL 的模块状态</a>                </div>
+                <div class="toclevel " data-toclevel="1">
+<a data-tochassubtree="true" href="https://msdn.microsoft.com/zh-cn/library/h5f7ck28.aspx" id="mt458114_VS.140_zh-cn" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="扩展 DLL">扩展 DLL</a>                </div>
+                <div class="toclevel " data-toclevel="1">
+<a href="https://msdn.microsoft.com/zh-cn/library/24b2tcy0.aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="创建纯资源 DLL">创建纯资源 DLL</a>                </div>
+                <div class="toclevel " data-toclevel="1">
+<a href="https://msdn.microsoft.com/zh-cn/library/8fkteez0.aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="MFC 应用程序中的本地化资源：附属 DLL">MFC 应用程序中的本地化资源：附属 DLL</a>                </div>
+                <div class="toclevel " data-toclevel="1">
+<a data-tochassubtree="true" href="https://msdn.microsoft.com/zh-cn/library/9h658af8.aspx" id="mt549964_VS.140_zh-cn" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="导入和导出">导入和导出</a>                </div>
+                <div class="toclevel " data-toclevel="1">
+<a href="https://msdn.microsoft.com/zh-cn/library/zksae4h8.aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="Active 技术和 DLL">Active 技术和 DLL</a>                </div>
+                <div class="toclevel " data-toclevel="1">
+<a href="https://msdn.microsoft.com/zh-cn/library/efshcbz3.aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="DLL 中的自动化">DLL 中的自动化</a>                </div>
+                <div class="toclevel " data-toclevel="1">
+<a href="https://msdn.microsoft.com/zh-cn/library/eezxhb2t.aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="MFC DLL 命名约定">MFC DLL 命名约定</a>                </div>
+                <div class="toclevel " data-toclevel="1">
+<a href="https://msdn.microsoft.com/zh-cn/library/dt232c9t.aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="从 Visual Basic 应用程序调用 DLL 函数">从 Visual Basic 应用程序调用 DLL 函数</a>                </div>
+    </div>
+    <a id="tocMenuToggler" href="#">
+        <span id="tocMenuTogglerIcon" class="tocMenuCollapse"></span>
+        <div id="tocMenuTogglerLabel">TOC</div>
+    </a>
+</div>            <div style="display:none">
+                <div id="CollapseLocalizeString">折叠目录</div>
+                <div id="ExpandLocalizeString">展开目录</div>
+            </div>
+        <div>
+            <a id="isd_archiveControlResponsive" style="display:none;" data-include-archive="包含旧版本" data-exclude-archive="不包含旧版本">
+            </a>
+        </div>
+    </div>
+    <div id="content" class="content">
+
+
+
+<div id="MTPSTranslator" class="MTPSTranslator">
+    <table class="MTPSTranslatorTable" style="width: 100%">
+        <tr>
+            <td class="TranslationAlertBox">
+                <div>此文章由人工翻译。 将光标移到文章的句子上，以查看原文。 <a href="/translate/hh856053">更多信息。</a></div>
+            </td>
+                <td class="TranslationViewSwitcher">
+                    <div>
+                        <input title="显示译文" value="0" name="TrnaslatorView" type="radio" class="translatechoice" checked="checked" /><span>译文</span>
+                    </div>
+                    <div>
+                        <input title="显示英文" value="1" name="TrnaslatorView" type="radio" class="translatechoice" /><span>原文</span>
+                    </div>
+                </td>
+        </tr>
+    </table>
+</div>
+    
+    
+    
+     
+
+
+
+
+
+
+
+
+<div xmlns="http://www.w3.org/1999/xhtml">
+  
+  <div class="topic">
+    <h1 class="title">演练：创建和使用动态链接库 (C++)</h1>
+    
+    <div class="lw_vs">
+      <div id="curversion">
+        <strong>
+            Visual Studio 2015 
+        </strong>
+      </div>
+      <div id="versionclick">
+        <div id="vsseperator" class="cl_lw_vs_seperator"></div>
+        <div>
+          <div>
+            <a id="vsLink" href="javascript:;">
+                        其他版本
+                    </a>
+          </div>
+          <div class="cl_vs_arrow clip10x10">
+            <img class="cl_lw_vs_arrow" id="vsArrow" alt="" src="https://i-msdn.sec.s-msft.com/Areas/Epx/Content/Images/ImageSprite.png?v=635914614327034862" />
+          </div>
+        </div>
+        <ul id="vsPanel">
+          <li class="">
+            <a href="/zh-cn/library/ms235636(v=vs.120).aspx">Visual Studio 2013 </a>
+          </li>
+          <li class="">
+            <a href="/zh-cn/library/ms235636(v=vs.110).aspx">Visual Studio 2012</a>
+          </li>
+          <li class="">
+            <a href="/zh-cn/library/ms235636(v=vs.100).aspx">Visual Studio 2010</a>
+          </li>
+          <li class="archived">
+            <a href="/zh-cn/library/ms235636(v=vs.80).aspx">Visual Studio 2005</a>
+          </li>
+          <li id="vsExpand">
+            <span class="breadcrumbEllipsis">
+              <a href="#"></a>
+            </span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div style="clear:both;"></div>
+    <div id="mainSection">
+      <div id="mainBody"> <div class="introduction"><p><span id="mt1" class="sentence" data-guid="83adec9a0c4f09ff6d87acef878a2073" data-source="This step-by-step walkthrough shows how to create a dynamic link library (DLL) for use with a C++ app." xml:space="preserve"><sentenceText xmlns="http://www.w3.org/1999/xhtml">此分步演练演示如何创建用于 C++ 应用的动态链接库 (DLL)。</sentenceText></span><span id="mt2" class="sentence" data-guid="2d77bf3360352865bcd4ea8a7ebb6017" data-source="Using a library is a great way to reuse code." xml:space="preserve"><sentenceText xmlns="http://www.w3.org/1999/xhtml">使用库是重复使用代码的一种绝佳方式。</sentenceText></span><span id="mt3" class="sentence" data-guid="301615ad33e8dcd420f9cacbd2a4d068" data-source="Rather than re-implementing the same routines in every program that you create, you write them one time and then reference them from apps that require the functionality." xml:space="preserve"><sentenceText xmlns="http://www.w3.org/1999/xhtml">与其在创建的每个程序中重新实现相同的例程，不如一次性编写它们，然后从需要该功能的应用中引用它们。</sentenceText></span><span id="mt4" class="sentence" data-guid="122f31627cf208da89dbefa74ba81bdf" data-source="By putting code in the DLL, you save space in every app that references it, and you can update the DLL without recompiling all of the apps." xml:space="preserve"><sentenceText xmlns="http://www.w3.org/1999/xhtml">通过将代码置入 DLL，可以节省引用它的每个应用中的空间，也可以更新该 DLL 而无需重新编译所有应用。</sentenceText></span><span id="mt5" class="sentence" data-guid="1479992ba5314b85c392bd2ff0514a59" data-source="For more information about DLLs, see &lt;span class=&quot;mtpsTagOuterHtml&quot; &gt;&lt;span&gt;Visual C++ 中的 DLL&lt;/span&gt;&lt;/span&gt;." xml:space="preserve"><sentenceText xmlns="http://www.w3.org/1999/xhtml">有关 DLL 的详细信息，请参阅 <a href="https://msdn.microsoft.com/zh-cn/library/1ez7dh12.aspx">Visual C++ 中的 DLL</a>。</sentenceText></span></p><p><span id="mt6" class="sentence" data-guid="08a6ed20b81d26dabbab1397f0c7d8ac" data-source="This walkthrough covers these tasks:" xml:space="preserve"><sentenceText xmlns="http://www.w3.org/1999/xhtml">本演练涵盖以下任务：</sentenceText></span></p><ul class="unordered"><li><p><span id="mt7" class="sentence" data-guid="a45e2f768507a5b9ac0e34a1f23978b7" data-source="Creating a DLL project." xml:space="preserve"><sentenceText xmlns="http://www.w3.org/1999/xhtml">创建 DLL 项目。</sentenceText></span></p></li><li><p><span id="mt8" class="sentence" data-guid="f75512f5d7f9b1d93d53f7384c4276bb" data-source="Adding a class to the DLL." xml:space="preserve"><sentenceText xmlns="http://www.w3.org/1999/xhtml">向 DLL 中添加类。</sentenceText></span></p></li><li><p><span id="mt9" class="sentence" data-guid="2b3b9b321c813aa79d824a35aa6ef1cb" data-source="Creating a console app that uses load-time dynamic linking to reference the DLL." xml:space="preserve"><sentenceText xmlns="http://www.w3.org/1999/xhtml">创建使用加载时动态链接来引用 DLL 的控制台应用。</sentenceText></span></p></li><li><p><span id="mt10" class="sentence" data-guid="6a9d7c6e8a6ebc7bdf766142c3c0baa7" data-source="Using the functionality from the class in the app." xml:space="preserve"><sentenceText xmlns="http://www.w3.org/1999/xhtml">在该应用中使用类中的功能。</sentenceText></span></p></li><li><p><span id="mt11" class="sentence" data-guid="b6feeeb031822325da43c349d642253b" data-source="Running the app." xml:space="preserve"><sentenceText xmlns="http://www.w3.org/1999/xhtml">运行该应用。</sentenceText></span></p></li></ul><p><span id="mt12" class="sentence" data-guid="f18290ca9371f57e1edfc9263c266280" data-source="This walkthrough creates a DLL that can only be called from apps that use C++ calling conventions." xml:space="preserve"><sentenceText xmlns="http://www.w3.org/1999/xhtml">本演练将创建仅可从使用 C++ 调用约定的应用中调用的 DLL。</sentenceText></span><span id="mt13" class="sentence" data-guid="18621b08eb919a43ef988992615aec80" data-source="For information about how to create DLLs for use with other languages, see &lt;span class=&quot;mtpsTagOuterHtml&quot; &gt;&lt;span&gt;从 Visual Basic 应用程序调用 DLL 函数&lt;/span&gt;&lt;/span&gt;." xml:space="preserve"><sentenceText xmlns="http://www.w3.org/1999/xhtml">有关如何创建适用于其他语言的 DLL 的信息，请参阅<a href="https://msdn.microsoft.com/zh-cn/library/dt232c9t.aspx">从 Visual Basic 应用程序调用 DLL 函数</a>。</sentenceText></span></p></div><div class="section"><h2 class="heading" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:xlink="http://www.w3.org/1999/xlink">系统必备</h2><div class="section"><p><span id="mt14" class="sentence" data-guid="47e43f933fe8fd0c7a17bd18c20fbd90" data-source="This topic assumes that you understand the fundamentals of the C++ language. " xml:space="preserve"><sentenceText xmlns="http://www.w3.org/1999/xhtml">本主题假定你了解 C++ 语言的基础知识。</sentenceText></span></p></div></div><div class="section" bookmarktitle="创建动态链接库 (DLL) 项目"><h2 class="heading" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:xlink="http://www.w3.org/1999/xlink"><span id="mt15" class="sentence" data-guid="82cfe9e30540c7084e6339ff1af93fcc" data-source="To create a dynamic link library (DLL) project" xml:space="preserve"><sentenceText xmlns="http://www.w3.org/1999/xhtml">创建动态链接库 (DLL) 项目</sentenceText></span></h2><ol class="steps"><li class="step"><div class="section"><p><span id="mt16" class="sentence" data-guid="dae7eddb773c69cb5ae176577b399fc9" data-source="On the menu bar, choose &lt;strong&gt;File&lt;/strong&gt;, &lt;strong&gt;New&lt;/strong&gt;, &lt;strong&gt;Project&lt;/strong&gt;." xml:space="preserve"><sentenceText xmlns="http://www.w3.org/1999/xhtml">
+  <sentenceText xmlns="http://www.w3.org/1999/xhtml">在菜单栏上，依次选择<span><strong>“文件”</strong></span><strong>、</strong><span><strong>“新建”</strong></span><strong>、</strong><span><strong>“项目”</strong></span>。</sentenceText>
+</sentenceText></span></p></div></li><li class="step"><div class="section"><p><span id="mt17" class="sentence" data-guid="06af5ace9b5577c3f312d84223ae406a" data-source="In the left pane of the &lt;strong&gt;New Project&lt;/strong&gt; dialog box, expand &lt;strong&gt;Installed&lt;/strong&gt;, &lt;strong&gt;Templates&lt;/strong&gt;, &lt;strong&gt;Visual C++&lt;/strong&gt;, and then select &lt;strong&gt;Win32&lt;/strong&gt;." xml:space="preserve"><sentenceText xmlns="http://www.w3.org/1999/xhtml">在<strong xmlns="http://www.w3.org/1999/xhtml">“新建项目”</strong>对话框的左窗格中，依次展开<strong xmlns="http://www.w3.org/1999/xhtml">“已安装”</strong>、<strong xmlns="http://www.w3.org/1999/xhtml">“模板”</strong>、<strong xmlns="http://www.w3.org/1999/xhtml">“Visual C++”</strong>，然后选择<strong xmlns="http://www.w3.org/1999/xhtml">“Win32”</strong>。</sentenceText></span></p></div></li><li class="step"><div class="section"><p><span id="mt18" class="sentence" data-guid="a61eba33e1d961923fb97cad469f60bf" data-source="In the center pane, select &lt;strong&gt;Win32 Console Application&lt;/strong&gt;." xml:space="preserve"><sentenceText xmlns="http://www.w3.org/1999/xhtml">在中间窗格中，选择<strong xmlns="http://www.w3.org/1999/xhtml">“Win32 控制台应用程序”</strong>。</sentenceText></span></p></div></li><li class="step"><div class="section"><p><span id="mt19" class="sentence" data-guid="3c67279e7ec30b56251a52b6949f5062" data-source="Specify a name for the project—for example, MathFuncsDll—in the &lt;strong&gt;Name&lt;/strong&gt; box." xml:space="preserve"><sentenceText xmlns="http://www.w3.org/1999/xhtml">在<strong xmlns="http://www.w3.org/1999/xhtml">“名称”</strong>框中为项目指定名称，例如 MathFuncsDll。</sentenceText></span><span id="mt20" class="sentence" data-guid="259d8dfca08677c0c8a39937247a8fba" data-source="Specify a name for the solution—for example, DynamicLibrary—in the &lt;strong&gt;Solution name&lt;/strong&gt; box." xml:space="preserve"><sentenceText xmlns="http://www.w3.org/1999/xhtml">在<strong xmlns="http://www.w3.org/1999/xhtml">“解决方案名称”</strong>框中为解决方案指定名称，例如 DynamicLibrary。</sentenceText></span><span id="mt21" class="sentence" data-guid="a458c7f3712e26cae70bd6e27f3b12c4" data-source="Choose the &lt;strong&gt;OK&lt;/strong&gt; button." xml:space="preserve"><sentenceText xmlns="http://www.w3.org/1999/xhtml">选择<strong xmlns="http://www.w3.org/1999/xhtml">“确定”</strong>按钮。</sentenceText></span></p></div></li><li class="step"><div class="section"><p><span id="mt22" class="sentence" data-guid="bd8708c31b07bf837e64eb2802654605" data-source="On the &lt;strong&gt;Overview&lt;/strong&gt; page of the &lt;strong&gt;Win32 Application Wizard&lt;/strong&gt; dialog box, choose the &lt;strong&gt;Next&lt;/strong&gt; button." xml:space="preserve"><sentenceText xmlns="http://www.w3.org/1999/xhtml">在<strong xmlns="http://www.w3.org/1999/xhtml">“Win32 应用程序向导”</strong>对话框的<strong xmlns="http://www.w3.org/1999/xhtml">“概述”</strong>页上，选择<strong xmlns="http://www.w3.org/1999/xhtml">“下一步”</strong>按钮。</sentenceText></span></p></div></li><li class="step"><div class="section"><p><span id="mt23" class="sentence" data-guid="298cdc1000e2368eb2b2e5b904b5ac13" data-source="On the &lt;strong&gt;Application Settings&lt;/strong&gt; page, under &lt;strong&gt;Application type&lt;/strong&gt;, select &lt;strong&gt;DLL&lt;/strong&gt;. " xml:space="preserve"><sentenceText xmlns="http://www.w3.org/1999/xhtml">在<strong xmlns="http://www.w3.org/1999/xhtml">“应用程序设置”</strong>页面的<strong xmlns="http://www.w3.org/1999/xhtml">“应用程序类型”</strong>下，选择<strong xmlns="http://www.w3.org/1999/xhtml">“DLL”</strong>。</sentenceText></span></p></div></li><li class="step"><div class="section"><p><span id="mt24" class="sentence" data-guid="31ecd71087e6c6df353333b355bf80d1" data-source="Choose the &lt;strong&gt;Finish&lt;/strong&gt; button to create the project." xml:space="preserve"><sentenceText xmlns="http://www.w3.org/1999/xhtml">选择<strong xmlns="http://www.w3.org/1999/xhtml">“完成”</strong>按钮创建项目。</sentenceText></span></p></div></li></ol></div><div class="section" bookmarktitle="向动态链接库添加类"><h2 class="heading" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:xlink="http://www.w3.org/1999/xlink"><span id="mt25" class="sentence" data-guid="636a2a42c188df88192dfa82e3437b0e" data-source="To add a class to the dynamic link library" xml:space="preserve"><sentenceText xmlns="http://www.w3.org/1999/xhtml">向动态链接库添加类</sentenceText></span></h2><ol class="steps"><li class="step"><div class="section"><p><span id="mt26" class="sentence" data-guid="9d0c1af2c2a355c9e946e60583719f16" data-source="To create a header file for a new class, on the menu bar, choose &lt;strong&gt;Project&lt;/strong&gt;, &lt;strong&gt;Add New Item&lt;/strong&gt;." xml:space="preserve"><sentenceText xmlns="http://www.w3.org/1999/xhtml">若要为新类创建头文件，请在菜单栏上，依次选择<strong xmlns="http://www.w3.org/1999/xhtml">“项目”</strong>、<strong xmlns="http://www.w3.org/1999/xhtml">“添加新项”</strong>。</sentenceText></span><span id="mt27" class="sentence" data-guid="915657f660523f446c0cb8bf5ac1a3d2" data-source="In the &lt;strong&gt;Add New Item&lt;/strong&gt; dialog box, in the left pane, under &lt;strong&gt;Visual C++&lt;/strong&gt;, select &lt;strong&gt;Code&lt;/strong&gt;." xml:space="preserve"><sentenceText xmlns="http://www.w3.org/1999/xhtml">在<strong xmlns="http://www.w3.org/1999/xhtml">“添加新项”</strong>对话框的左窗格中，在<strong xmlns="http://www.w3.org/1999/xhtml">“Visual C++”</strong>下选择<strong xmlns="http://www.w3.org/1999/xhtml">“代码”</strong>。</sentenceText></span><span id="mt28" class="sentence" data-guid="bba9465dab12e47642166e245120dcf4" data-source="In the center pane, select &lt;strong&gt;Header File (.h)&lt;/strong&gt;." xml:space="preserve"><sentenceText xmlns="http://www.w3.org/1999/xhtml">在中间窗格中，选择<strong xmlns="http://www.w3.org/1999/xhtml">“头文件(.h)”</strong>。</sentenceText></span><span id="mt29" class="sentence" data-guid="41ff0f48f4bcf0eafc7fabf5da120049" data-source="Specify a name for the header file—for example, MathFuncsDll.h—and then choose the &lt;strong&gt;Add&lt;/strong&gt; button." xml:space="preserve"><sentenceText xmlns="http://www.w3.org/1999/xhtml">为头文件指定名称（例如 MathFuncsLib.h），然后选择<strong xmlns="http://www.w3.org/1999/xhtml">“添加”</strong>按钮。</sentenceText></span><span id="mt30" class="sentence" data-guid="b6a61df87a08ad8c1e7a94c09b539dd1" data-source="A blank header file is displayed." xml:space="preserve"><sentenceText xmlns="http://www.w3.org/1999/xhtml">将显示一个空白头文件。</sentenceText></span></p></div></li><li class="step"><div class="section"><p><span id="mt31" class="sentence" data-guid="7bf30e8aec9300dcf476c00c1d70be17" data-source="Add the following code to the beginning of the header file:" xml:space="preserve"><sentenceText xmlns="http://www.w3.org/1999/xhtml">将以下代码添加到头文件的开头：</sentenceText></span></p>
+<div id="code-snippet-1" class="codeSnippetContainer" xmlns="">
+    <div class="codeSnippetContainerTabs">
+        <div class="codeSnippetContainerTabSingle" dir="ltr"><a>C++</a></div>
+    </div>
+    <div class="codeSnippetContainerCodeContainer">
+        <div class="codeSnippetToolBar">
+            <div class="codeSnippetToolBarText">
+                <a name="CodeSnippetCopyLink" style="display: none;" title="复制到剪贴板。" href="javascript:if (window.epx.codeSnippet)window.epx.codeSnippet.copyCode('CodeSnippetContainerCode_3a8551f4-b6ee-46a4-9c70-4ce3fd45c0fa');" ms.cmptyp="CodeSnippet">复制</a>
+            </div>
+        </div>
+        <div id="CodeSnippetContainerCode_3a8551f4-b6ee-46a4-9c70-4ce3fd45c0fa" class="codeSnippetContainerCode" dir="ltr">
+            <div style="color:Black;"><pre>
+<span style="color:Green;">// MathFuncsDll.h</span>
+
+#ifdef MATHFUNCSDLL_EXPORTS
+#define MATHFUNCSDLL_API __declspec(<span style="color:Blue;">dllexport</span>) 
+#<span style="color:Blue;">else</span>
+#define MATHFUNCSDLL_API __declspec(<span style="color:Blue;">dllimport</span>) 
+#endif
+
+</pre></div>
+            
+        </div>
+    </div>
+</div>
+</div></li><li class="step"><div class="section"><p><span id="mt33" class="sentence" data-guid="476e189476913d969c4ce13db2d3aa99" data-source="Add a basic class named MyMathFuncs to perform common mathematical operations such as addition, subtraction, multiplication, and division." xml:space="preserve"><sentenceText xmlns="http://www.w3.org/1999/xhtml">添加一个名为 MyMathFuncs 的基类，以执行常见的算术运算（例如加、减、乘和除）。</sentenceText></span><span id="mt34" class="sentence" data-guid="c8e91851d17c4c20ee8ac94610f87636" data-source="The code should resemble this:" xml:space="preserve"><sentenceText xmlns="http://www.w3.org/1999/xhtml">代码应类似如下: </sentenceText></span></p>
+<div id="code-snippet-2" class="codeSnippetContainer" xmlns="">
+    <div class="codeSnippetContainerTabs">
+        <div class="codeSnippetContainerTabSingle" dir="ltr"><a>C++</a></div>
+    </div>
+    <div class="codeSnippetContainerCodeContainer">
+        <div class="codeSnippetToolBar">
+            <div class="codeSnippetToolBarText">
+                <a name="CodeSnippetCopyLink" style="display: none;" title="复制到剪贴板。" href="javascript:if (window.epx.codeSnippet)window.epx.codeSnippet.copyCode('CodeSnippetContainerCode_a171f881-e4d6-4eec-aec6-98a766414b07');" ms.cmptyp="CodeSnippet">复制</a>
+            </div>
+        </div>
+        <div id="CodeSnippetContainerCode_a171f881-e4d6-4eec-aec6-98a766414b07" class="codeSnippetContainerCode" dir="ltr">
+            <div style="color:Black;"><pre>
+<span style="color:Blue;">namespace</span> MathFuncs
+{
+    <span style="color:Green;">// This class is exported from the MathFuncsDll.dll</span>
+    <span style="color:Blue;">class</span> MyMathFuncs
+    {
+    <span style="color:Blue;">public</span>: 
+        <span style="color:Green;">// Returns a + b</span>
+        <span style="color:Blue;">static</span> MATHFUNCSDLL_API <span style="color:Blue;">double</span> Add(<span style="color:Blue;">double</span> a, <span style="color:Blue;">double</span> b); 
+
+        <span style="color:Green;">// Returns a - b</span>
+        <span style="color:Blue;">static</span> MATHFUNCSDLL_API <span style="color:Blue;">double</span> Subtract(<span style="color:Blue;">double</span> a, <span style="color:Blue;">double</span> b); 
+
+        <span style="color:Green;">// Returns a * b</span>
+        <span style="color:Blue;">static</span> MATHFUNCSDLL_API <span style="color:Blue;">double</span> Multiply(<span style="color:Blue;">double</span> a, <span style="color:Blue;">double</span> b); 
+
+        <span style="color:Green;">// Returns a / b</span>
+        <span style="color:Green;">// Throws const std::invalid_argument&amp; if b is 0</span>
+        <span style="color:Blue;">static</span> MATHFUNCSDLL_API <span style="color:Blue;">double</span> Divide(<span style="color:Blue;">double</span> a, <span style="color:Blue;">double</span> b); 
+    };
+}
+</pre></div>
+            
+        </div>
+    </div>
+</div>
+<p><span id="mt36" class="sentence" data-guid="8840cbcfe0c7c1b60091d3a1e2750c0a" data-source="When the MATHFUNCSDLL_EXPORTS symbol is defined, the MATHFUNCSDLL_API symbol will set the &lt;strong&gt;__declspec(dllexport)&lt;/strong&gt; modifier in the member function declarations in this code." xml:space="preserve"><sentenceText xmlns="http://www.w3.org/1999/xhtml">
+  <sentenceText xmlns="http://www.w3.org/1999/xhtml">在此代码中，当 MATHFUNCSDLL_EXPORTS 符号已经被定义时，成员函数声明部分的 MATHFUNCSDLL_API 符号将被设置为 <span><span>__declspec(dllexport)</span></span> 修饰符。</sentenceText>
+</sentenceText></span><span id="mt37" class="sentence" data-guid="e458f950978a0879ef971db74c0aea9d" data-source="This modifier enables the function to be exported by the DLL so that it can be used by other applications." xml:space="preserve"><sentenceText xmlns="http://www.w3.org/1999/xhtml">
+  <sentenceText xmlns="http://www.w3.org/1999/xhtml">此修饰符使函数能作为 DLL 导出，以供其他应用程序调用。</sentenceText>
+</sentenceText></span><span id="mt38" class="sentence" data-guid="c048909ddc70ea6aeb779834af1add6f" data-source="When MATHFUNCSDLL_EXPORTS is undefined—for example, when the header file is included by an application—MATHFUNCSDLL_API defines the &lt;strong&gt;__declspec(dllimport)&lt;/strong&gt; modifier in the member function declarations." xml:space="preserve"><sentenceText xmlns="http://www.w3.org/1999/xhtml">如果未定义 MATHFUNCSDLL_EXPORTS（例如，应用程序包含了头文件），则 MATHFUNCSDLL_API 将定义成员函数声明中的 <strong xmlns="http://www.w3.org/1999/xhtml">__declspec(dllimport)</strong> 修饰符。</sentenceText></span><span id="mt39" class="sentence" data-guid="740ea7fb2ef6279ecd4d3b851a7b46f5" data-source="This modifier optimizes the import of the function in an application." xml:space="preserve"><sentenceText xmlns="http://www.w3.org/1999/xhtml">此修饰符将优化在应用程序中导入该函数的操作。</sentenceText></span><span id="mt40" class="sentence" data-guid="3b69ebfe9431126d1b779c19b597ed3c" data-source="By default, the New Project template for a DLL adds &lt;em&gt;PROJECTNAME&lt;/em&gt;_EXPORTS to the defined symbols for the DLL project." xml:space="preserve"><sentenceText xmlns="http://www.w3.org/1999/xhtml">默认情况下，DLL 的“新建项目”模板会将 <em xmlns="http://www.w3.org/1999/xhtml">PROJECTNAME</em>_EXPORTS 添加到 DLL 项目的已定义符号中。</sentenceText></span><span id="mt41" class="sentence" data-guid="7103ef63843f5f26e10542a938313599" data-source="In this example, MATHFUNCSDLL_EXPORTS is defined when your MathFuncsDll project is built." xml:space="preserve"><sentenceText xmlns="http://www.w3.org/1999/xhtml">在本例中，生成 MathFuncsDll 项目后将定义 MATHFUNCSDLL_EXPORTS。</sentenceText></span><span id="mt42" class="sentence" data-guid="cdb4218534e1a364911555b6f486ddc7" data-source="For more information, see &lt;span class=&quot;mtpsTagOuterHtml&quot; &gt;&lt;span&gt;dllexport、dllimport&lt;/span&gt;&lt;/span&gt;." xml:space="preserve"><sentenceText xmlns="http://www.w3.org/1999/xhtml">有关详细信息，请参阅<a href="https://msdn.microsoft.com/zh-cn/library/3y1sfaz2.aspx">dllexport、dllimport</a>。</sentenceText></span></p><div class="alert"><table><tr><th align="left"><span><img id="s-e6f6a65cf14f462597b64ac058dbe1d0-system-media-system-caps-note" alt="System_CAPS_note" src="https://i-msdn.sec.s-msft.com/dynimg/IC101471.jpeg" title="System_CAPS_note" xmlns="" /></span><span class="alertTitle">注意</span></th></tr><tr><td><p><span id="mt43" class="sentence" data-guid="0c01f4c96eba4828524c744fcf8a6666" data-source="If you are building the DLL project on the command line, use the &lt;strong&gt;/D&lt;/strong&gt; compiler option to define the MATHFUNCSDLL_EXPORTS symbol." xml:space="preserve"><sentenceText xmlns="http://www.w3.org/1999/xhtml">如果你要在命令行上生成 DLL 项目，请使用 <strong xmlns="http://www.w3.org/1999/xhtml">/D</strong> 编译器选项来定义 MATHFUNCSDLL_EXPORTS 符号。</sentenceText></span></p></td></tr></table></div></div></li><li class="step"><div class="section"><p><span id="mt44" class="sentence" data-guid="b08e52eef4a4be6e3f1262450d1b13be" data-source="In the &lt;strong&gt;MathFuncsDll&lt;/strong&gt; project in &lt;strong&gt;Solution Explorer&lt;/strong&gt;, in the &lt;strong&gt;Source Files&lt;/strong&gt; folder, open MathFuncsDll.cpp. " xml:space="preserve"><sentenceText xmlns="http://www.w3.org/1999/xhtml">在<strong xmlns="http://www.w3.org/1999/xhtml">“解决方案资源管理器”</strong>的<strong xmlns="http://www.w3.org/1999/xhtml">“MathFuncsDll”</strong>项目中，在<strong xmlns="http://www.w3.org/1999/xhtml">“源文件”</strong>文件夹中打开 MathFuncsDll.cpp。</sentenceText></span></p></div></li><li class="step"><div class="section"><p><span id="mt45" class="sentence" data-guid="160e335738ec41521819ca3128ce04ee" data-source="Implement the functionality for MyMathFuncs in the source file." xml:space="preserve"><sentenceText xmlns="http://www.w3.org/1999/xhtml">实现源文件中 MyMathFuncs 的功能。</sentenceText></span><span id="mt46" class="sentence" data-guid="c8e91851d17c4c20ee8ac94610f87636" data-source="The code should resemble this:" xml:space="preserve"><sentenceText xmlns="http://www.w3.org/1999/xhtml">代码应类似如下: </sentenceText></span></p>
+<div id="code-snippet-3" class="codeSnippetContainer" xmlns="">
+    <div class="codeSnippetContainerTabs">
+        <div class="codeSnippetContainerTabSingle" dir="ltr"><a>C++</a></div>
+    </div>
+    <div class="codeSnippetContainerCodeContainer">
+        <div class="codeSnippetToolBar">
+            <div class="codeSnippetToolBarText">
+                <a name="CodeSnippetCopyLink" style="display: none;" title="复制到剪贴板。" href="javascript:if (window.epx.codeSnippet)window.epx.codeSnippet.copyCode('CodeSnippetContainerCode_8aac340c-e16a-4092-a6fe-79f5ee97db09');" ms.cmptyp="CodeSnippet">复制</a>
+            </div>
+        </div>
+        <div id="CodeSnippetContainerCode_8aac340c-e16a-4092-a6fe-79f5ee97db09" class="codeSnippetContainerCode" dir="ltr">
+            <div style="color:Black;"><pre>
+<span style="color:Green;">// MathFuncsDll.cpp : Defines the exported functions for the DLL application.</span>
+<span style="color:Green;">//</span>
+
+#include <span style="color:#A31515;">"stdafx.h"</span>
+#include <span style="color:#A31515;">"MathFuncsDll.h"</span>
+#include &lt;stdexcept&gt;
+
+<span style="color:Blue;">using</span> <span style="color:Blue;">namespace</span> std;
+
+<span style="color:Blue;">namespace</span> MathFuncs
+{
+    <span style="color:Blue;">double</span> MyMathFuncs::Add(<span style="color:Blue;">double</span> a, <span style="color:Blue;">double</span> b)
+    {
+        <span style="color:Blue;">return</span> a + b;
+    }
+
+    <span style="color:Blue;">double</span> MyMathFuncs::Subtract(<span style="color:Blue;">double</span> a, <span style="color:Blue;">double</span> b)
+    {
+        <span style="color:Blue;">return</span> a - b;
+    }
+
+    <span style="color:Blue;">double</span> MyMathFuncs::Multiply(<span style="color:Blue;">double</span> a, <span style="color:Blue;">double</span> b)
+    {
+        <span style="color:Blue;">return</span> a * b;
+    }
+
+    <span style="color:Blue;">double</span> MyMathFuncs::Divide(<span style="color:Blue;">double</span> a, <span style="color:Blue;">double</span> b)
+    {
+        <span style="color:Blue;">if</span> (b == 0)
+        {
+            <span style="color:Blue;">throw</span> invalid_argument(<span style="color:#A31515;">"b cannot be zero!"</span>);
+        }
+
+        <span style="color:Blue;">return</span> a / b;
+    }
+}
+</pre></div>
+            
+        </div>
+    </div>
+</div>
+</div></li><li class="step"><div class="section"><p><span id="mt48" class="sentence" data-guid="f47dee83bf56d5e36f58a2bc8b6fefd3" data-source="Compile the dynamic link library by choosing &lt;strong&gt;Build&lt;/strong&gt;, &lt;strong&gt;Build Solution&lt;/strong&gt; on the menu bar. " xml:space="preserve"><sentenceText xmlns="http://www.w3.org/1999/xhtml">
+  <sentenceText xmlns="http://www.w3.org/1999/xhtml">通过选择菜单栏中的 生成&gt;生成解决方案 编译动态链接库</sentenceText>
+</sentenceText></span></p><div class="alert"><table><tr><th align="left"><span><img id="s-e6f6a65cf14f462597b64ac058dbe1d0-system-media-system-caps-note" alt="System_CAPS_note" src="https://i-msdn.sec.s-msft.com/dynimg/IC101471.jpeg" title="System_CAPS_note" xmlns="" /></span><span class="alertTitle">注意</span></th></tr><tr><td><p><span id="mt49" class="sentence" data-guid="af63c97538591deadd5a5934fd8cb38e" data-source="If you are using an Express edition that does not display a &lt;strong&gt;Build&lt;/strong&gt; menu, on the menu bar, choose &lt;strong&gt;Tools&lt;/strong&gt;, &lt;strong&gt;Settings&lt;/strong&gt;, &lt;strong&gt;Expert Settings&lt;/strong&gt; to enable it, and then choose &lt;strong&gt;Build&lt;/strong&gt;, &lt;strong&gt;Build Solution&lt;/strong&gt;. " xml:space="preserve"><sentenceText xmlns="http://www.w3.org/1999/xhtml">如果使用的是不显示<strong xmlns="http://www.w3.org/1999/xhtml">“生成”</strong>菜单的 Express 版，请在菜单栏上，依次选择<strong xmlns="http://www.w3.org/1999/xhtml">“工具”</strong>、<strong xmlns="http://www.w3.org/1999/xhtml">“设置”</strong>、<strong xmlns="http://www.w3.org/1999/xhtml">“专家设置”</strong>来启用它，然后依次选择<strong xmlns="http://www.w3.org/1999/xhtml">“生成”</strong>、<strong xmlns="http://www.w3.org/1999/xhtml">“生成解决方案”</strong>。</sentenceText></span></p></td></tr></table></div><div class="alert"><table><tr><th align="left"><span><img id="s-e6f6a65cf14f462597b64ac058dbe1d0-system-media-system-caps-note" alt="System_CAPS_note" src="https://i-msdn.sec.s-msft.com/dynimg/IC101471.jpeg" title="System_CAPS_note" xmlns="" /></span><span class="alertTitle">注意</span></th></tr><tr><td><p><span id="mt50" class="sentence" data-guid="9f65958f179da8c6493e74dd7441a3bf" data-source="If you are building a project on the command line, use the &lt;strong&gt;/LD&lt;/strong&gt; compiler option to specify that the output file is to be a DLL." xml:space="preserve"><sentenceText xmlns="http://www.w3.org/1999/xhtml">
+  <sentenceText xmlns="http://www.w3.org/1999/xhtml">如果在命令行中生成项目，请使用 <strong>/LD</strong> 编译器选项指定输出文件为 DLL。</sentenceText>
+</sentenceText></span><span id="mt51" class="sentence" data-guid="54bce94d623b35e82e6b4170ba5f6085" data-source="For more information, see &lt;span class=&quot;mtpsTagOuterHtml&quot; &gt;&lt;span&gt;/MD、/MT、/LD（使用运行库）&lt;/span&gt;&lt;/span&gt;." xml:space="preserve"><sentenceText xmlns="http://www.w3.org/1999/xhtml">有关详细信息，请参阅<a href="https://msdn.microsoft.com/zh-cn/library/2kzt1wy3.aspx">/MD、/MT、/LD（使用运行库）</a>。</sentenceText></span><span id="mt52" class="sentence" data-guid="f3243bd39da67fb66950a3bf6e915a89" data-source="Use the &lt;strong&gt;/EHsc&lt;/strong&gt; compiler option to enable C++ exception handling." xml:space="preserve"><sentenceText xmlns="http://www.w3.org/1999/xhtml">使用 <strong xmlns="http://www.w3.org/1999/xhtml">/EHsc</strong> 编译器选项启用 C++ 异常处理。</sentenceText></span><span id="mt53" class="sentence" data-guid="c595efcc6dcee1dd988788eddd56c5a3" data-source="For more information, see &lt;span class=&quot;mtpsTagOuterHtml&quot; &gt;&lt;span&gt;/EH（异常处理模型）&lt;/span&gt;&lt;/span&gt;." xml:space="preserve"><sentenceText xmlns="http://www.w3.org/1999/xhtml">有关详细信息，请参阅<a href="https://msdn.microsoft.com/zh-cn/library/1deeycx5.aspx">/EH（异常处理模型）</a>。</sentenceText></span></p></td></tr></table></div></div></li></ol></div><div class="section" bookmarktitle="创建引用 DLL 的应用"><h2 class="heading" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:xlink="http://www.w3.org/1999/xlink"><span id="mt54" class="sentence" data-guid="1fd3088e67763d0464e37ff1795a252d" data-source="To create an app that references the DLL" xml:space="preserve"><sentenceText xmlns="http://www.w3.org/1999/xhtml">创建引用 DLL 的应用</sentenceText></span></h2><ol class="steps"><li class="step"><div class="section"><p><span id="mt55" class="sentence" data-guid="fd24309e4e132e3803fadeae28693b93" data-source="To create a C++ app that will reference and use the DLL that you just created, on the menu bar, choose &lt;strong&gt;File&lt;/strong&gt;, &lt;strong&gt;New&lt;/strong&gt;, &lt;strong&gt;Project&lt;/strong&gt;." xml:space="preserve"><sentenceText xmlns="http://www.w3.org/1999/xhtml">
+  <sentenceText xmlns="http://www.w3.org/1999/xhtml">为了创建一个项目引用你刚刚创建好的DLL，在菜单栏中选择 <span>文件&gt;</span><span>新建&gt;</span><span>项目</span>。</sentenceText>
+</sentenceText></span></p></div></li><li class="step"><div class="section"><p><span id="mt56" class="sentence" data-guid="206c777c9fbb24be77462423fe4d8773" data-source="In the left pane, under &lt;strong&gt;Visual C++&lt;/strong&gt;, select &lt;strong&gt;Win32&lt;/strong&gt;." xml:space="preserve"><sentenceText xmlns="http://www.w3.org/1999/xhtml">在左窗格中的<strong xmlns="http://www.w3.org/1999/xhtml">“Visual C++”</strong>下，选择<strong xmlns="http://www.w3.org/1999/xhtml">“Win32”</strong>。</sentenceText></span></p></div></li><li class="step"><div class="section"><p><span id="mt57" class="sentence" data-guid="a61eba33e1d961923fb97cad469f60bf" data-source="In the center pane, select &lt;strong&gt;Win32 Console Application&lt;/strong&gt;." xml:space="preserve"><sentenceText xmlns="http://www.w3.org/1999/xhtml">在中间窗格中，选择<strong xmlns="http://www.w3.org/1999/xhtml">“Win32 控制台应用程序”</strong>。</sentenceText></span></p></div></li><li class="step"><div class="section"><p><span id="mt58" class="sentence" data-guid="5813f08bfe2b14d471273d30cb6ab031" data-source="Specify a name for the project—for example, MyExecRefsDll—in the &lt;strong&gt;Name&lt;/strong&gt; box." xml:space="preserve"><sentenceText xmlns="http://www.w3.org/1999/xhtml">在<strong xmlns="http://www.w3.org/1999/xhtml">“名称”</strong>框中为项目指定名称，例如 MyExecRefsDll。</sentenceText></span><span id="mt59" class="sentence" data-guid="89e3ec09f19dc85f396b5e544a826061" data-source="Next to &lt;strong&gt;Solution&lt;/strong&gt;, select &lt;strong&gt;Add to Solution&lt;/strong&gt; from the drop-down list." xml:space="preserve"><sentenceText xmlns="http://www.w3.org/1999/xhtml">在<strong xmlns="http://www.w3.org/1999/xhtml">“解决方案”</strong>旁边，从下拉列表中选择<strong xmlns="http://www.w3.org/1999/xhtml">“添加到解决方案”</strong>。</sentenceText></span><span id="mt60" class="sentence" data-guid="c071b7385d7fa6e70af9507ed6b5bd37" data-source="This adds the new project to the same solution that contains the DLL." xml:space="preserve"><sentenceText xmlns="http://www.w3.org/1999/xhtml">这会将新项目添加到包含此 DLL 的同一解决方案中。</sentenceText></span><span id="mt61" class="sentence" data-guid="a458c7f3712e26cae70bd6e27f3b12c4" data-source="Choose the &lt;strong&gt;OK&lt;/strong&gt; button." xml:space="preserve"><sentenceText xmlns="http://www.w3.org/1999/xhtml">选择<strong xmlns="http://www.w3.org/1999/xhtml">“确定”</strong>按钮。</sentenceText></span></p></div></li><li class="step"><div class="section"><p><span id="mt62" class="sentence" data-guid="bd8708c31b07bf837e64eb2802654605" data-source="On the &lt;strong&gt;Overview&lt;/strong&gt; page of the &lt;strong&gt;Win32 Application Wizard&lt;/strong&gt; dialog box, choose the &lt;strong&gt;Next&lt;/strong&gt; button." xml:space="preserve"><sentenceText xmlns="http://www.w3.org/1999/xhtml">在<strong xmlns="http://www.w3.org/1999/xhtml">“Win32 应用程序向导”</strong>对话框的<strong xmlns="http://www.w3.org/1999/xhtml">“概述”</strong>页上，选择<strong xmlns="http://www.w3.org/1999/xhtml">“下一步”</strong>按钮。</sentenceText></span></p></div></li><li class="step"><div class="section"><p><span id="mt63" class="sentence" data-guid="eb2f39e322e45dd52ad8bd2667e168e9" data-source="On the &lt;strong&gt;Application Settings&lt;/strong&gt; page, under &lt;strong&gt;Application type&lt;/strong&gt;, select &lt;strong&gt;Console application&lt;/strong&gt;." xml:space="preserve"><sentenceText xmlns="http://www.w3.org/1999/xhtml">在<strong xmlns="http://www.w3.org/1999/xhtml">“应用程序设置”</strong>页的<strong xmlns="http://www.w3.org/1999/xhtml">“应用程序类型”</strong>下，选择<strong xmlns="http://www.w3.org/1999/xhtml">“控制台应用程序”</strong>。</sentenceText></span></p></div></li><li class="step"><div class="section"><p><span id="mt64" class="sentence" data-guid="5fe211ca923c613144162806007aae60" data-source="On the &lt;strong&gt;Application Settings&lt;/strong&gt; page, under &lt;strong&gt;Additional options&lt;/strong&gt;, clear the &lt;strong&gt;Precompiled header&lt;/strong&gt; check box." xml:space="preserve"><sentenceText xmlns="http://www.w3.org/1999/xhtml">在<strong xmlns="http://www.w3.org/1999/xhtml">“应用程序设置”</strong>页的<strong xmlns="http://www.w3.org/1999/xhtml">“附加选项”</strong>下，清除<strong xmlns="http://www.w3.org/1999/xhtml">“预编译头”</strong>复选框。</sentenceText></span></p></div></li><li class="step"><div class="section"><p><span id="mt65" class="sentence" data-guid="31ecd71087e6c6df353333b355bf80d1" data-source="Choose the &lt;strong&gt;Finish&lt;/strong&gt; button to create the project." xml:space="preserve"><sentenceText xmlns="http://www.w3.org/1999/xhtml">选择<strong xmlns="http://www.w3.org/1999/xhtml">“完成”</strong>按钮创建项目。</sentenceText></span></p></div></li></ol></div><div class="section" bookmarktitle="在该应用中使用类库中的功能"><h2 class="heading" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:xlink="http://www.w3.org/1999/xlink"><span id="mt66" class="sentence" data-guid="d418f69f03e6b0d51847e8f31f7bb961" data-source="To use the functionality from the class library in the app" xml:space="preserve"><sentenceText xmlns="http://www.w3.org/1999/xhtml">在该应用中使用类库中的功能</sentenceText></span></h2><ol class="steps"><li class="step"><div class="section"><p><span id="mt67" class="sentence" data-guid="db2d1e0505233880f6e955b5ef6a662f" data-source="After you create a console app, an empty program is created for you." xml:space="preserve"><sentenceText xmlns="http://www.w3.org/1999/xhtml">
+  <sentenceText xmlns="http://www.w3.org/1999/xhtml">在创建一个控制台应用程序后，一个空的程序已经为你创建好了。</sentenceText>
+</sentenceText></span><span id="mt68" class="sentence" data-guid="a7d6ad707bdd24a74a3fc0366beee741" data-source="The name for the source file is the same as the name that you chose earlier." xml:space="preserve"><sentenceText xmlns="http://www.w3.org/1999/xhtml">源文件的名称与你之前选择的名称相同。</sentenceText></span><span id="mt69" class="sentence" data-guid="cfe204f98fb8d1242ff96b1e69bc197e" data-source="In this example, it is named MyExecRefsDll.cpp." xml:space="preserve"><sentenceText xmlns="http://www.w3.org/1999/xhtml">在此示例中，其名称为 MyExecRefsDll.cpp。</sentenceText></span></p></div></li><li class="step"><div class="section"><p><span id="mt70" class="sentence" data-guid="d8a8a37ac5bb805edc2eee4e59c3c8e7" data-source="To use in the app the math routines that you created in the DLL, you must reference it." xml:space="preserve"><sentenceText xmlns="http://www.w3.org/1999/xhtml">若要在应用中使用在 DLL 中创建的数学例程，必须对它进行引用。</sentenceText></span><span id="mt71" class="sentence" data-guid="04a48a8e56c7d83b4149332ac95d9f51" data-source="To do this, select the MyExecRefsDll project in &lt;strong&gt;Solution Explorer&lt;/strong&gt;, and then on the menu bar, choose &lt;strong&gt;Project&lt;/strong&gt;, &lt;strong&gt;References&lt;/strong&gt;." xml:space="preserve"><sentenceText xmlns="http://www.w3.org/1999/xhtml">
+  <sentenceText xmlns="http://www.w3.org/1999/xhtml">为此，请在 <span>解决方案资源管理器 中</span>选择 MyExecRefsDll 项目，然后在菜单栏上，选择 <span>项目</span>，<span>引用</span>。</sentenceText>
+</sentenceText></span><span id="mt72" class="sentence" data-guid="0d0e37b263dc9a2cfb24635fade4d01f" data-source="In the &lt;strong&gt;Property Pages&lt;/strong&gt; dialog box, expand the &lt;strong&gt;Common Properties&lt;/strong&gt; node, select &lt;strong&gt;Framework and References&lt;/strong&gt;, and then choose the &lt;strong&gt;Add New Reference&lt;/strong&gt; button." xml:space="preserve"><sentenceText xmlns="http://www.w3.org/1999/xhtml">在<strong xmlns="http://www.w3.org/1999/xhtml">“属性页”</strong>对话框中，展开<strong xmlns="http://www.w3.org/1999/xhtml">“通用属性”</strong>节点、选择<strong xmlns="http://www.w3.org/1999/xhtml">“框架和引用”</strong>，然后选择<strong xmlns="http://www.w3.org/1999/xhtml">“添加新引用”</strong>按钮。</sentenceText></span><span id="mt73" class="sentence" data-guid="131b5ae7c83a2f10d4e5275401f08262" data-source="For more information about the &lt;strong&gt;References&lt;/strong&gt; dialog box, see &lt;span class=&quot;mtpsTagOuterHtml&quot; &gt;&lt;span&gt;在 Visual C++ 项目中添加引用&lt;/span&gt;&lt;/span&gt;." xml:space="preserve"><sentenceText xmlns="http://www.w3.org/1999/xhtml">有关<strong xmlns="http://www.w3.org/1999/xhtml">“引用”</strong>对话框的更多信息，请参见<a href="https://msdn.microsoft.com/zh-cn/library/47w1hdab.aspx">在 Visual C++ 项目中添加引用</a>。</sentenceText></span></p></div></li><li class="step"><div class="section"><p><span id="mt74" class="sentence" data-guid="89cf433fe5cbdbf6996612f8d4d05eed" data-source="The &lt;strong&gt;Add Reference&lt;/strong&gt; dialog box lists the libraries that you can reference." xml:space="preserve"><sentenceText xmlns="http://www.w3.org/1999/xhtml">
+  <strong xmlns="http://www.w3.org/1999/xhtml">“添加引用”</strong>对话框列出了可以引用的库。</sentenceText></span><span id="mt75" class="sentence" data-guid="86c4d7198abaebf012727539bf48bd41" data-source="The &lt;strong&gt;Project&lt;/strong&gt; tab lists the projects in the current solution and any libraries that they contain." xml:space="preserve"><sentenceText xmlns="http://www.w3.org/1999/xhtml">
+  <strong xmlns="http://www.w3.org/1999/xhtml">“项目”</strong>选项卡列出了当前解决方案中的所有项目以及它们包含的所有库。</sentenceText></span><span id="mt76" class="sentence" data-guid="908ab1d8dea4bac0bb7859ec31a5f549" data-source="On the &lt;strong&gt;Projects&lt;/strong&gt; tab, select the check box next to MathFuncsDll, and then choose the &lt;strong&gt;OK&lt;/strong&gt; button." xml:space="preserve"><sentenceText xmlns="http://www.w3.org/1999/xhtml">在<strong xmlns="http://www.w3.org/1999/xhtml">“项目”</strong>选项卡上，选中“MathFuncsDll”旁边的复选框，然后选择<strong xmlns="http://www.w3.org/1999/xhtml">“确定”</strong>按钮。</sentenceText></span></p></div></li><li class="step"><div class="section"><p><span id="mt77" class="sentence" data-guid="7cc1b3f2c0989b341166655eaf5923ae" data-source="To reference the header files of the DLL, you must modify the included directories path." xml:space="preserve"><sentenceText xmlns="http://www.w3.org/1999/xhtml">若要引用 DLL 的头文件，必须修改包含的目录路径。</sentenceText></span><span id="mt78" class="sentence" data-guid="cdb55de1fe832424203af6e0d8d5fe11" data-source="To do this, in the &lt;strong&gt;Property Pages&lt;/strong&gt; dialog box, expand the &lt;strong&gt;Configuration Properties&lt;/strong&gt; node, expand the &lt;strong&gt;C/C++&lt;/strong&gt; node, and then select &lt;strong&gt;General&lt;/strong&gt;." xml:space="preserve"><sentenceText xmlns="http://www.w3.org/1999/xhtml">若要执行此操作，请在<strong xmlns="http://www.w3.org/1999/xhtml">“属性页”</strong>对话框中，依次展开<strong xmlns="http://www.w3.org/1999/xhtml">“配置属性”</strong>节点和<strong xmlns="http://www.w3.org/1999/xhtml">“C/C++”</strong>节点，然后选择<strong xmlns="http://www.w3.org/1999/xhtml">“常规”</strong>。</sentenceText></span><span id="mt79" class="sentence" data-guid="002fcafa256154580587450178c4ed27" data-source="Next to &lt;strong&gt;Additional Include Directories&lt;/strong&gt;, specify the path of the location of the MathFuncsDll.h header file." xml:space="preserve"><sentenceText xmlns="http://www.w3.org/1999/xhtml">在<strong xmlns="http://www.w3.org/1999/xhtml">“附加包含目录”</strong>旁边，指定 MathFuncsDll.h 头文件的位置路径。</sentenceText></span><span id="mt80" class="sentence" data-guid="ed682775fc89e8d531866b624ed0b902" data-source="You can use a relative path—for example, ..\MathFuncsDll\—then choose the &lt;strong&gt;OK&lt;/strong&gt; button." xml:space="preserve"><sentenceText xmlns="http://www.w3.org/1999/xhtml">你可以使用相对路径（例如 ..\MathFuncsDll\），然后选择<strong xmlns="http://www.w3.org/1999/xhtml">“确定”</strong>按钮。</sentenceText></span></p></div></li><li class="step"><div class="section"><p><span id="mt81" class="sentence" data-guid="c9d3cee6399016c1d5a5f7976a876975" data-source="You can now use the MyMathFuncs class in this application." xml:space="preserve"><sentenceText xmlns="http://www.w3.org/1999/xhtml">现在即可在此应用程序中使用 MyMathFuncs 类。</sentenceText></span><span id="mt82" class="sentence" data-guid="a7ae32926b1cb07df2df30ad14618814" data-source="Replace the contents of MyExecRefsDll.cpp with the following code:" xml:space="preserve"><sentenceText xmlns="http://www.w3.org/1999/xhtml">将 MyExecRefsDll.cpp 的内容替换为以下代码：</sentenceText></span></p>
+<div id="code-snippet-4" class="codeSnippetContainer" xmlns="">
+    <div class="codeSnippetContainerTabs">
+        <div class="codeSnippetContainerTabSingle" dir="ltr"><a>C++</a></div>
+    </div>
+    <div class="codeSnippetContainerCodeContainer">
+        <div class="codeSnippetToolBar">
+            <div class="codeSnippetToolBarText">
+                <a name="CodeSnippetCopyLink" style="display: none;" title="复制到剪贴板。" href="javascript:if (window.epx.codeSnippet)window.epx.codeSnippet.copyCode('CodeSnippetContainerCode_02c10de3-db08-4e9e-a8de-898e04dd517f');" ms.cmptyp="CodeSnippet">复制</a>
+            </div>
+        </div>
+        <div id="CodeSnippetContainerCode_02c10de3-db08-4e9e-a8de-898e04dd517f" class="codeSnippetContainerCode" dir="ltr">
+            <div style="color:Black;"><pre>
+<span style="color:Green;">// MyExecRefsDll.cpp</span>
+<span style="color:Green;">// compile with: /EHsc /link MathFuncsDll.lib</span>
+
+#include &lt;iostream&gt;
+
+#include <span style="color:#A31515;">"MathFuncsDll.h"</span>
+
+<span style="color:Blue;">using</span> <span style="color:Blue;">namespace</span> std;
+
+<span style="color:Blue;">int</span> main()
+{
+    <span style="color:Blue;">double</span> a = 7.4;
+    <span style="color:Blue;">int</span> b = 99;
+
+    cout &lt;&lt; <span style="color:#A31515;">"a + b = "</span> &lt;&lt;
+        MathFuncs::MyMathFuncs::Add(a, b) &lt;&lt; endl;
+    cout &lt;&lt; <span style="color:#A31515;">"a - b = "</span> &lt;&lt;
+        MathFuncs::MyMathFuncs::Subtract(a, b) &lt;&lt; endl;
+    cout &lt;&lt; <span style="color:#A31515;">"a * b = "</span> &lt;&lt;
+        MathFuncs::MyMathFuncs::Multiply(a, b) &lt;&lt; endl;
+    cout &lt;&lt; <span style="color:#A31515;">"a / b = "</span> &lt;&lt;
+        MathFuncs::MyMathFuncs::Divide(a, b) &lt;&lt; endl;
+
+    <span style="color:Blue;">try</span>
+    {
+        cout &lt;&lt; <span style="color:#A31515;">"a / 0 = "</span> &lt;&lt;
+            MathFuncs::MyMathFuncs::Divide(a, 0) &lt;&lt; endl; 
+    }
+    <span style="color:Blue;">catch</span> (<span style="color:Blue;">const</span> invalid_argument &amp;e) 
+    {
+        cout &lt;&lt; <span style="color:#A31515;">"Caught exception: "</span> &lt;&lt; e.what() &lt;&lt; endl; 
+    }
+
+    <span style="color:Blue;">return</span> 0;
+}
+</pre></div>
+            
+        </div>
+    </div>
+</div>
+</div></li><li class="step"><div class="section"><p><span id="mt84" class="sentence" data-guid="744d09c4545fb572fc9af24e7693bb5c" data-source="Build the executable by choosing &lt;strong&gt;Build&lt;/strong&gt;, &lt;strong&gt;Build Solution&lt;/strong&gt; on the menu bar." xml:space="preserve"><sentenceText xmlns="http://www.w3.org/1999/xhtml">通过在菜单栏上依次选择<strong xmlns="http://www.w3.org/1999/xhtml">“生成”</strong>、<strong xmlns="http://www.w3.org/1999/xhtml">“生成解决方案”</strong>来生成可执行文件。</sentenceText></span></p></div></li></ol></div><div class="section" bookmarktitle="运行应用程序"><h2 class="heading" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:xlink="http://www.w3.org/1999/xlink"><span id="mt85" class="sentence" data-guid="ddd2eea9053f5a46740fc2c2bd632b3b" data-source="To run the application" xml:space="preserve"><sentenceText xmlns="http://www.w3.org/1999/xhtml">运行应用程序</sentenceText></span></h2><ol class="steps"><li class="step"><div class="section"><p><span id="mt86" class="sentence" data-guid="e93a49e6f46894da37d1917fac28cb05" data-source="Make sure that MyExecRefsDll is selected as the default project." xml:space="preserve"><sentenceText xmlns="http://www.w3.org/1999/xhtml">请确保已将 MyExecRefsDll 选为默认项目。</sentenceText></span><span id="mt87" class="sentence" data-guid="4a2ff5b46a54c9d438473ed12e1d12d8" data-source="In &lt;strong&gt;Solution Explorer&lt;/strong&gt;, select MyExecRefsDll, and then on the menu bar, choose &lt;strong&gt;Project&lt;/strong&gt;, &lt;strong&gt;Set As StartUp Project&lt;/strong&gt;." xml:space="preserve"><sentenceText xmlns="http://www.w3.org/1999/xhtml">在<strong xmlns="http://www.w3.org/1999/xhtml">“解决方案资源管理器”</strong>中，选择 MyExecRefsDll，然后在菜单栏上，依次选择<strong xmlns="http://www.w3.org/1999/xhtml">“项目”</strong>、<strong xmlns="http://www.w3.org/1999/xhtml">“设为启动项目”</strong>。</sentenceText></span></p></div></li><li class="step"><div class="section"><p><span id="mt88" class="sentence" data-guid="0527a789b055b79ee7614e9415586777" data-source="To run the project, on the menu bar, choose &lt;strong&gt;Debug&lt;/strong&gt;, &lt;strong&gt;Start Without Debugging&lt;/strong&gt;." xml:space="preserve"><sentenceText xmlns="http://www.w3.org/1999/xhtml">若要运行项目，请在菜单栏上依次选择<strong xmlns="http://www.w3.org/1999/xhtml">“调试”</strong>、<strong xmlns="http://www.w3.org/1999/xhtml">“开始执行(不调试)”</strong>。</sentenceText></span><span id="mt89" class="sentence" data-guid="38a937977f7b1629ae475fda4b33dfb7" data-source="The output should resemble this:" xml:space="preserve"><sentenceText xmlns="http://www.w3.org/1999/xhtml">输出应该与下面的内容类似：</sentenceText></span></p><div class="computerOutput"><pre>a + b = 106.4
+a - b = -91.6
+a * b = 732.6
+a / b = 0.0747475
+捕获到异常：b 不能为零！
+</pre></div></div></li></ol></div><div><h2 class="LW_CollapsibleArea_TitleDiv"><div><a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="折叠" role="button"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">请参阅</span></a><div id="Anchor_0" class="LW_CollapsibleArea_Anchor_Div"><a href="/zh-cn/library/ms235636.aspx#Anchor_0" class="LW_CollapsibleArea_Anchor_Img" title="右键单击以复制并共享此部分的链接"></a></div><div class="LW_CollapsibleArea_HrDiv"><hr class="LW_CollapsibleArea_Hr" /></div></div></h2><div class="sectionblock"><p><a href="https://msdn.microsoft.com/zh-cn/library/ms235630.aspx">Visual C++ Guided Tour</a><br /><a href="https://msdn.microsoft.com/zh-cn/library/1ez7dh12.aspx">Visual C++ 中的 DLL</a><br /><a href="https://msdn.microsoft.com/zh-cn/library/zebw5zk9.aspx">部署本机桌面应用程序 (Visual C++)</a><br /><a href="https://msdn.microsoft.com/zh-cn/library/bb384837.aspx">演练：部署程序 (C++)</a><br /><a href="https://msdn.microsoft.com/zh-cn/library/dt232c9t.aspx">从 Visual Basic 应用程序调用 DLL 函数</a><br /></p></div></div></div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+<div class="libraryMemberFilter">
+    <div class="filterContainer">
+        <span>显示:</span>
+        <label>
+            <input type="checkbox" class="libraryFilterInherited" checked="checked" value="Inherit" />继承
+        </label>
+        <label>
+            <input type="checkbox" class="libraryFilterProtected" checked="checked" value="Protected" />保护
+        </label>
+    </div>
+</div>
+    
+<input type="hidden" id="libraryMemberFilterEmptyWarning" value="您当前的筛选设置无成员可用。" />
+
+
+
+    </div>
+
+<div id="rightNavigationMenu" ms.pgarea="right nav">
+    <div id="mobileButtons">
+        <div id="navigationButtons">
+            <a id="provideFeedback1" href="javascript:void(0)"><ins class="suggestion"></ins>您有何建议？</a>
+            <a id="isd_print" href="https://msdn.microsoft.com/zh-cn/library/ms235636(d=printer).aspx" rel="nofollow"><ins class="print"></ins>打印</a>
+            <a id="isd_printABook" href="/zh-cn/library/export/help/?returnurl=%2fzh-cn%2flibrary%2fms235636.aspx">
+                <ins class="export"></ins>导出 (<span class="count">0</span>)
+            </a>
+        </div>
+    </div>
+    <div id="navMain">
+        <div id="closeNavigation">
+            <a class="tocCloseSmall" id="closeButton"></a>
+        </div>
+        <div id="navigationButtons">
+            <a id="provideFeedback2" href="javascript:void(0)"><ins class="suggestion"></ins>您有何建议？</a>
+            <a id="isd_print" href="https://msdn.microsoft.com/zh-cn/library/ms235636(d=printer).aspx" rel="nofollow"><ins class="print"></ins>打印</a>
+            <a id="isd_printABook2" href="/zh-cn/library/export/help/?returnurl=%2fzh-cn%2flibrary%2fms235636.aspx">
+                <ins class="export"></ins>导出 (<span class="count">0</span>)
+            </a>
+            <a id="isdShare" href="#">
+                <ins class="share"></ins>共享
+            </a>
+            <div id="socials" style="display: none">
+                <a id="isdFacebook" href="#">
+                    <ins class="facebook"></ins>
+                </a>
+                <a id="isdTwitter" href="#">
+                    <ins class="twitter"></ins>
+                </a>
+                <a id="isdGooglePlus" href="#">
+                    <ins class="googlePlus"></ins>
+                </a>
+            </div>
+        </div>
+        <div id="indoc_toc" style="display: none" ms.cmpgrp="indoc toc">
+            <div id="indoc_title">本文内容</div>
+            <ul id="indoc_toclist"></ul>
+        </div>
+    </div>
+</div>
+<div id="rightNavigationMenuThumbnail" class="rightNavigationMenuThumbnail">
+</div>
+
+
+
+        </div>
+        <div class="clear"></div>
+
+        
+
+<input name="__RequestVerificationToken" type="hidden" value="t0beEuwGr0I4PjaD3yR55c6yZrP8CR9wwiuo9buD6tFDfoyEajy0Wte_ssGQgFG_ne5oVI-0iaiLVjYJQSfZAiRpqqQ1" />
+<input id="ratingValueSubmitUrl" type="hidden" value="https://msdn.microsoft.com/zh-cn/library/feedback/rate/ms235636.aspx" />
+<input id="ratingAdditionalSubmitUrl" type="hidden" value="https://msdn.microsoft.com/zh-cn/library/feedback/additional/ms235636.aspx" />
+<input id="isTopicRated" type="hidden" value="false" />
+
+
+
+    <div id="lib-footer">
+            <div id="responsiveRating" ms.pgarea="rating">
+                    
+    <div id="skinnyRating">
+        <div class="closeSmallWhite"></div>
+        <div class="rating">
+            <div id="s_ratingSection1">
+                <div class="title">
+                    此页面有用吗？
+                </div>
+                <div class="buttons">
+                    <button class="button" id="s_ratingYes" aria-label="是，此页面很有帮助">是</button>
+                    <button class="button" id="s_ratingNo" aria-label="不，此页面没有任何帮助">否</button>
+                </div>
+                <input id="s_ratingValue" type="hidden" value="" />
+            </div>
+            <div id="s_ratingSection2">
+                <div id="s_skinnyRatingForm">
+                    <div class="title">
+                        更多反馈？
+                    </div>
+                    <textarea id="s_ratingText" rows="6" cols="" maxlength="1500"></textarea>
+                    <div class="right">
+                        <div class="counter">
+                            <span id="feedbackTextCounter">1500</span> 个剩余字符
+                        </div>
+                        <div class="buttons">
+                            <button class="button" id="s_ratingSubmit" aria-label="提交我的其他反馈">提交</button>
+                            <button class="button" id="s_ratingSkipThis" aria-label="跳过其他反馈">跳过此步</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="s_ratingSection3" style="display: none">
+                <div class="title">
+                    谢谢！
+                </div>
+                <div class="description">
+                    我们非常感谢您的反馈。
+                </div>
+            </div>
+            
+            <div id="contentFeedbackQAContainer" style="display: none;"></div>
+        </div>
+    </div>
+        
+
+            </div>
+        
+
+    
+    <link type="text/css" rel="stylesheet" />
+    
+        
+    <div id="ux-footer" class="" style="" dir="ltr">
+        
+            
+        <div id="footerSock" class="">
+            <div id="footerSockInner">
+                             
+                    <div class="footerSockLeft"><div data-fragmentName="SocialLinks" id="Fragment_SocialLinks" xmlns="http://www.w3.org/1999/xhtml">
+  
+  <div class="linkList">
+    <div class="linkListTitle">关注我们</div>
+    <ul class="links">
+      <li>
+        <a href="http://www.weibo.com/cnmsdn" target="_blank" id="SocialLinks_2151_19" class="weiboShare" xmlns="http://www.w3.org/1999/xhtml">http://www.weibo.com/cnmsdn</a>
+      </li>
+      <li>
+        <a href="http://aka.ms/msdnwechat" target="_blank" id="SocialLinks_2151_20" class="wechatShare" xmlns="http://www.w3.org/1999/xhtml">http://aka.ms/msdnwechat</a>
+      </li>
+      <li>
+        <a href="http://aka.ms/contactmsdn" target="_blank" id="SocialLinks_2151_21" class="cnContactShare" xmlns="http://www.w3.org/1999/xhtml">http://aka.ms/contactmsdn</a>
+      </li>
+    </ul>
+  </div>
+</div></div>
+                        
+                <div class="footerSockCenter">
+                        <a name="feedback"></a>
+
+<div class="rating">
+    <div id="ratingSection1">
+        <div class="title">
+            此页面有用吗？
+        </div>
+        <div class="description">
+            您对此内容的反馈非常重要。<br />请告诉我们您的想法。
+        </div>
+        <div class="buttons">
+            <button class="button" id="ratingYes" aria-label="是，此页面很有帮助">是</button>
+            <button class="button" id="ratingNo" aria-label="不，此页面没有任何帮助">否</button>
+        </div>
+        <input id="ratingValue" type="hidden" value="" />
+    </div>
+    <div id="ratingSection2">
+        <div class="title left">
+            更多反馈？
+        </div>
+        <textarea id="ratingText" rows="6" cols="" maxlength="1500"></textarea>
+        <div class="right">
+            <div class="counter">
+                <span id="feedbackTextCounter">1500</span> 个剩余字符
+            </div>
+            <div class="buttons">
+                <button class="button" id="ratingSubmit" aria-label="提交我的其他反馈">提交</button>
+                <button class="button" id="ratingSkipThis" aria-label="跳过其他反馈">跳过此步</button>
+            </div>
+        </div>
+    </div>
+    <div id="ratingSection3">
+        <div class="title">
+            谢谢！
+        </div>
+        <div class="description">
+            我们非常感谢您的反馈。
+        </div>
+    </div>
+    
+    
+    <div id="contentFeedbackQAContainer" style="display: none;"></div>
+</div>
+    
+                                    </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+
+        <footer class="top">
+            <div data-fragmentName="LeftLinks" id="Fragment_LeftLinks" xmlns="http://www.w3.org/1999/xhtml">
+  
+  <div class="linkList">
+    <div class="linkListTitle">开发人员中心</div>
+    <ul class="links">
+      <li>
+        <a href="https://dev.windows.com" id="LeftLinks_2148_1" class="windowsBlue" xmlns="http://www.w3.org/1999/xhtml">Windows</a>
+      </li>
+      <li>
+        <a href="http://dev.office.com" id="LeftLinks_2148_3" class="office" xmlns="http://www.w3.org/1999/xhtml">Office</a>
+      </li>
+      <li>
+        <a href="https://msdn.microsoft.com/vstudio" id="LeftLinks_2148_4" class="visualStudio" xmlns="http://www.w3.org/1999/xhtml">Visual Studio</a>
+      </li>
+      <li>
+        <a href="http://azure.microsoft.com/zh-cn/documentation/" target="_blank" id="LeftLinks_2148_12" xmlns="http://www.w3.org/1999/xhtml">Microsoft Azure</a>
+      </li>
+      <li>
+        <a href="https://msdn.microsoft.com/developer-centers-msdn" id="LeftLinks_2148_5" xmlns="http://www.w3.org/1999/xhtml">更多...</a>
+      </li>
+    </ul>
+  </div>
+</div>
+            <div id="rightLinks">
+                <div data-fragmentName="CenterLinks1" id="Fragment_CenterLinks1" xmlns="http://www.w3.org/1999/xhtml">
+  
+  <div class="linkList">
+    <div class="linkListTitle">学习资源</div>
+    <ul class="links">
+      <li>
+        <a href="http://www.microsoftvirtualacademy.com/" id="CenterLinks1_2151_4" xmlns="http://www.w3.org/1999/xhtml">Microsoft 虚拟学院</a>
+      </li>
+      <li>
+        <a href="http://channel9.msdn.com/" id="CenterLinks1_2151_5" xmlns="http://www.w3.org/1999/xhtml">第 9 频道</a>
+      </li>
+      <li>
+        <a href="https://msdn.microsoft.com/magazine/" id="CenterLinks1_2151_7" xmlns="http://www.w3.org/1999/xhtml">MSDN 杂志</a>
+      </li>
+    </ul>
+  </div>
+</div>
+                <div data-fragmentName="CenterLinks2" id="Fragment_CenterLinks2" xmlns="http://www.w3.org/1999/xhtml">
+  
+  <div class="linkList">
+    <div class="linkListTitle">社区</div>
+    <ul class="links">
+      <li>
+        <a href="https://social.msdn.microsoft.com/forums/zh-cn/home" id="CenterLinks2_2151_8" xmlns="http://www.w3.org/1999/xhtml">论坛</a>
+      </li>
+      <li>
+        <a href="http://blogs.msdn.com/b/developer-tools/" id="CenterLinks2_2151_9" xmlns="http://www.w3.org/1999/xhtml">博客</a>
+      </li>
+      <li>
+        <a href="http://www.codeplex.com" id="CenterLinks2_2151_10" xmlns="http://www.w3.org/1999/xhtml">Codeplex</a>
+      </li>
+    </ul>
+  </div>
+</div>
+                <div data-fragmentName="CenterLinks3" id="Fragment_CenterLinks3" xmlns="http://www.w3.org/1999/xhtml">
+  
+  <div class="linkList">
+    <div class="linkListTitle">支持</div>
+    <ul class="links">
+      <li>
+        <a href="https://msdn.microsoft.com/hh361695" id="CenterLinks3_2151_11" xmlns="http://www.w3.org/1999/xhtml">自助支持</a>
+      </li>
+    </ul>
+  </div>
+</div>
+                <div data-fragmentName="CenterLinks4" id="Fragment_CenterLinks4" xmlns="http://www.w3.org/1999/xhtml">
+  
+  <div class="linkList">
+    <div class="linkListTitle">计划</div>
+    <ul class="links">
+      <li>
+        <a href="https://www.microsoft.com/bizspark/" id="CenterLinks4_2151_13" xmlns="http://www.w3.org/1999/xhtml">BizSpark（针对新创企业）</a>
+      </li>
+      <li>
+        <a href="https://www.dreamspark.com/" id="CenterLinks4_2151_14" xmlns="http://www.w3.org/1999/xhtml">DreamSpark</a>
+      </li>
+      <li>
+        <a href="http://www.imaginecup.com" id="CenterLinks4_2151_17" xmlns="http://www.w3.org/1999/xhtml">创新杯</a>
+      </li>
+    </ul>
+  </div>
+</div>
+            </div>
+        </footer>
+
+        <footer class="bottom">
+            <span class="localeContainer">
+                
+    <form class="selectLocale" id="selectLocaleForm" action="https://msdn.microsoft.com/zh-cn/selectlocale-dmc">
+        <input type="hidden" name="fromPage" value="https%3a%2f%2fmsdn.microsoft.com%2fzh-cn%2flibrary%2fms235636.aspx" />
+        <a href="#" onclick="$('#selectLocaleForm').submit();return false;" title="更改您的语言">中国 (简体中文)</a>
+    </form>
+
+
+            </span>
+
+            <div data-fragmentName="BottomLinks" id="Fragment_BottomLinks" xmlns="http://www.w3.org/1999/xhtml">
+  
+  <div class="linkList">
+    <ul class="links horizontal">
+      <li>
+        <a href="https://msdn.microsoft.com/newsletter.aspx" id="BottomLinks_2148_7" xmlns="http://www.w3.org/1999/xhtml">新闻稿</a>
+      </li>
+      <li>
+        <a href="https://msdn.microsoft.com/dn529288" id="BottomLinks_2148_8" xmlns="http://www.w3.org/1999/xhtml">隐私&amp; Cookie</a>
+      </li>
+      <li>
+        <a href="https://msdn.microsoft.com/cc300389" id="BottomLinks_2148_9" xmlns="http://www.w3.org/1999/xhtml">使用条款</a>
+      </li>
+      <li>
+        <a href="https://www.microsoft.com/en-us/legal/intellectualproperty/Trademarks/EN-US.aspx" id="BottomLinks_2148_10" xmlns="http://www.w3.org/1999/xhtml">商标</a>
+      </li>
+    </ul>
+  </div>
+</div>
+            <span class="logoLegal">
+                <span class="logo"></span>
+                <span class="copyright">© 2016 Microsoft</span>
+            </span>
+        </footer>
+    </div>
+    
+
+    </div>
+
+        <div class="footerPrintView">
+            <div class="footerCopyrightPrintView">© 2016 Microsoft</div>
+        </div>
+
+        
+        
+
+        
+        
+        
+
+    <input id="tocPaddingPerLevel" type="hidden" value="17" />
+
+
+
+        <input id="MtpsDevice" type="hidden" value="Default" />
+
+
+<![CDATA[ Third party scripts and code linked to or referenced from this website are licensed to you by the parties that own such code, not by Microsoft.  See ASP.NET Ajax CDN Terms of Use – http://www.asp.net/ajaxlibrary/CDN.ashx. ]]>
+
+        
+        
+        
+            
+        
+
+
+
+
+
+
+<noscript><div><img alt="DCSIMG" id="Img1" width="1" height="1" src="https://m.webtrends.com/dcsmgru7m99k7mqmgrhudo0k8_8c6m/njs.gif?dcsuri=/nojavascript&amp;WT.js=No" /></div></noscript>
+
+
+
+
+
+
+
+
+<div id="globalRequestVerification">
+    <input name="__RequestVerificationToken" type="hidden" value="-8WUvLfnuRJo8INENwElxRJ0zZOeC6_Xb0U98HdQVc6lR1vAwW5Gn0xgtGK33uOeZL9EyEDPqCgGkPARpusUVRP8Fwk1" />
+</div>
+
+
+    </div>
+
+    
+    
+
+    
+
+    
+    
+    
+<script type="text/javascript" class="mtps-injected">
+/*<![CDATA[*/
+(function(window,document){"use strict";function preload(scripts){for(var result=[],script,e,i=0;i<scripts.length;i++)script=scripts[i],script.hasOwnProperty("url")&&(e=document.createElement("script"),e.src=script.url,script.throwaway=e),result.push(script);return result}function inject(scripts,index){var script,elem;if(index>=scripts.length){delete mtps.injectScripts;return}script=scripts[index];elem=document.createElement("script");elem.className="mtps-injected";elem.async=!1;var isLoaded=!1,timeoutId=0,injectNextFnName="",injectNext=elem.onerror=function(){isLoaded||(isLoaded=!0,inject(scripts,index+1),window.clearTimeout(timeoutId),elem.onload=elem.onerror=elem.onreadystatechange=null,injectNextFnName&&delete mtps[injectNextFnName],elem.removeEventListener&&elem.removeEventListener("load",injectNext,!1))};elem.addEventListener?elem.addEventListener("load",injectNext,!1):elem.readyState==="uninitialized"?elem.onreadystatechange=function(){(this.readyState==="loaded"||this.readyState==="complete")&&injectNext()}:elem.onload=injectNext;script.hasOwnProperty("url")?(timeoutId=window.setTimeout(injectNext,12e4),elem.src=script.url):(injectNextFnName="_injectNextScript_"+index,mtps[injectNextFnName]=injectNext,timeoutId=window.setTimeout(injectNext,2e3),elem.text="try {\n"+script.txt+"\n} finally { MTPS."+injectNextFnName+" && MTPS."+injectNextFnName+"(); }");parent.appendChild(elem)}var mtps=window.MTPS||(window.MTPS={}),parent=document.getElementsByTagName("head")[0];mtps.injectScripts=function(scripts){inject(preload(scripts),0)}})(window,document);
+MTPS.injectScripts([
+	{ txt: "/**/\r\n(window.MTPS || (window.MTPS = {})).cdnDomains || (window.MTPS.cdnDomains = { \r\n\t\"image\": \"https://i-msdn.sec.s-msft.com\", \r\n\t\"js\": \"https://i2-msdn.sec.s-msft.com\", \r\n\t\"css\": \"https://i-msdn.sec.s-msft.com\", \r\n\t\"ttf\": \"https://i-msdn.sec.s-msft.com\"\r\n});\r\n/**/" },
+	{ txt: "//\n  var literalNormalizedUrl = \u0027/zh-cn/library/ms235636(l=zh-cn,v=vs.140).aspx\u0027;\n  var wt_nvr_ru = \u0027WT_NVR_RU\u0027;\n  var wt_fpcdom = \u0027.microsoft.com\u0027;\n  var wt_domlist = \u0027msdn.microsoft.com\u0027;\n  var wt_pathlist = \u0027\u0027;\n  var wt_paramlist = \u0027DCSext.mtps_devcenter\u0027;\n  var wt_siteid = \u0027MSDN\u0027;\n  var gDomain = \u0027m.webtrends.com\u0027;\n  var gDcsId = \u0027dcsmgru7m99k7mqmgrhudo0k8_8c6m\u0027;\n  var gFpc = \u0027WT_FPC\u0027;\n\n\n\n  if (document.cookie.indexOf(gFpc + \"=\") == -1) {\n    var wtidJs = document.createElement(\"script\");\n    wtidJs.src = \"//\" + gDomain + \"/\" + gDcsId + \"/wtid.js\";\n    document.getElementsByTagName(\"head\")[0].appendChild(wtidJs);\n  }\n\n\n\n  var detectedLocale = \u0027zh-cn\u0027;\n  var wtsp = \u0027msdnlib_devtools_lang\u0027;\n  var gTrackEvents = \u00270\u0027;\n/**/" },
+	{ txt: "//\n\n        window.appInsightsId = \u00275eb1b2eb-c47a-497a-a7ac-a1c230b2882f\u0027;\n        //" },
+	{ url: "https://i2-msdn.sec.s-msft.com/Combined.js?resources=0:Utilities,1:Layout,2:Header,3:Breadcrumbs,4:LibraryRightNavigationMenu,4:PrintExportButton,5:SkinnyRating,1:Rating,2:Footer,0:Topic,6:webtrendsscript,0:AppInsightsPerf,3:ResponsiveToc,0:ABTestControl,4:WEDCS,3:CmpgrpForHeader,0:livefyre,0:Comment,1:SearchBox;/Areas/Epx/Content/Scripts:0,/Areas/Epx/Themes/Base/Content:1,/Areas/Centers/Themes/StandardDevCenter/Content:2,/Areas/Library/Content:3,/Areas/Library/Themes/Base/Content:4,/Areas/Library/Themes/Msdn/Content:5,/Areas/Global/Content/Webtrends/resources:6\u0026amp;hashKey=3A523AF46D0DCF73FB301B08B46BEA73\u0026amp;v=F0BD9A5961EEA7D465215005035E63CC" },
+	{ url: "https://i1.services.social.microsoft.com/search/Widgets/SearchBox.jss?boxid=HeaderSearchTextBox\u0026btnid=HeaderSearchButton\u0026pgArea=header\u0026brand=Msdn\u0026loc=zh-cn\u0026focusOnInit=false\u0026emptyWatermark=true\u0026searchButtonTooltip=搜索 MSDN" },
+	{ txt: "//\n    MTPS = window.MTPS || {};\n    MTPS.Translation = window.MTPS.Translation || {};\n\n    MTPS.Translation.TranslationType =  0;\n    \n    \n        \n        MTPS.Translation.EditorLink = {\n            includeEditor : 0,\n            editLink: \"https://msdn.microsoft.com/zh-cn/library/translation/edit/ms235636.aspx\",\n            editLinkText: \"建议更好的翻译\"\n        };\n        \n    //" },
+	{ url: "https://i2-msdn.sec.s-msft.com/Combined.js?resources=0:jquery.popup,0:Translator;/Areas/Library/Content:0\u0026amp;hashKey=16D24150BAC1A18066CEC17E9B28E03E\u0026amp;v=F0BD9A5961EEA7D465215005035E63CC" },
+	{ txt: "MTPS = window.MTPS || {}; MTPS.LocalizedStrings = window.MTPS.LocalizedStrings || {}; MTPS.LocalizedStrings.ExpandButtonTooltip = \u0027展开\u0027; MTPS.LocalizedStrings.CollapseButtonTooltip = \u0027折叠\u0027; MTPS.LocalizedStrings.EnhancedExpandTooltip = \u0027单击以展开。双击以全部展开。\u0027; MTPS.LocalizedStrings.EnhancedCollapseTooltip = \u0027单击以折叠。双击以全部折叠。\u0027; MTPS.LocalizedStrings.ExpandAllButtonTooltip = \u0027全部展开\u0027; MTPS.LocalizedStrings.CollapseAllButtonTooltip = \u0027全部折叠\u0027;" },
+	{ url: "https://i2-msdn.sec.s-msft.com/Combined.js?resources=0:LibraryMemberFilter,1:Toc_Fixed,1:CodeSnippet,1:TopicNotInScope,0:ResponsiveSupport,1:VersionSelector,1:SurveyBroker;/Areas/Library/Content:0,/Areas/Epx/Content/Scripts:1\u0026amp;hashKey=CDA41F7EA7DE185FBCE7B189AEA99930\u0026amp;v=F0BD9A5961EEA7D465215005035E63CC" },
+	{ txt: "$(document).ready(function() {\n        try {\n            var token = $(\"#globalRequestVerification input[name=\u0027__RequestVerificationToken\u0027]\").clone();\n            $(\"#siteFeedbackForm\").append(token);\n        } catch(err) {\n            \n        }\n    });" }
+]);
+
+/*]]>*/
+</script></body>
+</html>
