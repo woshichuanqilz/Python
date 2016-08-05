@@ -1,7 +1,10 @@
 import pyttsx
 engine = pyttsx.init()
 voices = engine.getProperty('voices')
+
+text = "A bear walks into a bar and says to the bartender, I'll have a pint of beer and a.......... packet of peanuts."
 for voice in voices:
-   engine.setProperty('voice', voice.id)
-   engine.say('The quick brown fox jumped over the lazy dog.')
+    if 'ZIRA' in voice.id:
+        engine.setProperty('voice', voice.id)
+        engine.say(text)
 engine.runAndWait()

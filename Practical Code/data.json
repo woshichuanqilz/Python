@@ -1,19 +1,13 @@
 {
-    "maps": [
+    "colorxy": [
         {
-            "id": "blabla",
-            "iscategorical": "0"
+            "x": "",
+            "y": "",
+            "color": "0"
         },
         {
             "id": "blabla",
             "iscategorical": "0"
         }
-    ],
-    "masks": {
-        "id": "valore"
-    },
-    "om_points": "value",
-    "parameters": {
-        "id": "valore"
-    }
+    ]
 }
