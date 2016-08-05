@@ -6,5 +6,3 @@ with open('data2.json') as data_file:
 
 
 print data["colorxy"][0]["x"]
-# print data["masks"]["id"]
-# print data["om_points"]
