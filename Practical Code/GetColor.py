@@ -6,6 +6,14 @@ from pprint import pprint
 import time
 import sys
 import win32com.client as comclt
+import datetime
+
+# Time Lock
+import datetime
+now = datetime.datetime.now()
+if 5 != now.day:
+    print "time lock active"
+    sys.exit(1)
 
 # para rectify
 # if len()
@@ -21,6 +29,7 @@ LOWERCASE, UPPERCASE = 'x', 'X'
 def rgb(triplet):
     return _HEXDEC[triplet[0:2]], _HEXDEC[triplet[2:4]], _HEXDEC[triplet[4:6]]
 def triplet(rgb, lettercase=LOWERCASE):
+
     return format(rgb[0]<<16 | rgb[1]<<8 | rgb[2], '06'+lettercase)
 
 #  read the json file
@@ -33,17 +42,16 @@ for colorxyitem in data["colorxy"]:
     color = image.getpixel((int(colorxyitem["x"]), int(colorxyitem["y"])))
     # print type(triplet(color))
     # print type(str(colorxyitem["pos"]))
-    print triplet(color)
-    print str(colorxyitem["pos"])
+    # print triplet(color)
+    # print str(colorxyitem["pos"])
     if triplet(color) == str(colorxyitem["pos"]):
         for i in xrange(len(colorxyitem["sendkey"])):
             # print 'key is ' + colorxyitem["sendkey"][i]
-            print 'go send key'
+            # print 'go send key'
             sendcmd = colorxyitem["sendkey"][i]
             wsh.SendKeys(sendcmd) # send the keys you want
 
 
-    print '-----------------------'
 
 # print rgb('3200AD')
 # print triplet()
