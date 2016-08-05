@@ -5,23 +5,61 @@ import json
 from pprint import pprint
 import time
 import sys
-time.clock()
-import sys  
+import win32com.client as comclt
+
+# para rectify
 # if len()
-for i in range(len(sys.argv)):
-    print "the para is %d : %s" % (i,sys.argv[i])
-image = ImageGrab.grab()
-print 'size of the image : height is %d, width is %d' % (image.height, image.width)
-color = image.getpixel((int(sys.argv[1]), int(sys.argv[2])))
-print color
-print type(color)
-print(time.clock())
 
-sys.exit(72)
+# Init WScript
+wsh= comclt.Dispatch("WScript.Shell")
 
+# Hex to Decimal
+_NUMERALS = '0123456789abcdefABCDEF'
+_HEXDEC = {v: int(v, 16) for v in (x+y for x in _NUMERALS for y in _NUMERALS)}
+LOWERCASE, UPPERCASE = 'x', 'X'
 
-with open('data2.json') as data_file:    
+def rgb(triplet):
+    return _HEXDEC[triplet[0:2]], _HEXDEC[triplet[2:4]], _HEXDEC[triplet[4:6]]
+def triplet(rgb, lettercase=LOWERCASE):
+    return format(rgb[0]<<16 | rgb[1]<<8 | rgb[2], '06'+lettercase)
+
+#  read the json file
+with open('colorxy.json') as data_file:    
     data = json.load(data_file)
 
+image = ImageGrab.grab()
 
-print data["colorxy"][0]["x"]
+for colorxyitem in data["colorxy"]:
+    color = image.getpixel((int(colorxyitem["x"]), int(colorxyitem["y"])))
+    # print type(triplet(color))
+    # print type(str(colorxyitem["pos"]))
+    print triplet(color)
+    print str(colorxyitem["pos"])
+    if triplet(color) == str(colorxyitem["pos"]):
+        for i in xrange(len(colorxyitem["sendkey"])):
+            # print 'key is ' + colorxyitem["sendkey"][i]
+            print 'go send key'
+            sendcmd = colorxyitem["sendkey"][i]
+            wsh.SendKeys(sendcmd) # send the keys you want
+
+
+    print '-----------------------'
+
+# print rgb('3200AD')
+# print triplet()
+
+
+#######################################
+    # print 'x = ' + colorxyitem["x"]
+    # print 'y = ' + colorxyitem["y"]
+    # print color
+    # print type(color)
+# print data["colorxy"][0]["x"]
+# print 'size of the image : height is %d, width is %d' % (image.height, image.width)
+# print color
+# print type(color)
+# put the dec to hex
+# for i in xrange(1, 20 , 2):
+    # color = image.getpixel((i * 10, i * 5))
+    # print triplet(color)
+
