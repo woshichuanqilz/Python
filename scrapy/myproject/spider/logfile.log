@@ -1,0 +1,1307 @@
+2016-08-07 17:38:09 [scrapy] INFO: Scrapy 1.1.0 started (bot: lzscrapy)
+2016-08-07 17:38:09 [scrapy] INFO: Overridden settings: {'COOKIES_DEBUG': True, 'NEWSPIDER_MODULE': 'lzscrapy.spiders', 'SPIDER_MODULES': ['lzscrapy.spiders'], 'LOG_FILE': 'logfile.log', 'BOT_NAME': 'lzscrapy'}
+2016-08-07 17:38:23 [scrapy] INFO: Scrapy 1.1.0 started (bot: lzscrapy)
+2016-08-07 17:38:23 [scrapy] INFO: Overridden settings: {'COOKIES_DEBUG': True, 'NEWSPIDER_MODULE': 'lzscrapy.spiders', 'SPIDER_MODULES': ['lzscrapy.spiders'], 'LOG_FILE': 'logfile.log', 'BOT_NAME': 'lzscrapy'}
+2016-08-07 17:38:24 [scrapy] INFO: Enabled extensions:
+['scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.corestats.CoreStats']
+2016-08-07 17:38:26 [scrapy] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.chunked.ChunkedTransferMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2016-08-07 17:38:26 [scrapy] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2016-08-07 17:38:26 [scrapy] INFO: Enabled item pipelines:
+[]
+2016-08-07 17:38:26 [scrapy] INFO: Spider opened
+2016-08-07 17:38:26 [scrapy] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2016-08-07 17:38:26 [scrapy] DEBUG: Telnet console listening on 127.0.0.1:6023
+2016-08-07 17:38:32 [scrapy] DEBUG: Received cookies from: <200 http://deals.souq.com/ae-en/>
+Set-Cookie: AWSELB=E51545AD1CF944BE0001E552275CF10BE8F9152ACC4DDC293008D95D98540D45AD32E82AF2EFCC644D09AA5A62E07120D1FA9B243F8C7F45D0253942326F03A3F38C39C951;PATH=/;MAX-AGE=1800
+
+2016-08-07 17:38:32 [scrapy] DEBUG: Crawled (200) <GET http://deals.souq.com/ae-en/> (referer: None)
+2016-08-07 17:38:32 [scrapy] DEBUG: Filtered duplicate request: <GET http://uae.souq.com/ae-en/unit_one.php?id_unit=26565600295> - no more duplicates will be shown (see DUPEFILTER_DEBUG to show all duplicates)
+2016-08-07 17:38:33 [scrapy] DEBUG: Received cookies from: <301 http://uae.souq.com/ae-en/unit_one.php?id_unit=55079500478>
+Set-Cookie: PLATEFORMC=ae; expires=Mon, 07-Aug-2017 09:38:33 GMT; path=/; domain=.souq.com
+
+Set-Cookie: PHPSESSID=3usak2gqlk1fa0p7asrh86ulfe3ractl; path=/; domain=.souq.com; HttpOnly
+
+Set-Cookie: PLATEFORML=en; expires=Mon, 07-Aug-2017 09:38:33 GMT; path=/; domain=.souq.com
+
+Set-Cookie: c_Ident=14705627137305; expires=Wed, 05-Aug-2026 09:38:33 GMT; path=/; domain=.souq.com
+
+Set-Cookie: registration_source=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: registration_failed=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: login_source=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: login_failed=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: UserViews=6155761; expires=Tue, 06-Sep-2016 09:38:33 GMT; path=/
+
+Set-Cookie: NSC_tpvr-83+63+9+208-91=ffffffffb32aa51c45525d5f4f58455e445a4a423660;path=/;httponly
+
+2016-08-07 17:38:33 [scrapy] DEBUG: Redirecting (301) to <GET http://uae.souq.com/ae-en/gloria-vanderbilt-vanderbilt-for-women-100ml-eau-de-toilette-55079500478/u/> from <GET http://uae.souq.com/ae-en/unit_one.php?id_unit=55079500478>
+2016-08-07 17:38:33 [scrapy] DEBUG: Sending cookies to: <GET http://uae.souq.com/ae-en/gloria-vanderbilt-vanderbilt-for-women-100ml-eau-de-toilette-55079500478/u/>
+Cookie: NSC_tpvr-83+63+9+208-91=ffffffffb32aa51c45525d5f4f58455e445a4a423660; UserViews=6155761; PLATEFORML=en; PLATEFORMC=ae; PHPSESSID=3usak2gqlk1fa0p7asrh86ulfe3ractl; c_Ident=14705627137305
+
+2016-08-07 17:38:33 [scrapy] DEBUG: Received cookies from: <301 http://uae.souq.com/ae-en/unit_one.php?id_unit=28246200295>
+Set-Cookie: PLATEFORMC=ae; expires=Mon, 07-Aug-2017 09:38:33 GMT; path=/; domain=.souq.com
+
+Set-Cookie: PHPSESSID=9bnac4fbsojdnirm15c1p8ak73l132u3; path=/; domain=.souq.com; HttpOnly
+
+Set-Cookie: PLATEFORML=en; expires=Mon, 07-Aug-2017 09:38:33 GMT; path=/; domain=.souq.com
+
+Set-Cookie: c_Ident=14705627137316; expires=Wed, 05-Aug-2026 09:38:33 GMT; path=/; domain=.souq.com
+
+Set-Cookie: registration_source=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: registration_failed=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: login_source=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: login_failed=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: UserViews=7332636; expires=Tue, 06-Sep-2016 09:38:33 GMT; path=/
+
+Set-Cookie: NSC_tpvr-83+63+9+208-91=ffffffffb32aa51c45525d5f4f58455e445a4a423660;path=/;httponly
+
+2016-08-07 17:38:33 [scrapy] DEBUG: Redirecting (301) to <GET http://uae.souq.com/ae-en/just-gold-makeup-kit-jg-232-28246200295/u/> from <GET http://uae.souq.com/ae-en/unit_one.php?id_unit=28246200295>
+2016-08-07 17:38:33 [scrapy] DEBUG: Received cookies from: <301 http://uae.souq.com/ae-en/unit_one.php?id_unit=50194100478>
+Set-Cookie: PLATEFORMC=ae; expires=Mon, 07-Aug-2017 09:38:33 GMT; path=/; domain=.souq.com
+
+Set-Cookie: PHPSESSID=lkavn8det656sdd9r9qlvpbrponuaadd; path=/; domain=.souq.com; HttpOnly
+
+Set-Cookie: PLATEFORML=en; expires=Mon, 07-Aug-2017 09:38:33 GMT; path=/; domain=.souq.com
+
+Set-Cookie: c_Ident=14705627137530; expires=Wed, 05-Aug-2026 09:38:33 GMT; path=/; domain=.souq.com
+
+Set-Cookie: registration_source=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: registration_failed=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: login_source=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: login_failed=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: UserViews=8716917; expires=Tue, 06-Sep-2016 09:38:33 GMT; path=/
+
+Set-Cookie: NSC_tpvr-83+63+9+208-91=ffffffffb32aa51c45525d5f4f58455e445a4a423660;path=/;httponly
+
+2016-08-07 17:38:33 [scrapy] DEBUG: Redirecting (301) to <GET http://uae.souq.com/ae-en/seductive-homme-by-guess-for-men-eau-de-toilette-100-ml-50194100478/u/> from <GET http://uae.souq.com/ae-en/unit_one.php?id_unit=50194100478>
+2016-08-07 17:38:33 [scrapy] DEBUG: Received cookies from: <301 http://uae.souq.com/ae-en/unit_one.php?id_unit=4829800491>
+Set-Cookie: PLATEFORMC=ae; expires=Mon, 07-Aug-2017 09:38:33 GMT; path=/; domain=.souq.com
+
+Set-Cookie: PHPSESSID=c78fjj1m86jf089ofsucq218emdjtqpq; path=/; domain=.souq.com; HttpOnly
+
+Set-Cookie: PLATEFORML=en; expires=Mon, 07-Aug-2017 09:38:33 GMT; path=/; domain=.souq.com
+
+Set-Cookie: c_Ident=14705627137306; expires=Wed, 05-Aug-2026 09:38:33 GMT; path=/; domain=.souq.com
+
+Set-Cookie: registration_source=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: registration_failed=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: login_source=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: login_failed=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: UserViews=10171187; expires=Tue, 06-Sep-2016 09:38:33 GMT; path=/
+
+Set-Cookie: NSC_tpvr-83+63+9+208-91=ffffffffb32aa51c45525d5f4f58455e445a4a423660;path=/;httponly
+
+2016-08-07 17:38:33 [scrapy] DEBUG: Redirecting (301) to <GET http://uae.souq.com/ae-en/philips-essential-care-hair-straightener-hp8321-4829800491/u/> from <GET http://uae.souq.com/ae-en/unit_one.php?id_unit=4829800491>
+2016-08-07 17:38:33 [scrapy] DEBUG: Sending cookies to: <GET http://uae.souq.com/ae-en/philips-essential-care-hair-straightener-hp8321-4829800491/u/>
+Cookie: NSC_tpvr-83+63+9+208-91=ffffffffb32aa51c45525d5f4f58455e445a4a423660; UserViews=10171187; PLATEFORML=en; PLATEFORMC=ae; PHPSESSID=c78fjj1m86jf089ofsucq218emdjtqpq; c_Ident=14705627137306
+
+2016-08-07 17:38:33 [scrapy] DEBUG: Sending cookies to: <GET http://uae.souq.com/ae-en/seductive-homme-by-guess-for-men-eau-de-toilette-100-ml-50194100478/u/>
+Cookie: NSC_tpvr-83+63+9+208-91=ffffffffb32aa51c45525d5f4f58455e445a4a423660; UserViews=10171187; PLATEFORML=en; PLATEFORMC=ae; PHPSESSID=c78fjj1m86jf089ofsucq218emdjtqpq; c_Ident=14705627137306
+
+2016-08-07 17:38:33 [scrapy] DEBUG: Sending cookies to: <GET http://uae.souq.com/ae-en/just-gold-makeup-kit-jg-232-28246200295/u/>
+Cookie: NSC_tpvr-83+63+9+208-91=ffffffffb32aa51c45525d5f4f58455e445a4a423660; UserViews=10171187; PLATEFORML=en; PLATEFORMC=ae; PHPSESSID=c78fjj1m86jf089ofsucq218emdjtqpq; c_Ident=14705627137306
+
+2016-08-07 17:38:33 [scrapy] DEBUG: Received cookies from: <301 http://uae.souq.com/ae-en/unit_one.php?id_unit=29743100295>
+Set-Cookie: PLATEFORMC=ae; expires=Mon, 07-Aug-2017 09:38:33 GMT; path=/; domain=.souq.com
+
+Set-Cookie: PHPSESSID=gu35gniu2tltpbbffcccgmhevbm8nvpo; path=/; domain=.souq.com; HttpOnly
+
+Set-Cookie: PLATEFORML=en; expires=Mon, 07-Aug-2017 09:38:33 GMT; path=/; domain=.souq.com
+
+Set-Cookie: c_Ident=14705627137560; expires=Wed, 05-Aug-2026 09:38:33 GMT; path=/; domain=.souq.com
+
+Set-Cookie: registration_source=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: registration_failed=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: login_source=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: login_failed=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: UserViews=10030397; expires=Tue, 06-Sep-2016 09:38:33 GMT; path=/
+
+Set-Cookie: NSC_tpvr-83+63+9+208-91=ffffffffb32aa51c45525d5f4f58455e445a4a423660;path=/;httponly
+
+2016-08-07 17:38:33 [scrapy] DEBUG: Redirecting (301) to <GET http://uae.souq.com/ae-en/elizabeth-arden-36-piece-all-day-chic-color-collection-set-29743100295/u/> from <GET http://uae.souq.com/ae-en/unit_one.php?id_unit=29743100295>
+2016-08-07 17:38:33 [scrapy] DEBUG: Received cookies from: <301 http://uae.souq.com/ae-en/unit_one.php?id_unit=55120900478>
+Set-Cookie: PLATEFORMC=ae; expires=Mon, 07-Aug-2017 09:38:33 GMT; path=/; domain=.souq.com
+
+Set-Cookie: PHPSESSID=ab619vl2rsv9vruic90mbje050sl10ba; path=/; domain=.souq.com; HttpOnly
+
+Set-Cookie: PLATEFORML=en; expires=Mon, 07-Aug-2017 09:38:33 GMT; path=/; domain=.souq.com
+
+Set-Cookie: c_Ident=14705627137597; expires=Wed, 05-Aug-2026 09:38:33 GMT; path=/; domain=.souq.com
+
+Set-Cookie: registration_source=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: registration_failed=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: login_source=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: login_failed=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: UserViews=5606171; expires=Tue, 06-Sep-2016 09:38:33 GMT; path=/
+
+Set-Cookie: NSC_tpvr-83+63+9+208-91=ffffffffb32aa51c45525d5f4f58455e445a4a423660;path=/;httponly
+
+2016-08-07 17:38:33 [scrapy] DEBUG: Redirecting (301) to <GET http://uae.souq.com/ae-en/dunhill-desire-red-100ml-for-men-55120900478/u/> from <GET http://uae.souq.com/ae-en/unit_one.php?id_unit=55120900478>
+2016-08-07 17:38:33 [scrapy] DEBUG: Sending cookies to: <GET http://uae.souq.com/ae-en/dunhill-desire-red-100ml-for-men-55120900478/u/>
+Cookie: NSC_tpvr-83+63+9+208-91=ffffffffb32aa51c45525d5f4f58455e445a4a423660; UserViews=5606171; PLATEFORML=en; PLATEFORMC=ae; PHPSESSID=ab619vl2rsv9vruic90mbje050sl10ba; c_Ident=14705627137597
+
+2016-08-07 17:38:33 [scrapy] DEBUG: Sending cookies to: <GET http://uae.souq.com/ae-en/elizabeth-arden-36-piece-all-day-chic-color-collection-set-29743100295/u/>
+Cookie: NSC_tpvr-83+63+9+208-91=ffffffffb32aa51c45525d5f4f58455e445a4a423660; UserViews=5606171; PLATEFORML=en; PLATEFORMC=ae; PHPSESSID=ab619vl2rsv9vruic90mbje050sl10ba; c_Ident=14705627137597
+
+2016-08-07 17:38:33 [scrapy] DEBUG: Received cookies from: <301 http://uae.souq.com/ae-en/unit_one.php?id_unit=44102500478>
+Set-Cookie: PLATEFORMC=ae; expires=Mon, 07-Aug-2017 09:38:33 GMT; path=/; domain=.souq.com
+
+Set-Cookie: PHPSESSID=8ncvb9i1vn8unqq01b6134racb8t77u8; path=/; domain=.souq.com; HttpOnly
+
+Set-Cookie: PLATEFORML=en; expires=Mon, 07-Aug-2017 09:38:33 GMT; path=/; domain=.souq.com
+
+Set-Cookie: c_Ident=14705627137752; expires=Wed, 05-Aug-2026 09:38:33 GMT; path=/; domain=.souq.com
+
+Set-Cookie: registration_source=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: registration_failed=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: login_source=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: login_failed=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: UserViews=5158507; expires=Tue, 06-Sep-2016 09:38:33 GMT; path=/
+
+Set-Cookie: NSC_tpvr-83+63+9+208-91=ffffffffb32aa51c45525d5f4f58455e445a4a423660;path=/;httponly
+
+2016-08-07 17:38:33 [scrapy] DEBUG: Redirecting (301) to <GET http://uae.souq.com/ae-en/guess-girl-by-guess-for-women-eau-de-toilette-100ml-44102500478/u/> from <GET http://uae.souq.com/ae-en/unit_one.php?id_unit=44102500478>
+2016-08-07 17:38:33 [scrapy] DEBUG: Sending cookies to: <GET http://uae.souq.com/ae-en/guess-girl-by-guess-for-women-eau-de-toilette-100ml-44102500478/u/>
+Cookie: NSC_tpvr-83+63+9+208-91=ffffffffb32aa51c45525d5f4f58455e445a4a423660; UserViews=5158507; PLATEFORML=en; PLATEFORMC=ae; PHPSESSID=8ncvb9i1vn8unqq01b6134racb8t77u8; c_Ident=14705627137752
+
+2016-08-07 17:38:34 [scrapy] DEBUG: Received cookies from: <301 http://uae.souq.com/ae-en/unit_one.php?id_unit=6996100350>
+Set-Cookie: PLATEFORMC=ae; expires=Mon, 07-Aug-2017 09:38:34 GMT; path=/; domain=.souq.com
+
+Set-Cookie: PHPSESSID=tuvgsas18em43269a6mpceflrmg15rot; path=/; domain=.souq.com; HttpOnly
+
+Set-Cookie: PLATEFORML=en; expires=Mon, 07-Aug-2017 09:38:34 GMT; path=/; domain=.souq.com
+
+Set-Cookie: c_Ident=14705627141162; expires=Wed, 05-Aug-2026 09:38:34 GMT; path=/; domain=.souq.com
+
+Set-Cookie: registration_source=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: registration_failed=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: login_source=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: login_failed=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: UserViews=9201186; expires=Tue, 06-Sep-2016 09:38:34 GMT; path=/
+
+Set-Cookie: NSC_tpvr-83+63+9+208-91=ffffffffb32aa51c45525d5f4f58455e445a4a423660;path=/;httponly
+
+2016-08-07 17:38:34 [scrapy] DEBUG: Redirecting (301) to <GET http://uae.souq.com/ae-en/v-comb-head-lice-comb-6996100350/u/> from <GET http://uae.souq.com/ae-en/unit_one.php?id_unit=6996100350>
+2016-08-07 17:38:34 [scrapy] DEBUG: Sending cookies to: <GET http://uae.souq.com/ae-en/v-comb-head-lice-comb-6996100350/u/>
+Cookie: NSC_tpvr-83+63+9+208-91=ffffffffb32aa51c45525d5f4f58455e445a4a423660; UserViews=9201186; PLATEFORML=en; PLATEFORMC=ae; PHPSESSID=tuvgsas18em43269a6mpceflrmg15rot; c_Ident=14705627141162
+
+2016-08-07 17:38:34 [scrapy] DEBUG: Received cookies from: <301 http://uae.souq.com/ae-en/unit_one.php?id_unit=441500385>
+Set-Cookie: PLATEFORMC=ae; expires=Mon, 07-Aug-2017 09:38:34 GMT; path=/; domain=.souq.com
+
+Set-Cookie: PHPSESSID=2i8captgh3ub2h9j0vnnolt07ol1jpr2; path=/; domain=.souq.com; HttpOnly
+
+Set-Cookie: PLATEFORML=en; expires=Mon, 07-Aug-2017 09:38:34 GMT; path=/; domain=.souq.com
+
+Set-Cookie: c_Ident=14705627141551; expires=Wed, 05-Aug-2026 09:38:34 GMT; path=/; domain=.souq.com
+
+Set-Cookie: registration_source=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: registration_failed=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: login_source=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: login_failed=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: UserViews=6833183; expires=Tue, 06-Sep-2016 09:38:34 GMT; path=/
+
+Set-Cookie: NSC_tpvr-83+63+9+208-91=ffffffffb32aa51c45525d5f4f58455e445a4a423660;path=/;httponly
+
+2016-08-07 17:38:34 [scrapy] DEBUG: Redirecting (301) to <GET http://uae.souq.com/ae-en/crest-whitestrips-supreme-professional-strength-84-strips-441500385/u/> from <GET http://uae.souq.com/ae-en/unit_one.php?id_unit=441500385>
+2016-08-07 17:38:34 [scrapy] DEBUG: Sending cookies to: <GET http://uae.souq.com/ae-en/crest-whitestrips-supreme-professional-strength-84-strips-441500385/u/>
+Cookie: NSC_tpvr-83+63+9+208-91=ffffffffb32aa51c45525d5f4f58455e445a4a423660; UserViews=6833183; PLATEFORML=en; PLATEFORMC=ae; PHPSESSID=2i8captgh3ub2h9j0vnnolt07ol1jpr2; c_Ident=14705627141551
+
+2016-08-07 17:38:34 [scrapy] DEBUG: Received cookies from: <301 http://uae.souq.com/ae-en/unit_one.php?id_unit=28966500295>
+Set-Cookie: PLATEFORMC=ae; expires=Mon, 07-Aug-2017 09:38:34 GMT; path=/; domain=.souq.com
+
+Set-Cookie: PHPSESSID=deh500pnc3lkj1r2da54ttfe5689eole; path=/; domain=.souq.com; HttpOnly
+
+Set-Cookie: PLATEFORML=en; expires=Mon, 07-Aug-2017 09:38:34 GMT; path=/; domain=.souq.com
+
+Set-Cookie: c_Ident=14705627141672; expires=Wed, 05-Aug-2026 09:38:34 GMT; path=/; domain=.souq.com
+
+Set-Cookie: registration_source=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: registration_failed=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: login_source=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: login_failed=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: UserViews=6971609; expires=Tue, 06-Sep-2016 09:38:34 GMT; path=/
+
+Set-Cookie: NSC_tpvr-83+63+9+208-91=ffffffffb32aa51c45525d5f4f58455e445a4a423660;path=/;httponly
+
+2016-08-07 17:38:34 [scrapy] DEBUG: Redirecting (301) to <GET http://uae.souq.com/ae-en/the-balm-mary-lou-manizer-highlighter-shadow-shimmer-28966500295/u/> from <GET http://uae.souq.com/ae-en/unit_one.php?id_unit=28966500295>
+2016-08-07 17:38:34 [scrapy] DEBUG: Sending cookies to: <GET http://uae.souq.com/ae-en/the-balm-mary-lou-manizer-highlighter-shadow-shimmer-28966500295/u/>
+Cookie: NSC_tpvr-83+63+9+208-91=ffffffffb32aa51c45525d5f4f58455e445a4a423660; UserViews=6971609; PLATEFORML=en; PLATEFORMC=ae; PHPSESSID=deh500pnc3lkj1r2da54ttfe5689eole; c_Ident=14705627141672
+
+2016-08-07 17:38:34 [scrapy] DEBUG: Received cookies from: <301 http://uae.souq.com/ae-en/unit_one.php?id_unit=8972600300>
+Set-Cookie: PLATEFORMC=ae; expires=Mon, 07-Aug-2017 09:38:34 GMT; path=/; domain=.souq.com
+
+Set-Cookie: PHPSESSID=se1lv04cbg9dv0h3pth60gpn664hog7v; path=/; domain=.souq.com; HttpOnly
+
+Set-Cookie: PLATEFORML=en; expires=Mon, 07-Aug-2017 09:38:34 GMT; path=/; domain=.souq.com
+
+Set-Cookie: c_Ident=14705627141616; expires=Wed, 05-Aug-2026 09:38:34 GMT; path=/; domain=.souq.com
+
+Set-Cookie: registration_source=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: registration_failed=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: login_source=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: login_failed=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: UserViews=10954145; expires=Tue, 06-Sep-2016 09:38:34 GMT; path=/
+
+Set-Cookie: NSC_tpvr-83+63+9+208-91=ffffffffb32aa51c45525d5f4f58455e445a4a423660;path=/;httponly
+
+2016-08-07 17:38:34 [scrapy] DEBUG: Redirecting (301) to <GET http://uae.souq.com/ae-en/real-techniques-core-+-starter-set-8972600300/u/> from <GET http://uae.souq.com/ae-en/unit_one.php?id_unit=8972600300>
+2016-08-07 17:38:34 [scrapy] DEBUG: Sending cookies to: <GET http://uae.souq.com/ae-en/real-techniques-core-+-starter-set-8972600300/u/>
+Cookie: NSC_tpvr-83+63+9+208-91=ffffffffb32aa51c45525d5f4f58455e445a4a423660; UserViews=10954145; PLATEFORML=en; PLATEFORMC=ae; PHPSESSID=se1lv04cbg9dv0h3pth60gpn664hog7v; c_Ident=14705627141616
+
+2016-08-07 17:38:34 [scrapy] DEBUG: Received cookies from: <301 http://uae.souq.com/ae-en/unit_one.php?id_unit=21999700295>
+Set-Cookie: PLATEFORMC=ae; expires=Mon, 07-Aug-2017 09:38:34 GMT; path=/; domain=.souq.com
+
+Set-Cookie: PHPSESSID=incqidiitu1g5vfgalbner0h3minollp; path=/; domain=.souq.com; HttpOnly
+
+Set-Cookie: PLATEFORML=en; expires=Mon, 07-Aug-2017 09:38:34 GMT; path=/; domain=.souq.com
+
+Set-Cookie: c_Ident=14705627141833; expires=Wed, 05-Aug-2026 09:38:34 GMT; path=/; domain=.souq.com
+
+Set-Cookie: registration_source=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: registration_failed=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: login_source=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: login_failed=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: UserViews=8558802; expires=Tue, 06-Sep-2016 09:38:34 GMT; path=/
+
+Set-Cookie: NSC_tpvr-83+63+9+208-91=ffffffffb32aa51c45525d5f4f58455e445a4a423660;path=/;httponly
+
+2016-08-07 17:38:34 [scrapy] DEBUG: Redirecting (301) to <GET http://uae.souq.com/ae-en/nyx-soft-matte-lip-cream-11-different-colors-21999700295/u/> from <GET http://uae.souq.com/ae-en/unit_one.php?id_unit=21999700295>
+2016-08-07 17:38:34 [scrapy] DEBUG: Sending cookies to: <GET http://uae.souq.com/ae-en/nyx-soft-matte-lip-cream-11-different-colors-21999700295/u/>
+Cookie: NSC_tpvr-83+63+9+208-91=ffffffffb32aa51c45525d5f4f58455e445a4a423660; UserViews=8558802; PLATEFORML=en; PLATEFORMC=ae; PHPSESSID=incqidiitu1g5vfgalbner0h3minollp; c_Ident=14705627141833
+
+2016-08-07 17:38:34 [scrapy] DEBUG: Received cookies from: <301 http://uae.souq.com/ae-en/unit_one.php?id_unit=26565600295>
+Set-Cookie: PLATEFORMC=ae; expires=Mon, 07-Aug-2017 09:38:34 GMT; path=/; domain=.souq.com
+
+Set-Cookie: PHPSESSID=mqasap76cgc3e60el62t5q61gsljlakp; path=/; domain=.souq.com; HttpOnly
+
+Set-Cookie: PLATEFORML=en; expires=Mon, 07-Aug-2017 09:38:34 GMT; path=/; domain=.souq.com
+
+Set-Cookie: c_Ident=14705627141854; expires=Wed, 05-Aug-2026 09:38:34 GMT; path=/; domain=.souq.com
+
+Set-Cookie: registration_source=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: registration_failed=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: login_source=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: login_failed=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: UserViews=9444531; expires=Tue, 06-Sep-2016 09:38:34 GMT; path=/
+
+Set-Cookie: NSC_tpvr-83+63+9+208-91=ffffffffb32aa51c45525d5f4f58455e445a4a423660;path=/;httponly
+
+2016-08-07 17:38:34 [scrapy] DEBUG: Redirecting (301) to <GET http://uae.souq.com/ae-en/estee-lauder-makeup-gift-set-2016-26565600295/u/> from <GET http://uae.souq.com/ae-en/unit_one.php?id_unit=26565600295>
+2016-08-07 17:38:34 [scrapy] DEBUG: Sending cookies to: <GET http://uae.souq.com/ae-en/estee-lauder-makeup-gift-set-2016-26565600295/u/>
+Cookie: NSC_tpvr-83+63+9+208-91=ffffffffb32aa51c45525d5f4f58455e445a4a423660; UserViews=9444531; PLATEFORML=en; PLATEFORMC=ae; PHPSESSID=mqasap76cgc3e60el62t5q61gsljlakp; c_Ident=14705627141854
+
+2016-08-07 17:38:34 [scrapy] DEBUG: Received cookies from: <301 http://uae.souq.com/ae-en/unit_one.php?id_unit=7298700350>
+Set-Cookie: PLATEFORMC=ae; expires=Mon, 07-Aug-2017 09:38:34 GMT; path=/; domain=.souq.com
+
+Set-Cookie: PHPSESSID=r5g3mad6fu7ed11ftbtfpabos6o1u3r6; path=/; domain=.souq.com; HttpOnly
+
+Set-Cookie: PLATEFORML=en; expires=Mon, 07-Aug-2017 09:38:34 GMT; path=/; domain=.souq.com
+
+Set-Cookie: c_Ident=14705627141677; expires=Wed, 05-Aug-2026 09:38:34 GMT; path=/; domain=.souq.com
+
+Set-Cookie: registration_source=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: registration_failed=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: login_source=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: login_failed=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: UserViews=9520673; expires=Tue, 06-Sep-2016 09:38:34 GMT; path=/
+
+Set-Cookie: NSC_tpvr-83+63+9+208-91=ffffffffb32aa51c45525d5f4f58455e445a4a423660;path=/;httponly
+
+2016-08-07 17:38:34 [scrapy] DEBUG: Redirecting (301) to <GET http://uae.souq.com/ae-en/scholl-velvet-smooth-electronic-foot-file-with-diamond-crystals-+-cracked-heel-repair-cream-60ml-7298700350/u/> from <GET http://uae.souq.com/ae-en/unit_one.php?id_unit=7298700350>
+2016-08-07 17:38:34 [scrapy] DEBUG: Sending cookies to: <GET http://uae.souq.com/ae-en/scholl-velvet-smooth-electronic-foot-file-with-diamond-crystals-+-cracked-heel-repair-cream-60ml-7298700350/u/>
+Cookie: NSC_tpvr-83+63+9+208-91=ffffffffb32aa51c45525d5f4f58455e445a4a423660; UserViews=9520673; PLATEFORML=en; PLATEFORMC=ae; PHPSESSID=r5g3mad6fu7ed11ftbtfpabos6o1u3r6; c_Ident=14705627141677
+
+2016-08-07 17:38:34 [scrapy] DEBUG: Received cookies from: <301 http://uae.souq.com/ae-en/unit_one.php?id_unit=34436000478>
+Set-Cookie: PLATEFORMC=ae; expires=Mon, 07-Aug-2017 09:38:34 GMT; path=/; domain=.souq.com
+
+Set-Cookie: PHPSESSID=5i0vest03918n7fg6jjopjd9cr63ug86; path=/; domain=.souq.com; HttpOnly
+
+Set-Cookie: PLATEFORML=en; expires=Mon, 07-Aug-2017 09:38:34 GMT; path=/; domain=.souq.com
+
+Set-Cookie: c_Ident=14705627144618; expires=Wed, 05-Aug-2026 09:38:34 GMT; path=/; domain=.souq.com
+
+Set-Cookie: registration_source=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: registration_failed=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: login_source=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: login_failed=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: UserViews=6554442; expires=Tue, 06-Sep-2016 09:38:34 GMT; path=/
+
+Set-Cookie: NSC_tpvr-83+63+9+208-91=ffffffffb32aa51c45525d5f4f58455e445a4a423660;path=/;httponly
+
+2016-08-07 17:38:34 [scrapy] DEBUG: Redirecting (301) to <GET http://uae.souq.com/ae-en/body-intense-by-burberry-for-women-eau-de-parfum-85ml-34436000478/u/> from <GET http://uae.souq.com/ae-en/unit_one.php?id_unit=34436000478>
+2016-08-07 17:38:34 [scrapy] DEBUG: Sending cookies to: <GET http://uae.souq.com/ae-en/body-intense-by-burberry-for-women-eau-de-parfum-85ml-34436000478/u/>
+Cookie: NSC_tpvr-83+63+9+208-91=ffffffffb32aa51c45525d5f4f58455e445a4a423660; UserViews=6554442; PLATEFORML=en; PLATEFORMC=ae; PHPSESSID=5i0vest03918n7fg6jjopjd9cr63ug86; c_Ident=14705627144618
+
+2016-08-07 17:38:35 [scrapy] DEBUG: Received cookies from: <200 http://uae.souq.com/ae-en/seductive-homme-by-guess-for-men-eau-de-toilette-100-ml-50194100478/u/>
+Set-Cookie: PLATEFORMC=ae; expires=Mon, 07-Aug-2017 09:38:34 GMT; path=/; domain=.souq.com
+
+Set-Cookie: PLATEFORML=en; expires=Mon, 07-Aug-2017 09:38:34 GMT; path=/; domain=.souq.com
+
+Set-Cookie: registration_source=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: registration_failed=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: login_source=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: login_failed=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: UserViews=10171187%2C8716917; expires=Tue, 06-Sep-2016 09:38:34 GMT; path=/
+
+2016-08-07 17:38:35 [scrapy] DEBUG: Crawled (200) <GET http://uae.souq.com/ae-en/seductive-homme-by-guess-for-men-eau-de-toilette-100-ml-50194100478/u/> (referer: http://deals.souq.com/ae-en/)
+2016-08-07 17:38:35 [scrapy] DEBUG: Sending cookies to: <GET http://uae.souq.com/ae-en/unit_one.php?id_unit=6763000350>
+Cookie: NSC_tpvr-83+63+9+208-91=ffffffffb32aa51c45525d5f4f58455e445a4a423660; UserViews=10171187%2C8716917; PLATEFORML=en; PLATEFORMC=ae; PHPSESSID=5i0vest03918n7fg6jjopjd9cr63ug86; c_Ident=14705627144618
+
+2016-08-07 17:38:35 [scrapy] DEBUG: Received cookies from: <200 http://uae.souq.com/ae-en/philips-essential-care-hair-straightener-hp8321-4829800491/u/>
+Set-Cookie: PLATEFORMC=ae; expires=Mon, 07-Aug-2017 09:38:34 GMT; path=/; domain=.souq.com
+
+Set-Cookie: PLATEFORML=en; expires=Mon, 07-Aug-2017 09:38:34 GMT; path=/; domain=.souq.com
+
+Set-Cookie: registration_source=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: registration_failed=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: login_source=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: login_failed=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: UserViews=%2C10171187; expires=Tue, 06-Sep-2016 09:38:34 GMT; path=/
+
+2016-08-07 17:38:35 [scrapy] DEBUG: Crawled (200) <GET http://uae.souq.com/ae-en/philips-essential-care-hair-straightener-hp8321-4829800491/u/> (referer: http://deals.souq.com/ae-en/)
+2016-08-07 17:38:35 [scrapy] DEBUG: Sending cookies to: <GET http://uae.souq.com/ae-en/unit_one.php?id_unit=50014300478>
+Cookie: NSC_tpvr-83+63+9+208-91=ffffffffb32aa51c45525d5f4f58455e445a4a423660; UserViews=%2C10171187; PLATEFORML=en; PLATEFORMC=ae; PHPSESSID=5i0vest03918n7fg6jjopjd9cr63ug86; c_Ident=14705627144618
+
+2016-08-07 17:38:35 [scrapy] DEBUG: Scraped from <200 http://uae.souq.com/ae-en/seductive-homme-by-guess-for-men-eau-de-toilette-100-ml-50194100478/u/>
+{'Category': u'Perfumes & Fragrances', 'CurrentPrice': u'\n                        ', 'Discounted': False, 'OriginalPrice': -1, 'Title': u'Seductive Homme by Guess for Men - Eau De Toilette, 100 ml', 'Url': 'http://uae.souq.com/ae-en/seductive-homme-by-guess-for-men-eau-de-toilette-100-ml-50194100478/u/', 'SellerRating': 91, 'SoldBy': u'dod_uae', 'Savings': 0}
+2016-08-07 17:38:36 [scrapy] DEBUG: Scraped from <200 http://uae.souq.com/ae-en/philips-essential-care-hair-straightener-hp8321-4829800491/u/>
+{'Category': u'Hair Electronics', 'CurrentPrice': u'\n                        ', 'Discounted': False, 'OriginalPrice': -1, 'Title': u'Philips Essential Care Hair Straightener - HP8321', 'Url': 'http://uae.souq.com/ae-en/philips-essential-care-hair-straightener-hp8321-4829800491/u/', 'SellerRating': 96, 'SoldBy': u'Philips', 'Savings': 0}
+2016-08-07 17:38:36 [scrapy] DEBUG: Received cookies from: <200 http://uae.souq.com/ae-en/dunhill-desire-red-100ml-for-men-55120900478/u/>
+Set-Cookie: PLATEFORMC=ae; expires=Mon, 07-Aug-2017 09:38:34 GMT; path=/; domain=.souq.com
+
+Set-Cookie: PLATEFORML=en; expires=Mon, 07-Aug-2017 09:38:34 GMT; path=/; domain=.souq.com
+
+Set-Cookie: registration_source=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: registration_failed=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: login_source=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: login_failed=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: UserViews=%2C5606171; expires=Tue, 06-Sep-2016 09:38:34 GMT; path=/
+
+2016-08-07 17:38:36 [scrapy] DEBUG: Crawled (200) <GET http://uae.souq.com/ae-en/dunhill-desire-red-100ml-for-men-55120900478/u/> (referer: http://deals.souq.com/ae-en/)
+2016-08-07 17:38:36 [scrapy] DEBUG: Sending cookies to: <GET http://uae.souq.com/ae-en/unit_one.php?id_unit=49963300478>
+Cookie: NSC_tpvr-83+63+9+208-91=ffffffffb32aa51c45525d5f4f58455e445a4a423660; UserViews=%2C5606171; PLATEFORML=en; PLATEFORMC=ae; PHPSESSID=5i0vest03918n7fg6jjopjd9cr63ug86; c_Ident=14705627144618
+
+2016-08-07 17:38:36 [scrapy] DEBUG: Received cookies from: <200 http://uae.souq.com/ae-en/elizabeth-arden-36-piece-all-day-chic-color-collection-set-29743100295/u/>
+Set-Cookie: PLATEFORMC=ae; expires=Mon, 07-Aug-2017 09:38:34 GMT; path=/; domain=.souq.com
+
+Set-Cookie: PLATEFORML=en; expires=Mon, 07-Aug-2017 09:38:34 GMT; path=/; domain=.souq.com
+
+Set-Cookie: registration_source=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: registration_failed=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: login_source=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: login_failed=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: UserViews=5606171%2C10030397; expires=Tue, 06-Sep-2016 09:38:34 GMT; path=/
+
+2016-08-07 17:38:36 [scrapy] DEBUG: Crawled (200) <GET http://uae.souq.com/ae-en/elizabeth-arden-36-piece-all-day-chic-color-collection-set-29743100295/u/> (referer: http://deals.souq.com/ae-en/)
+2016-08-07 17:38:36 [scrapy] DEBUG: Sending cookies to: <GET http://uae.souq.com/ae-en/unit_one.php?id_unit=50012600478>
+Cookie: NSC_tpvr-83+63+9+208-91=ffffffffb32aa51c45525d5f4f58455e445a4a423660; UserViews=5606171%2C10030397; PLATEFORML=en; PLATEFORMC=ae; PHPSESSID=5i0vest03918n7fg6jjopjd9cr63ug86; c_Ident=14705627144618
+
+2016-08-07 17:38:36 [scrapy] DEBUG: Scraped from <200 http://uae.souq.com/ae-en/dunhill-desire-red-100ml-for-men-55120900478/u/>
+{'Category': u'Perfumes & Fragrances', 'CurrentPrice': u'\n                        ', 'Discounted': False, 'OriginalPrice': -1, 'Title': u'Dunhill Desire Red 100ml for Men', 'Url': 'http://uae.souq.com/ae-en/dunhill-desire-red-100ml-for-men-55120900478/u/', 'SellerRating': 91, 'SoldBy': u'dod_uae', 'Savings': 0}
+2016-08-07 17:38:36 [scrapy] DEBUG: Received cookies from: <200 http://uae.souq.com/ae-en/guess-girl-by-guess-for-women-eau-de-toilette-100ml-44102500478/u/>
+Set-Cookie: PLATEFORMC=ae; expires=Mon, 07-Aug-2017 09:38:34 GMT; path=/; domain=.souq.com
+
+Set-Cookie: PLATEFORML=en; expires=Mon, 07-Aug-2017 09:38:34 GMT; path=/; domain=.souq.com
+
+Set-Cookie: registration_source=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: registration_failed=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: login_source=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: login_failed=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: UserViews=%2C5158507; expires=Tue, 06-Sep-2016 09:38:34 GMT; path=/
+
+2016-08-07 17:38:36 [scrapy] DEBUG: Crawled (200) <GET http://uae.souq.com/ae-en/guess-girl-by-guess-for-women-eau-de-toilette-100ml-44102500478/u/> (referer: http://deals.souq.com/ae-en/)
+2016-08-07 17:38:36 [scrapy] DEBUG: Scraped from <200 http://uae.souq.com/ae-en/elizabeth-arden-36-piece-all-day-chic-color-collection-set-29743100295/u/>
+{'Category': u'Makeup', 'CurrentPrice': u'\n                        ', 'Discounted': False, 'OriginalPrice': -1, 'Title': u'Elizabeth Arden 36-Piece All Day Chic Color Collection Set', 'Url': 'http://uae.souq.com/ae-en/elizabeth-arden-36-piece-all-day-chic-color-collection-set-29743100295/u/', 'SellerRating': 0, 'SoldBy': u'Luxury-Beauty', 'Savings': 0}
+2016-08-07 17:38:36 [scrapy] DEBUG: Sending cookies to: <GET http://uae.souq.com/ae-en/unit_one.php?id_unit=49961400478>
+Cookie: NSC_tpvr-83+63+9+208-91=ffffffffb32aa51c45525d5f4f58455e445a4a423660; UserViews=%2C5158507; PLATEFORML=en; PLATEFORMC=ae; PHPSESSID=5i0vest03918n7fg6jjopjd9cr63ug86; c_Ident=14705627144618
+
+2016-08-07 17:38:36 [scrapy] DEBUG: Scraped from <200 http://uae.souq.com/ae-en/guess-girl-by-guess-for-women-eau-de-toilette-100ml-44102500478/u/>
+{'Category': u'Perfumes & Fragrances', 'CurrentPrice': u'\n                        ', 'Discounted': False, 'OriginalPrice': -1, 'Title': u'Guess Girl by Guess for Women - Eau de Toilette, 100ml', 'Url': 'http://uae.souq.com/ae-en/guess-girl-by-guess-for-women-eau-de-toilette-100ml-44102500478/u/', 'SellerRating': 91, 'SoldBy': u'dod_uae', 'Savings': 0}
+2016-08-07 17:38:36 [scrapy] DEBUG: Received cookies from: <301 http://uae.souq.com/ae-en/unit_one.php?id_unit=43846900478>
+Set-Cookie: PLATEFORMC=ae; expires=Mon, 07-Aug-2017 09:38:36 GMT; path=/; domain=.souq.com
+
+Set-Cookie: PHPSESSID=pt53ikdh8blj5vvop7p14ben1hpc9mhn; path=/; domain=.souq.com; HttpOnly
+
+Set-Cookie: PLATEFORML=en; expires=Mon, 07-Aug-2017 09:38:36 GMT; path=/; domain=.souq.com
+
+Set-Cookie: c_Ident=14705627168093; expires=Wed, 05-Aug-2026 09:38:36 GMT; path=/; domain=.souq.com
+
+Set-Cookie: registration_source=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: registration_failed=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: login_source=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: login_failed=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: UserViews=8716904; expires=Tue, 06-Sep-2016 09:38:36 GMT; path=/
+
+Set-Cookie: NSC_tpvr-83+63+9+208-91=ffffffffb32aa51c45525d5f4f58455e445a4a423660;path=/;httponly
+
+2016-08-07 17:38:36 [scrapy] DEBUG: Redirecting (301) to <GET http://uae.souq.com/ae-en/guess-by-marciano-for-women-eau-de-parfum-100-ml-43846900478/u/> from <GET http://uae.souq.com/ae-en/unit_one.php?id_unit=43846900478>
+2016-08-07 17:38:36 [scrapy] DEBUG: Sending cookies to: <GET http://uae.souq.com/ae-en/guess-by-marciano-for-women-eau-de-parfum-100-ml-43846900478/u/>
+Cookie: NSC_tpvr-83+63+9+208-91=ffffffffb32aa51c45525d5f4f58455e445a4a423660; UserViews=8716904; PLATEFORML=en; PLATEFORMC=ae; PHPSESSID=pt53ikdh8blj5vvop7p14ben1hpc9mhn; c_Ident=14705627168093
+
+2016-08-07 17:38:37 [scrapy] DEBUG: Received cookies from: <200 http://uae.souq.com/ae-en/just-gold-makeup-kit-jg-232-28246200295/u/>
+Set-Cookie: PLATEFORMC=ae; expires=Mon, 07-Aug-2017 09:38:34 GMT; path=/; domain=.souq.com
+
+Set-Cookie: PLATEFORML=en; expires=Mon, 07-Aug-2017 09:38:34 GMT; path=/; domain=.souq.com
+
+Set-Cookie: registration_source=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: registration_failed=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: login_source=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: login_failed=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: UserViews=10171187%2C7332636; expires=Tue, 06-Sep-2016 09:38:34 GMT; path=/
+
+2016-08-07 17:38:37 [scrapy] DEBUG: Crawled (200) <GET http://uae.souq.com/ae-en/just-gold-makeup-kit-jg-232-28246200295/u/> (referer: http://deals.souq.com/ae-en/)
+2016-08-07 17:38:37 [scrapy] DEBUG: Sending cookies to: <GET http://uae.souq.com/ae-en/unit_one.php?id_unit=4067600491>
+Cookie: NSC_tpvr-83+63+9+208-91=ffffffffb32aa51c45525d5f4f58455e445a4a423660; UserViews=10171187%2C7332636; PLATEFORML=en; PLATEFORMC=ae; PHPSESSID=pt53ikdh8blj5vvop7p14ben1hpc9mhn; c_Ident=14705627168093
+
+2016-08-07 17:38:37 [scrapy] DEBUG: Scraped from <200 http://uae.souq.com/ae-en/just-gold-makeup-kit-jg-232-28246200295/u/>
+{'Category': u'Makeup', 'CurrentPrice': u'\n                        ', 'Discounted': False, 'OriginalPrice': -1, 'Title': u'Just Gold Makeup Kit - JG 232', 'Url': 'http://uae.souq.com/ae-en/just-gold-makeup-kit-jg-232-28246200295/u/', 'SellerRating': 91, 'SoldBy': u'dod_uae', 'Savings': 0}
+2016-08-07 17:38:37 [scrapy] DEBUG: Received cookies from: <200 http://uae.souq.com/ae-en/crest-whitestrips-supreme-professional-strength-84-strips-441500385/u/>
+Set-Cookie: PLATEFORMC=ae; expires=Mon, 07-Aug-2017 09:38:35 GMT; path=/; domain=.souq.com
+
+Set-Cookie: PLATEFORML=en; expires=Mon, 07-Aug-2017 09:38:36 GMT; path=/; domain=.souq.com
+
+Set-Cookie: registration_source=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: registration_failed=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: login_source=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: login_failed=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: UserViews=%2C6833183; expires=Tue, 06-Sep-2016 09:38:36 GMT; path=/
+
+2016-08-07 17:38:37 [scrapy] DEBUG: Crawled (200) <GET http://uae.souq.com/ae-en/crest-whitestrips-supreme-professional-strength-84-strips-441500385/u/> (referer: http://deals.souq.com/ae-en/)
+2016-08-07 17:38:37 [scrapy] DEBUG: Sending cookies to: <GET http://uae.souq.com/ae-en/unit_one.php?id_unit=50195000478>
+Cookie: NSC_tpvr-83+63+9+208-91=ffffffffb32aa51c45525d5f4f58455e445a4a423660; UserViews=%2C6833183; PLATEFORML=en; PLATEFORMC=ae; PHPSESSID=pt53ikdh8blj5vvop7p14ben1hpc9mhn; c_Ident=14705627168093
+
+2016-08-07 17:38:37 [scrapy] DEBUG: Received cookies from: <200 http://uae.souq.com/ae-en/the-balm-mary-lou-manizer-highlighter-shadow-shimmer-28966500295/u/>
+Set-Cookie: PLATEFORMC=ae; expires=Mon, 07-Aug-2017 09:38:36 GMT; path=/; domain=.souq.com
+
+Set-Cookie: PLATEFORML=en; expires=Mon, 07-Aug-2017 09:38:36 GMT; path=/; domain=.souq.com
+
+Set-Cookie: registration_source=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: registration_failed=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: login_source=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: login_failed=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: UserViews=%2C6971609; expires=Tue, 06-Sep-2016 09:38:36 GMT; path=/
+
+2016-08-07 17:38:37 [scrapy] DEBUG: Crawled (200) <GET http://uae.souq.com/ae-en/the-balm-mary-lou-manizer-highlighter-shadow-shimmer-28966500295/u/> (referer: http://deals.souq.com/ae-en/)
+2016-08-07 17:38:37 [scrapy] DEBUG: Sending cookies to: <GET http://uae.souq.com/ae-en/unit_one.php?id_unit=50194900478>
+Cookie: NSC_tpvr-83+63+9+208-91=ffffffffb32aa51c45525d5f4f58455e445a4a423660; UserViews=%2C6971609; PLATEFORML=en; PLATEFORMC=ae; PHPSESSID=pt53ikdh8blj5vvop7p14ben1hpc9mhn; c_Ident=14705627168093
+
+2016-08-07 17:38:38 [scrapy] DEBUG: Scraped from <200 http://uae.souq.com/ae-en/crest-whitestrips-supreme-professional-strength-84-strips-441500385/u/>
+{'Category': u'Dental Care', 'CurrentPrice': u'\n                        ', 'Discounted': False, 'OriginalPrice': -1, 'Title': u'Crest Whitestrips Supreme Professional Strength 84 strips', 'Url': 'http://uae.souq.com/ae-en/crest-whitestrips-supreme-professional-strength-84-strips-441500385/u/', 'SellerRating': 91, 'SoldBy': u'dod_uae', 'Savings': 0}
+2016-08-07 17:38:38 [scrapy] DEBUG: Scraped from <200 http://uae.souq.com/ae-en/the-balm-mary-lou-manizer-highlighter-shadow-shimmer-28966500295/u/>
+{'Category': u'Makeup', 'CurrentPrice': u'\n                        ', 'Discounted': False, 'OriginalPrice': -1, 'Title': u'The Balm Mary-Lou Manizer Highlighter, Shadow & Shimmer', 'Url': 'http://uae.souq.com/ae-en/the-balm-mary-lou-manizer-highlighter-shadow-shimmer-28966500295/u/', 'SellerRating': 0, 'SoldBy': u'Stashed-Dubai', 'Savings': 0}
+2016-08-07 17:38:38 [scrapy] DEBUG: Received cookies from: <200 http://uae.souq.com/ae-en/v-comb-head-lice-comb-6996100350/u/>
+Set-Cookie: PLATEFORMC=ae; expires=Mon, 07-Aug-2017 09:38:35 GMT; path=/; domain=.souq.com
+
+Set-Cookie: PLATEFORML=en; expires=Mon, 07-Aug-2017 09:38:35 GMT; path=/; domain=.souq.com
+
+Set-Cookie: registration_source=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: registration_failed=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: login_source=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: login_failed=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: UserViews=%2C9201186; expires=Tue, 06-Sep-2016 09:38:36 GMT; path=/
+
+2016-08-07 17:38:38 [scrapy] DEBUG: Crawled (200) <GET http://uae.souq.com/ae-en/v-comb-head-lice-comb-6996100350/u/> (referer: http://deals.souq.com/ae-en/)
+2016-08-07 17:38:38 [scrapy] DEBUG: Sending cookies to: <GET http://uae.souq.com/ae-en/unit_one.php?id_unit=40169100478>
+Cookie: NSC_tpvr-83+63+9+208-91=ffffffffb32aa51c45525d5f4f58455e445a4a423660; UserViews=%2C9201186; PLATEFORML=en; PLATEFORMC=ae; PHPSESSID=pt53ikdh8blj5vvop7p14ben1hpc9mhn; c_Ident=14705627168093
+
+2016-08-07 17:38:38 [scrapy] DEBUG: Scraped from <200 http://uae.souq.com/ae-en/v-comb-head-lice-comb-6996100350/u/>
+{'Category': u'Electrical Personal Care', 'CurrentPrice': u'\n                        ', 'Discounted': False, 'OriginalPrice': -1, 'Title': u'V-Comb Head Lice Comb', 'Url': 'http://uae.souq.com/ae-en/v-comb-head-lice-comb-6996100350/u/', 'SellerRating': 100, 'SoldBy': u'user-fnmp', 'Savings': 0}
+2016-08-07 17:38:38 [scrapy] DEBUG: Received cookies from: <301 http://uae.souq.com/ae-en/unit_one.php?id_unit=6763000350>
+Set-Cookie: PLATEFORMC=ae; expires=Mon, 07-Aug-2017 09:38:38 GMT; path=/; domain=.souq.com
+
+Set-Cookie: PLATEFORML=en; expires=Mon, 07-Aug-2017 09:38:38 GMT; path=/; domain=.souq.com
+
+Set-Cookie: registration_source=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: registration_failed=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: login_source=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: login_failed=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: UserViews=10171187%2C8716917%2C9341457; expires=Tue, 06-Sep-2016 09:38:38 GMT; path=/
+
+2016-08-07 17:38:38 [scrapy] DEBUG: Redirecting (301) to <GET http://uae.souq.com/ae-en/philips-lumea-ipl-hair-removal-system-1997-6763000350/u/> from <GET http://uae.souq.com/ae-en/unit_one.php?id_unit=6763000350>
+2016-08-07 17:38:38 [scrapy] DEBUG: Received cookies from: <200 http://uae.souq.com/ae-en/gloria-vanderbilt-vanderbilt-for-women-100ml-eau-de-toilette-55079500478/u/>
+Set-Cookie: PLATEFORMC=ae; expires=Mon, 07-Aug-2017 09:38:34 GMT; path=/; domain=.souq.com
+
+Set-Cookie: PLATEFORML=en; expires=Mon, 07-Aug-2017 09:38:34 GMT; path=/; domain=.souq.com
+
+Set-Cookie: registration_source=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: registration_failed=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: login_source=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: login_failed=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: UserViews=%2C6155761; expires=Tue, 06-Sep-2016 09:38:34 GMT; path=/
+
+2016-08-07 17:38:38 [scrapy] DEBUG: Crawled (200) <GET http://uae.souq.com/ae-en/gloria-vanderbilt-vanderbilt-for-women-100ml-eau-de-toilette-55079500478/u/> (referer: http://deals.souq.com/ae-en/)
+2016-08-07 17:38:38 [scrapy] DEBUG: Sending cookies to: <GET http://uae.souq.com/ae-en/philips-lumea-ipl-hair-removal-system-1997-6763000350/u/>
+Cookie: NSC_tpvr-83+63+9+208-91=ffffffffb32aa51c45525d5f4f58455e445a4a423660; UserViews=%2C6155761; PLATEFORML=en; PLATEFORMC=ae; PHPSESSID=pt53ikdh8blj5vvop7p14ben1hpc9mhn; c_Ident=14705627168093
+
+2016-08-07 17:38:38 [scrapy] DEBUG: Sending cookies to: <GET http://uae.souq.com/ae-en/unit_one.php?id_unit=905600299>
+Cookie: NSC_tpvr-83+63+9+208-91=ffffffffb32aa51c45525d5f4f58455e445a4a423660; UserViews=%2C6155761; PLATEFORML=en; PLATEFORMC=ae; PHPSESSID=pt53ikdh8blj5vvop7p14ben1hpc9mhn; c_Ident=14705627168093
+
+2016-08-07 17:38:38 [scrapy] DEBUG: Scraped from <200 http://uae.souq.com/ae-en/gloria-vanderbilt-vanderbilt-for-women-100ml-eau-de-toilette-55079500478/u/>
+{'Category': u'Perfumes & Fragrances', 'CurrentPrice': u'\n                        ', 'Discounted': False, 'OriginalPrice': -1, 'Title': u'Gloria Vanderbilt Vanderbilt For Women - 100ml, Eau de Toilette', 'Url': 'http://uae.souq.com/ae-en/gloria-vanderbilt-vanderbilt-for-women-100ml-eau-de-toilette-55079500478/u/', 'SellerRating': 91, 'SoldBy': u'dod_uae', 'Savings': 0}
+2016-08-07 17:38:38 [scrapy] DEBUG: Received cookies from: <301 http://uae.souq.com/ae-en/unit_one.php?id_unit=50014300478>
+Set-Cookie: PLATEFORMC=ae; expires=Mon, 07-Aug-2017 09:38:38 GMT; path=/; domain=.souq.com
+
+Set-Cookie: PLATEFORML=en; expires=Mon, 07-Aug-2017 09:38:38 GMT; path=/; domain=.souq.com
+
+Set-Cookie: registration_source=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: registration_failed=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: login_source=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: login_failed=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: UserViews=%2C10171187%2C5870649; expires=Tue, 06-Sep-2016 09:38:38 GMT; path=/
+
+2016-08-07 17:38:38 [scrapy] DEBUG: Redirecting (301) to <GET http://uae.souq.com/ae-en/chopard-wish-for-women-eau-de-parfum-75ml-50014300478/u/> from <GET http://uae.souq.com/ae-en/unit_one.php?id_unit=50014300478>
+2016-08-07 17:38:38 [scrapy] DEBUG: Sending cookies to: <GET http://uae.souq.com/ae-en/chopard-wish-for-women-eau-de-parfum-75ml-50014300478/u/>
+Cookie: NSC_tpvr-83+63+9+208-91=ffffffffb32aa51c45525d5f4f58455e445a4a423660; UserViews=%2C10171187%2C5870649; PLATEFORML=en; PLATEFORMC=ae; PHPSESSID=pt53ikdh8blj5vvop7p14ben1hpc9mhn; c_Ident=14705627168093
+
+2016-08-07 17:38:38 [scrapy] DEBUG: Received cookies from: <200 http://uae.souq.com/ae-en/nyx-soft-matte-lip-cream-11-different-colors-21999700295/u/>
+Set-Cookie: PLATEFORMC=ae; expires=Mon, 07-Aug-2017 09:38:36 GMT; path=/; domain=.souq.com
+
+Set-Cookie: PLATEFORML=en; expires=Mon, 07-Aug-2017 09:38:36 GMT; path=/; domain=.souq.com
+
+Set-Cookie: registration_source=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: registration_failed=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: login_source=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: login_failed=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: UserViews=%2C8558802; expires=Tue, 06-Sep-2016 09:38:36 GMT; path=/
+
+2016-08-07 17:38:38 [scrapy] DEBUG: Crawled (200) <GET http://uae.souq.com/ae-en/nyx-soft-matte-lip-cream-11-different-colors-21999700295/u/> (referer: http://deals.souq.com/ae-en/)
+2016-08-07 17:38:38 [scrapy] DEBUG: Sending cookies to: <GET http://uae.souq.com/ae-en/unit_one.php?id_unit=641100537>
+Cookie: NSC_tpvr-83+63+9+208-91=ffffffffb32aa51c45525d5f4f58455e445a4a423660; UserViews=%2C8558802; PLATEFORML=en; PLATEFORMC=ae; PHPSESSID=pt53ikdh8blj5vvop7p14ben1hpc9mhn; c_Ident=14705627168093
+
+2016-08-07 17:38:38 [scrapy] DEBUG: Received cookies from: <200 http://uae.souq.com/ae-en/scholl-velvet-smooth-electronic-foot-file-with-diamond-crystals-+-cracked-heel-repair-cream-60ml-7298700350/u/>
+Set-Cookie: PLATEFORMC=ae; expires=Mon, 07-Aug-2017 09:38:37 GMT; path=/; domain=.souq.com
+
+Set-Cookie: PLATEFORML=en; expires=Mon, 07-Aug-2017 09:38:37 GMT; path=/; domain=.souq.com
+
+Set-Cookie: registration_source=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: registration_failed=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: login_source=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: login_failed=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: UserViews=%2C9520673; expires=Tue, 06-Sep-2016 09:38:37 GMT; path=/
+
+2016-08-07 17:38:38 [scrapy] DEBUG: Crawled (200) <GET http://uae.souq.com/ae-en/scholl-velvet-smooth-electronic-foot-file-with-diamond-crystals-+-cracked-heel-repair-cream-60ml-7298700350/u/> (referer: http://deals.souq.com/ae-en/)
+2016-08-07 17:38:38 [scrapy] DEBUG: Sending cookies to: <GET http://uae.souq.com/ae-en/unit_one.php?id_unit=8169900300>
+Cookie: NSC_tpvr-83+63+9+208-91=ffffffffb32aa51c45525d5f4f58455e445a4a423660; UserViews=%2C9520673; PLATEFORML=en; PLATEFORMC=ae; PHPSESSID=pt53ikdh8blj5vvop7p14ben1hpc9mhn; c_Ident=14705627168093
+
+2016-08-07 17:38:38 [scrapy] DEBUG: Received cookies from: <301 http://uae.souq.com/ae-en/unit_one.php?id_unit=50012600478>
+Set-Cookie: PLATEFORMC=ae; expires=Mon, 07-Aug-2017 09:38:38 GMT; path=/; domain=.souq.com
+
+Set-Cookie: PLATEFORML=en; expires=Mon, 07-Aug-2017 09:38:38 GMT; path=/; domain=.souq.com
+
+Set-Cookie: registration_source=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: registration_failed=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: login_source=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: login_failed=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: UserViews=5606171%2C10030397%2C4550823; expires=Tue, 06-Sep-2016 09:38:38 GMT; path=/
+
+2016-08-07 17:38:38 [scrapy] DEBUG: Redirecting (301) to <GET http://uae.souq.com/ae-en/beauty-by-calvin-klein-for-women-eau-de-parfum-100ml-50012600478/u/> from <GET http://uae.souq.com/ae-en/unit_one.php?id_unit=50012600478>
+2016-08-07 17:38:38 [scrapy] DEBUG: Sending cookies to: <GET http://uae.souq.com/ae-en/beauty-by-calvin-klein-for-women-eau-de-parfum-100ml-50012600478/u/>
+Cookie: NSC_tpvr-83+63+9+208-91=ffffffffb32aa51c45525d5f4f58455e445a4a423660; UserViews=5606171%2C10030397%2C4550823; PLATEFORML=en; PLATEFORMC=ae; PHPSESSID=pt53ikdh8blj5vvop7p14ben1hpc9mhn; c_Ident=14705627168093
+
+2016-08-07 17:38:38 [scrapy] DEBUG: Received cookies from: <301 http://uae.souq.com/ae-en/unit_one.php?id_unit=49963300478>
+Set-Cookie: PLATEFORMC=ae; expires=Mon, 07-Aug-2017 09:38:38 GMT; path=/; domain=.souq.com
+
+Set-Cookie: PLATEFORML=en; expires=Mon, 07-Aug-2017 09:38:38 GMT; path=/; domain=.souq.com
+
+Set-Cookie: registration_source=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: registration_failed=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: login_source=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: login_failed=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: UserViews=%2C5606171%2C4992373; expires=Tue, 06-Sep-2016 09:38:38 GMT; path=/
+
+2016-08-07 17:38:38 [scrapy] DEBUG: Redirecting (301) to <GET http://uae.souq.com/ae-en/silver-shadow-by-davidoff-for-men-eau-de-toilette-100ml-49963300478/u/> from <GET http://uae.souq.com/ae-en/unit_one.php?id_unit=49963300478>
+2016-08-07 17:38:38 [scrapy] DEBUG: Sending cookies to: <GET http://uae.souq.com/ae-en/silver-shadow-by-davidoff-for-men-eau-de-toilette-100ml-49963300478/u/>
+Cookie: NSC_tpvr-83+63+9+208-91=ffffffffb32aa51c45525d5f4f58455e445a4a423660; UserViews=%2C5606171%2C4992373; PLATEFORML=en; PLATEFORMC=ae; PHPSESSID=pt53ikdh8blj5vvop7p14ben1hpc9mhn; c_Ident=14705627168093
+
+2016-08-07 17:38:39 [scrapy] DEBUG: Scraped from <200 http://uae.souq.com/ae-en/nyx-soft-matte-lip-cream-11-different-colors-21999700295/u/>
+{'Category': u'Makeup', 'CurrentPrice': u'\n                        ', 'Discounted': False, 'OriginalPrice': -1, 'Title': u'NYX Soft Matte Lip Cream, 11 Different Colors', 'Url': 'http://uae.souq.com/ae-en/nyx-soft-matte-lip-cream-11-different-colors-21999700295/u/', 'SellerRating': 78, 'SoldBy': u'Paris.Shop', 'Savings': 0}
+2016-08-07 17:38:39 [scrapy] DEBUG: Received cookies from: <200 http://uae.souq.com/ae-en/real-techniques-core-+-starter-set-8972600300/u/>
+Set-Cookie: PLATEFORMC=ae; expires=Mon, 07-Aug-2017 09:38:36 GMT; path=/; domain=.souq.com
+
+Set-Cookie: PLATEFORML=en; expires=Mon, 07-Aug-2017 09:38:36 GMT; path=/; domain=.souq.com
+
+Set-Cookie: registration_source=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: registration_failed=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: login_source=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: login_failed=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: UserViews=%2C10954145; expires=Tue, 06-Sep-2016 09:38:36 GMT; path=/
+
+2016-08-07 17:38:39 [scrapy] DEBUG: Crawled (200) <GET http://uae.souq.com/ae-en/real-techniques-core-+-starter-set-8972600300/u/> (referer: http://deals.souq.com/ae-en/)
+2016-08-07 17:38:39 [scrapy] DEBUG: Sending cookies to: <GET http://uae.souq.com/ae-en/unit_one.php?id_unit=22731400295>
+Cookie: NSC_tpvr-83+63+9+208-91=ffffffffb32aa51c45525d5f4f58455e445a4a423660; UserViews=%2C10954145; PLATEFORML=en; PLATEFORMC=ae; PHPSESSID=pt53ikdh8blj5vvop7p14ben1hpc9mhn; c_Ident=14705627168093
+
+2016-08-07 17:38:39 [scrapy] DEBUG: Scraped from <200 http://uae.souq.com/ae-en/scholl-velvet-smooth-electronic-foot-file-with-diamond-crystals-+-cracked-heel-repair-cream-60ml-7298700350/u/>
+{'Category': u'Electrical Personal Care', 'CurrentPrice': u'\n                        ', 'Discounted': False, 'OriginalPrice': -1, 'Title': u'Scholl Velvet Smooth Electronic Foot File with Diamond Crystals + Cracked Heel Repair Cream, 60ml', 'Url': 'http://uae.souq.com/ae-en/scholl-velvet-smooth-electronic-foot-file-with-diamond-crystals-+-cracked-heel-repair-cream-60ml-7298700350/u/', 'SellerRating': 91, 'SoldBy': u'dod_uae', 'Savings': 0}
+2016-08-07 17:38:39 [scrapy] DEBUG: Received cookies from: <200 http://uae.souq.com/ae-en/estee-lauder-makeup-gift-set-2016-26565600295/u/>
+Set-Cookie: PLATEFORMC=ae; expires=Mon, 07-Aug-2017 09:38:37 GMT; path=/; domain=.souq.com
+
+Set-Cookie: PLATEFORML=en; expires=Mon, 07-Aug-2017 09:38:37 GMT; path=/; domain=.souq.com
+
+Set-Cookie: registration_source=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: registration_failed=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: login_source=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: login_failed=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: UserViews=%2C9444531; expires=Tue, 06-Sep-2016 09:38:37 GMT; path=/
+
+2016-08-07 17:38:39 [scrapy] DEBUG: Crawled (200) <GET http://uae.souq.com/ae-en/estee-lauder-makeup-gift-set-2016-26565600295/u/> (referer: http://deals.souq.com/ae-en/)
+2016-08-07 17:38:39 [scrapy] DEBUG: Received cookies from: <301 http://uae.souq.com/ae-en/unit_one.php?id_unit=49961400478>
+Set-Cookie: PLATEFORMC=ae; expires=Mon, 07-Aug-2017 09:38:39 GMT; path=/; domain=.souq.com
+
+Set-Cookie: PLATEFORML=en; expires=Mon, 07-Aug-2017 09:38:39 GMT; path=/; domain=.souq.com
+
+Set-Cookie: registration_source=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: registration_failed=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: login_source=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: login_failed=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: UserViews=%2C5158507%2C6550608; expires=Tue, 06-Sep-2016 09:38:39 GMT; path=/
+
+2016-08-07 17:38:39 [scrapy] DEBUG: Redirecting (301) to <GET http://uae.souq.com/ae-en/versace-pour-homme-oud-noir-by-versace-for-men-eau-de-parfum-100ml-49961400478/u/> from <GET http://uae.souq.com/ae-en/unit_one.php?id_unit=49961400478>
+2016-08-07 17:38:39 [scrapy] DEBUG: Sending cookies to: <GET http://uae.souq.com/ae-en/versace-pour-homme-oud-noir-by-versace-for-men-eau-de-parfum-100ml-49961400478/u/>
+Cookie: NSC_tpvr-83+63+9+208-91=ffffffffb32aa51c45525d5f4f58455e445a4a423660; UserViews=%2C5158507%2C6550608; PLATEFORML=en; PLATEFORMC=ae; PHPSESSID=pt53ikdh8blj5vvop7p14ben1hpc9mhn; c_Ident=14705627168093
+
+2016-08-07 17:38:39 [scrapy] DEBUG: Sending cookies to: <GET http://uae.souq.com/ae-en/unit_one.php?id_unit=52782500478>
+Cookie: NSC_tpvr-83+63+9+208-91=ffffffffb32aa51c45525d5f4f58455e445a4a423660; UserViews=%2C5158507%2C6550608; PLATEFORML=en; PLATEFORMC=ae; PHPSESSID=pt53ikdh8blj5vvop7p14ben1hpc9mhn; c_Ident=14705627168093
+
+2016-08-07 17:38:39 [scrapy] DEBUG: Received cookies from: <301 http://uae.souq.com/ae-en/unit_one.php?id_unit=4067600491>
+Set-Cookie: PLATEFORMC=ae; expires=Mon, 07-Aug-2017 09:38:39 GMT; path=/; domain=.souq.com
+
+Set-Cookie: PLATEFORML=en; expires=Mon, 07-Aug-2017 09:38:39 GMT; path=/; domain=.souq.com
+
+Set-Cookie: registration_source=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: registration_failed=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: login_source=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: login_failed=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: UserViews=10171187%2C7332636%2C9821560; expires=Tue, 06-Sep-2016 09:38:39 GMT; path=/
+
+2016-08-07 17:38:39 [scrapy] DEBUG: Redirecting (301) to <GET http://uae.souq.com/ae-en/instyler-wet-to-dry-rotating-iron-4067600491/u/> from <GET http://uae.souq.com/ae-en/unit_one.php?id_unit=4067600491>
+2016-08-07 17:38:39 [scrapy] DEBUG: Received cookies from: <301 http://uae.souq.com/ae-en/unit_one.php?id_unit=50195000478>
+Set-Cookie: PLATEFORMC=ae; expires=Mon, 07-Aug-2017 09:38:39 GMT; path=/; domain=.souq.com
+
+Set-Cookie: PLATEFORML=en; expires=Mon, 07-Aug-2017 09:38:39 GMT; path=/; domain=.souq.com
+
+Set-Cookie: registration_source=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: registration_failed=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: login_source=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: login_failed=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: UserViews=%2C6833183%2C7788694; expires=Tue, 06-Sep-2016 09:38:39 GMT; path=/
+
+2016-08-07 17:38:39 [scrapy] DEBUG: Redirecting (301) to <GET http://uae.souq.com/ae-en/guess-pink-by-guess-for-women-eau-de-parfum-75ml-50195000478/u/> from <GET http://uae.souq.com/ae-en/unit_one.php?id_unit=50195000478>
+2016-08-07 17:38:39 [scrapy] DEBUG: Scraped from <200 http://uae.souq.com/ae-en/real-techniques-core-+-starter-set-8972600300/u/>
+{'Category': u'Beauty Tools and Accessories', 'CurrentPrice': u'\n                        ', 'Discounted': False, 'OriginalPrice': -1, 'Title': u'Real Techniques Core + Starter Set', 'Url': 'http://uae.souq.com/ae-en/real-techniques-core-+-starter-set-8972600300/u/', 'SellerRating': 91, 'SoldBy': u'dod_uae', 'Savings': 0}
+2016-08-07 17:38:39 [scrapy] DEBUG: Sending cookies to: <GET http://uae.souq.com/ae-en/guess-pink-by-guess-for-women-eau-de-parfum-75ml-50195000478/u/>
+Cookie: NSC_tpvr-83+63+9+208-91=ffffffffb32aa51c45525d5f4f58455e445a4a423660; UserViews=%2C6833183%2C7788694; PLATEFORML=en; PLATEFORMC=ae; PHPSESSID=pt53ikdh8blj5vvop7p14ben1hpc9mhn; c_Ident=14705627168093
+
+2016-08-07 17:38:39 [scrapy] DEBUG: Sending cookies to: <GET http://uae.souq.com/ae-en/instyler-wet-to-dry-rotating-iron-4067600491/u/>
+Cookie: NSC_tpvr-83+63+9+208-91=ffffffffb32aa51c45525d5f4f58455e445a4a423660; UserViews=%2C6833183%2C7788694; PLATEFORML=en; PLATEFORMC=ae; PHPSESSID=pt53ikdh8blj5vvop7p14ben1hpc9mhn; c_Ident=14705627168093
+
+2016-08-07 17:38:39 [scrapy] DEBUG: Received cookies from: <301 http://uae.souq.com/ae-en/unit_one.php?id_unit=50194900478>
+Set-Cookie: PLATEFORMC=ae; expires=Mon, 07-Aug-2017 09:38:39 GMT; path=/; domain=.souq.com
+
+Set-Cookie: PLATEFORML=en; expires=Mon, 07-Aug-2017 09:38:39 GMT; path=/; domain=.souq.com
+
+Set-Cookie: registration_source=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: registration_failed=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: login_source=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: login_failed=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: UserViews=%2C6971609%2C5045276; expires=Tue, 06-Sep-2016 09:38:39 GMT; path=/
+
+2016-08-07 17:38:39 [scrapy] DEBUG: Redirecting (301) to <GET http://uae.souq.com/ae-en/calvin-klein-euphoria-for-women-eau-de-parfum-100ml-50194900478/u/> from <GET http://uae.souq.com/ae-en/unit_one.php?id_unit=50194900478>
+2016-08-07 17:38:39 [scrapy] DEBUG: Sending cookies to: <GET http://uae.souq.com/ae-en/calvin-klein-euphoria-for-women-eau-de-parfum-100ml-50194900478/u/>
+Cookie: NSC_tpvr-83+63+9+208-91=ffffffffb32aa51c45525d5f4f58455e445a4a423660; UserViews=%2C6971609%2C5045276; PLATEFORML=en; PLATEFORMC=ae; PHPSESSID=pt53ikdh8blj5vvop7p14ben1hpc9mhn; c_Ident=14705627168093
+
+2016-08-07 17:38:39 [scrapy] DEBUG: Scraped from <200 http://uae.souq.com/ae-en/estee-lauder-makeup-gift-set-2016-26565600295/u/>
+{'Category': u'Makeup', 'CurrentPrice': u'\n                        ', 'Discounted': False, 'OriginalPrice': -1, 'Title': u'Estee Lauder Makeup Gift Set 2016', 'Url': 'http://uae.souq.com/ae-en/estee-lauder-makeup-gift-set-2016-26565600295/u/', 'SellerRating': 0, 'SoldBy': u'Luxury-Beauty', 'Savings': 0}
+2016-08-07 17:38:39 [scrapy] DEBUG: Received cookies from: <301 http://uae.souq.com/ae-en/unit_one.php?id_unit=40169100478>
+Set-Cookie: PLATEFORMC=ae; expires=Mon, 07-Aug-2017 09:38:39 GMT; path=/; domain=.souq.com
+
+Set-Cookie: PLATEFORML=en; expires=Mon, 07-Aug-2017 09:38:39 GMT; path=/; domain=.souq.com
+
+Set-Cookie: registration_source=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: registration_failed=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: login_source=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: login_failed=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: UserViews=%2C9201186%2C9116326; expires=Tue, 06-Sep-2016 09:38:39 GMT; path=/
+
+2016-08-07 17:38:39 [scrapy] DEBUG: Redirecting (301) to <GET http://uae.souq.com/ae-en/sauvage-by-dior-for-men-eau-de-toilette-100ml-40169100478/u/> from <GET http://uae.souq.com/ae-en/unit_one.php?id_unit=40169100478>
+2016-08-07 17:38:39 [scrapy] DEBUG: Sending cookies to: <GET http://uae.souq.com/ae-en/sauvage-by-dior-for-men-eau-de-toilette-100ml-40169100478/u/>
+Cookie: NSC_tpvr-83+63+9+208-91=ffffffffb32aa51c45525d5f4f58455e445a4a423660; UserViews=%2C9201186%2C9116326; PLATEFORML=en; PLATEFORMC=ae; PHPSESSID=pt53ikdh8blj5vvop7p14ben1hpc9mhn; c_Ident=14705627168093
+
+2016-08-07 17:38:39 [scrapy] DEBUG: Received cookies from: <301 http://uae.souq.com/ae-en/unit_one.php?id_unit=905600299>
+Set-Cookie: PLATEFORMC=ae; expires=Mon, 07-Aug-2017 09:38:39 GMT; path=/; domain=.souq.com
+
+Set-Cookie: PLATEFORML=en; expires=Mon, 07-Aug-2017 09:38:39 GMT; path=/; domain=.souq.com
+
+Set-Cookie: registration_source=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: registration_failed=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: login_source=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: login_failed=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: UserViews=%2C6155761%2C8293037; expires=Tue, 06-Sep-2016 09:38:39 GMT; path=/
+
+2016-08-07 17:38:39 [scrapy] DEBUG: Redirecting (301) to <GET http://uae.souq.com/ae-en/saachi-nl-tm-1352-11-in-1-rechargeable-hair-trimmer-905600299/u/> from <GET http://uae.souq.com/ae-en/unit_one.php?id_unit=905600299>
+2016-08-07 17:38:39 [scrapy] DEBUG: Sending cookies to: <GET http://uae.souq.com/ae-en/saachi-nl-tm-1352-11-in-1-rechargeable-hair-trimmer-905600299/u/>
+Cookie: NSC_tpvr-83+63+9+208-91=ffffffffb32aa51c45525d5f4f58455e445a4a423660; UserViews=%2C6155761%2C8293037; PLATEFORML=en; PLATEFORMC=ae; PHPSESSID=pt53ikdh8blj5vvop7p14ben1hpc9mhn; c_Ident=14705627168093
+
+2016-08-07 17:38:39 [scrapy] DEBUG: Received cookies from: <301 http://uae.souq.com/ae-en/unit_one.php?id_unit=8169900300>
+Set-Cookie: PLATEFORMC=ae; expires=Mon, 07-Aug-2017 09:38:39 GMT; path=/; domain=.souq.com
+
+Set-Cookie: PLATEFORML=en; expires=Mon, 07-Aug-2017 09:38:39 GMT; path=/; domain=.souq.com
+
+Set-Cookie: registration_source=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: registration_failed=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: login_source=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: login_failed=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: UserViews=%2C9520673%2C9366892; expires=Tue, 06-Sep-2016 09:38:39 GMT; path=/
+
+2016-08-07 17:38:39 [scrapy] DEBUG: Redirecting (301) to <GET http://uae.souq.com/ae-en/roll-n-go-makeup-tools-travel-bag-red-8169900300/u/> from <GET http://uae.souq.com/ae-en/unit_one.php?id_unit=8169900300>
+2016-08-07 17:38:39 [scrapy] DEBUG: Sending cookies to: <GET http://uae.souq.com/ae-en/roll-n-go-makeup-tools-travel-bag-red-8169900300/u/>
+Cookie: NSC_tpvr-83+63+9+208-91=ffffffffb32aa51c45525d5f4f58455e445a4a423660; UserViews=%2C9520673%2C9366892; PLATEFORML=en; PLATEFORMC=ae; PHPSESSID=pt53ikdh8blj5vvop7p14ben1hpc9mhn; c_Ident=14705627168093
+
+2016-08-07 17:38:40 [scrapy] DEBUG: Received cookies from: <301 http://uae.souq.com/ae-en/unit_one.php?id_unit=22731400295>
+Set-Cookie: PLATEFORMC=ae; expires=Mon, 07-Aug-2017 09:38:40 GMT; path=/; domain=.souq.com
+
+Set-Cookie: PLATEFORML=en; expires=Mon, 07-Aug-2017 09:38:40 GMT; path=/; domain=.souq.com
+
+Set-Cookie: registration_source=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: registration_failed=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: login_source=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: login_failed=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: UserViews=%2C10954145%2C9050045; expires=Tue, 06-Sep-2016 09:38:40 GMT; path=/
+
+2016-08-07 17:38:40 [scrapy] DEBUG: Redirecting (301) to <GET http://uae.souq.com/ae-en/mn-cosmetics-makeup-matte-kiss-proof-lipstick-set-of-12-pieces-p13016-22731400295/u/> from <GET http://uae.souq.com/ae-en/unit_one.php?id_unit=22731400295>
+2016-08-07 17:38:40 [scrapy] DEBUG: Sending cookies to: <GET http://uae.souq.com/ae-en/mn-cosmetics-makeup-matte-kiss-proof-lipstick-set-of-12-pieces-p13016-22731400295/u/>
+Cookie: NSC_tpvr-83+63+9+208-91=ffffffffb32aa51c45525d5f4f58455e445a4a423660; UserViews=%2C10954145%2C9050045; PLATEFORML=en; PLATEFORMC=ae; PHPSESSID=pt53ikdh8blj5vvop7p14ben1hpc9mhn; c_Ident=14705627168093
+
+2016-08-07 17:38:40 [scrapy] DEBUG: Received cookies from: <200 http://uae.souq.com/ae-en/guess-by-marciano-for-women-eau-de-parfum-100-ml-43846900478/u/>
+Set-Cookie: PLATEFORMC=ae; expires=Mon, 07-Aug-2017 09:38:39 GMT; path=/; domain=.souq.com
+
+Set-Cookie: PLATEFORML=en; expires=Mon, 07-Aug-2017 09:38:39 GMT; path=/; domain=.souq.com
+
+Set-Cookie: registration_source=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: registration_failed=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: login_source=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: login_failed=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: UserViews=%2C8716904; expires=Tue, 06-Sep-2016 09:38:39 GMT; path=/
+
+2016-08-07 17:38:40 [scrapy] DEBUG: Crawled (200) <GET http://uae.souq.com/ae-en/guess-by-marciano-for-women-eau-de-parfum-100-ml-43846900478/u/> (referer: http://deals.souq.com/ae-en/)
+2016-08-07 17:38:40 [scrapy] DEBUG: Scraped from <200 http://uae.souq.com/ae-en/guess-by-marciano-for-women-eau-de-parfum-100-ml-43846900478/u/>
+{'Category': u'Perfumes & Fragrances', 'CurrentPrice': u'\n                        ', 'Discounted': False, 'OriginalPrice': -1, 'Title': u'Guess By Marciano for Women - Eau de Parfum, 100 ml', 'Url': 'http://uae.souq.com/ae-en/guess-by-marciano-for-women-eau-de-parfum-100-ml-43846900478/u/', 'SellerRating': 91, 'SoldBy': u'dod_uae', 'Savings': 0}
+2016-08-07 17:38:40 [scrapy] DEBUG: Received cookies from: <301 http://uae.souq.com/ae-en/unit_one.php?id_unit=641100537>
+Set-Cookie: PLATEFORMC=ae; expires=Mon, 07-Aug-2017 09:38:39 GMT; path=/; domain=.souq.com
+
+Set-Cookie: PLATEFORML=en; expires=Mon, 07-Aug-2017 09:38:39 GMT; path=/; domain=.souq.com
+
+Set-Cookie: registration_source=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: registration_failed=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: login_source=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: login_failed=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: UserViews=%2C8558802%2C10361594; expires=Tue, 06-Sep-2016 09:38:39 GMT; path=/
+
+2016-08-07 17:38:40 [scrapy] DEBUG: Redirecting (301) to <GET http://uae.souq.com/ae-en/braun-silk-expert-bd5001-ipl-with-gillette-venus-razor-641100537/u/> from <GET http://uae.souq.com/ae-en/unit_one.php?id_unit=641100537>
+2016-08-07 17:38:40 [scrapy] DEBUG: Sending cookies to: <GET http://uae.souq.com/ae-en/braun-silk-expert-bd5001-ipl-with-gillette-venus-razor-641100537/u/>
+Cookie: NSC_tpvr-83+63+9+208-91=ffffffffb32aa51c45525d5f4f58455e445a4a423660; UserViews=%2C8558802%2C10361594; PLATEFORML=en; PLATEFORMC=ae; PHPSESSID=pt53ikdh8blj5vvop7p14ben1hpc9mhn; c_Ident=14705627168093
+
+2016-08-07 17:38:40 [scrapy] DEBUG: Received cookies from: <200 http://uae.souq.com/ae-en/philips-lumea-ipl-hair-removal-system-1997-6763000350/u/>
+Set-Cookie: PLATEFORMC=ae; expires=Mon, 07-Aug-2017 09:38:39 GMT; path=/; domain=.souq.com
+
+Set-Cookie: PLATEFORML=en; expires=Mon, 07-Aug-2017 09:38:39 GMT; path=/; domain=.souq.com
+
+Set-Cookie: registration_source=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: registration_failed=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: login_source=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: login_failed=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: UserViews=%2C6155761%2C9341457; expires=Tue, 06-Sep-2016 09:38:39 GMT; path=/
+
+2016-08-07 17:38:40 [scrapy] DEBUG: Crawled (200) <GET http://uae.souq.com/ae-en/philips-lumea-ipl-hair-removal-system-1997-6763000350/u/> (referer: http://deals.souq.com/ae-en/)
+2016-08-07 17:38:40 [scrapy] DEBUG: Received cookies from: <200 http://uae.souq.com/ae-en/chopard-wish-for-women-eau-de-parfum-75ml-50014300478/u/>
+Set-Cookie: PLATEFORMC=ae; expires=Mon, 07-Aug-2017 09:38:39 GMT; path=/; domain=.souq.com
+
+Set-Cookie: PLATEFORML=en; expires=Mon, 07-Aug-2017 09:38:39 GMT; path=/; domain=.souq.com
+
+Set-Cookie: registration_source=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: registration_failed=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: login_source=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: login_failed=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: UserViews=%2C10171187%2C5870649; expires=Tue, 06-Sep-2016 09:38:39 GMT; path=/
+
+2016-08-07 17:38:40 [scrapy] DEBUG: Crawled (200) <GET http://uae.souq.com/ae-en/chopard-wish-for-women-eau-de-parfum-75ml-50014300478/u/> (referer: http://deals.souq.com/ae-en/)
+2016-08-07 17:38:41 [scrapy] DEBUG: Scraped from <200 http://uae.souq.com/ae-en/philips-lumea-ipl-hair-removal-system-1997-6763000350/u/>
+{'Category': u'Electrical Personal Care', 'CurrentPrice': u'\n                        ', 'Discounted': False, 'OriginalPrice': -1, 'Title': u'Philips Lumea IPL Hair Removal System - 1997', 'Url': 'http://uae.souq.com/ae-en/philips-lumea-ipl-hair-removal-system-1997-6763000350/u/', 'SellerRating': 96, 'SoldBy': u'Philips', 'Savings': 0}
+2016-08-07 17:38:41 [scrapy] DEBUG: Received cookies from: <301 http://uae.souq.com/ae-en/unit_one.php?id_unit=52782500478>
+Set-Cookie: PLATEFORMC=ae; expires=Mon, 07-Aug-2017 09:38:40 GMT; path=/; domain=.souq.com
+
+Set-Cookie: PLATEFORML=en; expires=Mon, 07-Aug-2017 09:38:40 GMT; path=/; domain=.souq.com
+
+Set-Cookie: registration_source=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: registration_failed=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: login_source=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: login_failed=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: UserViews=%2C5158507%2C6550608%2C6613988; expires=Tue, 06-Sep-2016 09:38:41 GMT; path=/
+
+2016-08-07 17:38:41 [scrapy] DEBUG: Redirecting (301) to <GET http://uae.souq.com/ae-en/brown-orchid-for-men-eau-de-parfum-80ml-52782500478/u/> from <GET http://uae.souq.com/ae-en/unit_one.php?id_unit=52782500478>
+2016-08-07 17:38:41 [scrapy] DEBUG: Sending cookies to: <GET http://uae.souq.com/ae-en/brown-orchid-for-men-eau-de-parfum-80ml-52782500478/u/>
+Cookie: NSC_tpvr-83+63+9+208-91=ffffffffb32aa51c45525d5f4f58455e445a4a423660; UserViews=%2C5158507%2C6550608%2C6613988; PLATEFORML=en; PLATEFORMC=ae; PHPSESSID=pt53ikdh8blj5vvop7p14ben1hpc9mhn; c_Ident=14705627168093
+
+2016-08-07 17:38:41 [scrapy] DEBUG: Scraped from <200 http://uae.souq.com/ae-en/chopard-wish-for-women-eau-de-parfum-75ml-50014300478/u/>
+{'Category': u'Perfumes & Fragrances', 'CurrentPrice': u'\n                        ', 'Discounted': False, 'OriginalPrice': -1, 'Title': u'Chopard Wish for Women, Eau de Parfum - 75ml', 'Url': 'http://uae.souq.com/ae-en/chopard-wish-for-women-eau-de-parfum-75ml-50014300478/u/', 'SellerRating': 91, 'SoldBy': u'dod_uae', 'Savings': 0}
+2016-08-07 17:38:41 [scrapy] DEBUG: Received cookies from: <200 http://uae.souq.com/ae-en/body-intense-by-burberry-for-women-eau-de-parfum-85ml-34436000478/u/>
+Set-Cookie: PLATEFORMC=ae; expires=Mon, 07-Aug-2017 09:38:38 GMT; path=/; domain=.souq.com
+
+Set-Cookie: PLATEFORML=en; expires=Mon, 07-Aug-2017 09:38:38 GMT; path=/; domain=.souq.com
+
+Set-Cookie: registration_source=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: registration_failed=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: login_source=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: login_failed=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: UserViews=%2C6554442; expires=Tue, 06-Sep-2016 09:38:38 GMT; path=/
+
+2016-08-07 17:38:41 [scrapy] DEBUG: Crawled (200) <GET http://uae.souq.com/ae-en/body-intense-by-burberry-for-women-eau-de-parfum-85ml-34436000478/u/> (referer: http://deals.souq.com/ae-en/)
+2016-08-07 17:38:41 [scrapy] DEBUG: Scraped from <200 http://uae.souq.com/ae-en/body-intense-by-burberry-for-women-eau-de-parfum-85ml-34436000478/u/>
+{'Category': u'Perfumes & Fragrances', 'CurrentPrice': u'\n                        ', 'Discounted': False, 'OriginalPrice': -1, 'Title': u'Body Intense by Burberry for Women - Eau de Parfum, 85ml', 'Url': 'http://uae.souq.com/ae-en/body-intense-by-burberry-for-women-eau-de-parfum-85ml-34436000478/u/', 'SellerRating': 92, 'SoldBy': u'DJperfumes', 'Savings': 0}
+2016-08-07 17:38:41 [scrapy] DEBUG: Received cookies from: <200 http://uae.souq.com/ae-en/beauty-by-calvin-klein-for-women-eau-de-parfum-100ml-50012600478/u/>
+Set-Cookie: PLATEFORMC=ae; expires=Mon, 07-Aug-2017 09:38:39 GMT; path=/; domain=.souq.com
+
+Set-Cookie: PLATEFORML=en; expires=Mon, 07-Aug-2017 09:38:39 GMT; path=/; domain=.souq.com
+
+Set-Cookie: registration_source=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: registration_failed=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: login_source=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: login_failed=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: UserViews=5606171%2C10030397%2C4550823; expires=Tue, 06-Sep-2016 09:38:39 GMT; path=/
+
+2016-08-07 17:38:41 [scrapy] DEBUG: Crawled (200) <GET http://uae.souq.com/ae-en/beauty-by-calvin-klein-for-women-eau-de-parfum-100ml-50012600478/u/> (referer: http://deals.souq.com/ae-en/)
+2016-08-07 17:38:41 [scrapy] DEBUG: Scraped from <200 http://uae.souq.com/ae-en/beauty-by-calvin-klein-for-women-eau-de-parfum-100ml-50012600478/u/>
+{'Category': u'Perfumes & Fragrances', 'CurrentPrice': u'\n                        ', 'Discounted': False, 'OriginalPrice': -1, 'Title': u'Beauty by Calvin Klein for Women - Eau de Parfum 100ml', 'Url': 'http://uae.souq.com/ae-en/beauty-by-calvin-klein-for-women-eau-de-parfum-100ml-50012600478/u/', 'SellerRating': 91, 'SoldBy': u'dod_uae', 'Savings': 0}
+2016-08-07 17:38:41 [scrapy] DEBUG: Received cookies from: <200 http://uae.souq.com/ae-en/silver-shadow-by-davidoff-for-men-eau-de-toilette-100ml-49963300478/u/>
+Set-Cookie: PLATEFORMC=ae; expires=Mon, 07-Aug-2017 09:38:39 GMT; path=/; domain=.souq.com
+
+Set-Cookie: PLATEFORML=en; expires=Mon, 07-Aug-2017 09:38:39 GMT; path=/; domain=.souq.com
+
+Set-Cookie: registration_source=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: registration_failed=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: login_source=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: login_failed=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: UserViews=%2C5606171%2C4992373; expires=Tue, 06-Sep-2016 09:38:40 GMT; path=/
+
+2016-08-07 17:38:41 [scrapy] DEBUG: Crawled (200) <GET http://uae.souq.com/ae-en/silver-shadow-by-davidoff-for-men-eau-de-toilette-100ml-49963300478/u/> (referer: http://deals.souq.com/ae-en/)
+2016-08-07 17:38:42 [scrapy] DEBUG: Scraped from <200 http://uae.souq.com/ae-en/silver-shadow-by-davidoff-for-men-eau-de-toilette-100ml-49963300478/u/>
+{'Category': u'Perfumes & Fragrances', 'CurrentPrice': u'\n                        ', 'Discounted': False, 'OriginalPrice': -1, 'Title': u'Silver Shadow by Davidoff for Men - Eau de Toilette, 100ml', 'Url': 'http://uae.souq.com/ae-en/silver-shadow-by-davidoff-for-men-eau-de-toilette-100ml-49963300478/u/', 'SellerRating': 91, 'SoldBy': u'dod_uae', 'Savings': 0}
+2016-08-07 17:38:42 [scrapy] DEBUG: Received cookies from: <200 http://uae.souq.com/ae-en/versace-pour-homme-oud-noir-by-versace-for-men-eau-de-parfum-100ml-49961400478/u/>
+Set-Cookie: PLATEFORMC=ae; expires=Mon, 07-Aug-2017 09:38:40 GMT; path=/; domain=.souq.com
+
+Set-Cookie: PLATEFORML=en; expires=Mon, 07-Aug-2017 09:38:40 GMT; path=/; domain=.souq.com
+
+Set-Cookie: registration_source=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: registration_failed=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: login_source=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: login_failed=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: UserViews=%2C5158507%2C6550608; expires=Tue, 06-Sep-2016 09:38:40 GMT; path=/
+
+2016-08-07 17:38:42 [scrapy] DEBUG: Crawled (200) <GET http://uae.souq.com/ae-en/versace-pour-homme-oud-noir-by-versace-for-men-eau-de-parfum-100ml-49961400478/u/> (referer: http://deals.souq.com/ae-en/)
+2016-08-07 17:38:42 [scrapy] DEBUG: Scraped from <200 http://uae.souq.com/ae-en/versace-pour-homme-oud-noir-by-versace-for-men-eau-de-parfum-100ml-49961400478/u/>
+{'Category': u'Perfumes & Fragrances', 'CurrentPrice': u'\n                        ', 'Discounted': False, 'OriginalPrice': -1, 'Title': u'Versace Pour Homme Oud Noir by Versace for Men - Eau de Parfum, 100ml', 'Url': 'http://uae.souq.com/ae-en/versace-pour-homme-oud-noir-by-versace-for-men-eau-de-parfum-100ml-49961400478/u/', 'SellerRating': 91, 'SoldBy': u'dod_uae', 'Savings': 0}
+2016-08-07 17:38:42 [scrapy] DEBUG: Received cookies from: <200 http://uae.souq.com/ae-en/instyler-wet-to-dry-rotating-iron-4067600491/u/>
+Set-Cookie: PLATEFORMC=ae; expires=Mon, 07-Aug-2017 09:38:41 GMT; path=/; domain=.souq.com
+
+Set-Cookie: PLATEFORML=en; expires=Mon, 07-Aug-2017 09:38:41 GMT; path=/; domain=.souq.com
+
+Set-Cookie: registration_source=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: registration_failed=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: login_source=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: login_failed=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: UserViews=%2C6833183%2C7788694%2C9821560; expires=Tue, 06-Sep-2016 09:38:41 GMT; path=/
+
+2016-08-07 17:38:42 [scrapy] DEBUG: Crawled (200) <GET http://uae.souq.com/ae-en/instyler-wet-to-dry-rotating-iron-4067600491/u/> (referer: http://deals.souq.com/ae-en/)
+2016-08-07 17:38:42 [scrapy] DEBUG: Received cookies from: <200 http://uae.souq.com/ae-en/guess-pink-by-guess-for-women-eau-de-parfum-75ml-50195000478/u/>
+Set-Cookie: PLATEFORMC=ae; expires=Mon, 07-Aug-2017 09:38:41 GMT; path=/; domain=.souq.com
+
+Set-Cookie: PLATEFORML=en; expires=Mon, 07-Aug-2017 09:38:41 GMT; path=/; domain=.souq.com
+
+Set-Cookie: registration_source=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: registration_failed=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: login_source=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: login_failed=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: UserViews=%2C6833183%2C7788694; expires=Tue, 06-Sep-2016 09:38:41 GMT; path=/
+
+2016-08-07 17:38:42 [scrapy] DEBUG: Crawled (200) <GET http://uae.souq.com/ae-en/guess-pink-by-guess-for-women-eau-de-parfum-75ml-50195000478/u/> (referer: http://deals.souq.com/ae-en/)
+2016-08-07 17:38:42 [scrapy] DEBUG: Scraped from <200 http://uae.souq.com/ae-en/instyler-wet-to-dry-rotating-iron-4067600491/u/>
+{'Category': u'Hair Electronics', 'CurrentPrice': u'\n                        ', 'Discounted': False, 'OriginalPrice': -1, 'Title': u'InStyler Wet To Dry Rotating Iron', 'Url': 'http://uae.souq.com/ae-en/instyler-wet-to-dry-rotating-iron-4067600491/u/', 'SellerRating': 91, 'SoldBy': u'dod_uae', 'Savings': 0}
+2016-08-07 17:38:42 [scrapy] DEBUG: Scraped from <200 http://uae.souq.com/ae-en/guess-pink-by-guess-for-women-eau-de-parfum-75ml-50195000478/u/>
+{'Category': u'Perfumes & Fragrances', 'CurrentPrice': u'\n                        ', 'Discounted': False, 'OriginalPrice': -1, 'Title': u'Guess Pink by Guess for Women - Eau de Parfum, 75ml', 'Url': 'http://uae.souq.com/ae-en/guess-pink-by-guess-for-women-eau-de-parfum-75ml-50195000478/u/', 'SellerRating': 91, 'SoldBy': u'dod_uae', 'Savings': 0}
+2016-08-07 17:38:42 [scrapy] DEBUG: Received cookies from: <200 http://uae.souq.com/ae-en/sauvage-by-dior-for-men-eau-de-toilette-100ml-40169100478/u/>
+Set-Cookie: PLATEFORMC=ae; expires=Mon, 07-Aug-2017 09:38:41 GMT; path=/; domain=.souq.com
+
+Set-Cookie: PLATEFORML=en; expires=Mon, 07-Aug-2017 09:38:41 GMT; path=/; domain=.souq.com
+
+Set-Cookie: registration_source=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: registration_failed=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: login_source=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: login_failed=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: UserViews=%2C9201186%2C9116326; expires=Tue, 06-Sep-2016 09:38:41 GMT; path=/
+
+2016-08-07 17:38:42 [scrapy] DEBUG: Crawled (200) <GET http://uae.souq.com/ae-en/sauvage-by-dior-for-men-eau-de-toilette-100ml-40169100478/u/> (referer: http://deals.souq.com/ae-en/)
+2016-08-07 17:38:43 [scrapy] DEBUG: Scraped from <200 http://uae.souq.com/ae-en/sauvage-by-dior-for-men-eau-de-toilette-100ml-40169100478/u/>
+{'Category': u'Perfumes & Fragrances', 'CurrentPrice': u'\n                        ', 'Discounted': False, 'OriginalPrice': -1, 'Title': u'Sauvage by Dior For Men - Eau de Toilette, 100ml', 'Url': 'http://uae.souq.com/ae-en/sauvage-by-dior-for-men-eau-de-toilette-100ml-40169100478/u/', 'SellerRating': 92, 'SoldBy': u'DJperfumes', 'Savings': 0}
+2016-08-07 17:38:44 [scrapy] DEBUG: Received cookies from: <200 http://uae.souq.com/ae-en/braun-silk-expert-bd5001-ipl-with-gillette-venus-razor-641100537/u/>
+Set-Cookie: PLATEFORMC=ae; expires=Mon, 07-Aug-2017 09:38:42 GMT; path=/; domain=.souq.com
+
+Set-Cookie: PLATEFORML=en; expires=Mon, 07-Aug-2017 09:38:42 GMT; path=/; domain=.souq.com
+
+Set-Cookie: registration_source=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: registration_failed=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: login_source=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: login_failed=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: UserViews=%2C8558802%2C10361594; expires=Tue, 06-Sep-2016 09:38:42 GMT; path=/
+
+2016-08-07 17:38:44 [scrapy] DEBUG: Crawled (200) <GET http://uae.souq.com/ae-en/braun-silk-expert-bd5001-ipl-with-gillette-venus-razor-641100537/u/> (referer: http://deals.souq.com/ae-en/)
+2016-08-07 17:38:44 [scrapy] DEBUG: Received cookies from: <200 http://uae.souq.com/ae-en/saachi-nl-tm-1352-11-in-1-rechargeable-hair-trimmer-905600299/u/>
+Set-Cookie: PLATEFORMC=ae; expires=Mon, 07-Aug-2017 09:38:41 GMT; path=/; domain=.souq.com
+
+Set-Cookie: PLATEFORML=en; expires=Mon, 07-Aug-2017 09:38:41 GMT; path=/; domain=.souq.com
+
+Set-Cookie: registration_source=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: registration_failed=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: login_source=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: login_failed=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: UserViews=%2C6155761%2C8293037; expires=Tue, 06-Sep-2016 09:38:41 GMT; path=/
+
+2016-08-07 17:38:44 [scrapy] DEBUG: Crawled (200) <GET http://uae.souq.com/ae-en/saachi-nl-tm-1352-11-in-1-rechargeable-hair-trimmer-905600299/u/> (referer: http://deals.souq.com/ae-en/)
+2016-08-07 17:38:44 [scrapy] DEBUG: Received cookies from: <200 http://uae.souq.com/ae-en/roll-n-go-makeup-tools-travel-bag-red-8169900300/u/>
+Set-Cookie: PLATEFORMC=ae; expires=Mon, 07-Aug-2017 09:38:41 GMT; path=/; domain=.souq.com
+
+Set-Cookie: PLATEFORML=en; expires=Mon, 07-Aug-2017 09:38:41 GMT; path=/; domain=.souq.com
+
+Set-Cookie: registration_source=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: registration_failed=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: login_source=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: login_failed=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: UserViews=%2C9520673%2C9366892; expires=Tue, 06-Sep-2016 09:38:41 GMT; path=/
+
+2016-08-07 17:38:44 [scrapy] DEBUG: Crawled (200) <GET http://uae.souq.com/ae-en/roll-n-go-makeup-tools-travel-bag-red-8169900300/u/> (referer: http://deals.souq.com/ae-en/)
+2016-08-07 17:38:44 [scrapy] DEBUG: Scraped from <200 http://uae.souq.com/ae-en/braun-silk-expert-bd5001-ipl-with-gillette-venus-razor-641100537/u/>
+{'Category': u'Electric Shavers Removal', 'CurrentPrice': u'\n                        ', 'Discounted': False, 'OriginalPrice': -1, 'Title': u'Braun Silk-expert BD5001 IPL With Gillette Venus Razor', 'Url': 'http://uae.souq.com/ae-en/braun-silk-expert-bd5001-ipl-with-gillette-venus-razor-641100537/u/', 'SellerRating': 0, 'SoldBy': u'BraunBeauty', 'Savings': 0}
+2016-08-07 17:38:44 [scrapy] DEBUG: Received cookies from: <200 http://uae.souq.com/ae-en/brown-orchid-for-men-eau-de-parfum-80ml-52782500478/u/>
+Set-Cookie: PLATEFORMC=ae; expires=Mon, 07-Aug-2017 09:38:42 GMT; path=/; domain=.souq.com
+
+Set-Cookie: PLATEFORML=en; expires=Mon, 07-Aug-2017 09:38:42 GMT; path=/; domain=.souq.com
+
+Set-Cookie: registration_source=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: registration_failed=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: login_source=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: login_failed=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: UserViews=%2C5158507%2C6550608%2C6613988; expires=Tue, 06-Sep-2016 09:38:42 GMT; path=/
+
+2016-08-07 17:38:44 [scrapy] DEBUG: Crawled (200) <GET http://uae.souq.com/ae-en/brown-orchid-for-men-eau-de-parfum-80ml-52782500478/u/> (referer: http://deals.souq.com/ae-en/)
+2016-08-07 17:38:44 [scrapy] DEBUG: Received cookies from: <200 http://uae.souq.com/ae-en/calvin-klein-euphoria-for-women-eau-de-parfum-100ml-50194900478/u/>
+Set-Cookie: PLATEFORMC=ae; expires=Mon, 07-Aug-2017 09:38:41 GMT; path=/; domain=.souq.com
+
+Set-Cookie: PLATEFORML=en; expires=Mon, 07-Aug-2017 09:38:41 GMT; path=/; domain=.souq.com
+
+Set-Cookie: registration_source=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: registration_failed=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: login_source=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: login_failed=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: UserViews=%2C6971609%2C5045276; expires=Tue, 06-Sep-2016 09:38:41 GMT; path=/
+
+2016-08-07 17:38:44 [scrapy] DEBUG: Crawled (200) <GET http://uae.souq.com/ae-en/calvin-klein-euphoria-for-women-eau-de-parfum-100ml-50194900478/u/> (referer: http://deals.souq.com/ae-en/)
+2016-08-07 17:38:44 [scrapy] DEBUG: Scraped from <200 http://uae.souq.com/ae-en/saachi-nl-tm-1352-11-in-1-rechargeable-hair-trimmer-905600299/u/>
+{'Category': u"Men's Grooming", 'CurrentPrice': u'\n                        ', 'Discounted': False, 'OriginalPrice': -1, 'Title': u'Saachi NL-TM-1352 11 in 1 Rechargeable Hair Trimmer', 'Url': 'http://uae.souq.com/ae-en/saachi-nl-tm-1352-11-in-1-rechargeable-hair-trimmer-905600299/u/', 'SellerRating': 91, 'SoldBy': u'dod_uae', 'Savings': 0}
+2016-08-07 17:38:44 [scrapy] DEBUG: Scraped from <200 http://uae.souq.com/ae-en/roll-n-go-makeup-tools-travel-bag-red-8169900300/u/>
+{'Category': u'Beauty Tools and Accessories', 'CurrentPrice': u'\n                        ', 'Discounted': False, 'OriginalPrice': -1, 'Title': u"Roll N' Go Makeup Tools Travel Bag - Red", 'Url': 'http://uae.souq.com/ae-en/roll-n-go-makeup-tools-travel-bag-red-8169900300/u/', 'SellerRating': 91, 'SoldBy': u'dod_uae', 'Savings': 0}
+2016-08-07 17:38:44 [scrapy] DEBUG: Received cookies from: <200 http://uae.souq.com/ae-en/mn-cosmetics-makeup-matte-kiss-proof-lipstick-set-of-12-pieces-p13016-22731400295/u/>
+Set-Cookie: PLATEFORMC=ae; expires=Mon, 07-Aug-2017 09:38:42 GMT; path=/; domain=.souq.com
+
+Set-Cookie: PLATEFORML=en; expires=Mon, 07-Aug-2017 09:38:42 GMT; path=/; domain=.souq.com
+
+Set-Cookie: registration_source=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: registration_failed=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: login_source=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: login_failed=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.souq.com
+
+Set-Cookie: UserViews=%2C10954145%2C9050045; expires=Tue, 06-Sep-2016 09:38:42 GMT; path=/
+
+2016-08-07 17:38:44 [scrapy] DEBUG: Crawled (200) <GET http://uae.souq.com/ae-en/mn-cosmetics-makeup-matte-kiss-proof-lipstick-set-of-12-pieces-p13016-22731400295/u/> (referer: http://deals.souq.com/ae-en/)
+2016-08-07 17:38:44 [scrapy] DEBUG: Scraped from <200 http://uae.souq.com/ae-en/brown-orchid-for-men-eau-de-parfum-80ml-52782500478/u/>
+{'Category': u'Perfumes & Fragrances', 'CurrentPrice': u'\n                        ', 'Discounted': False, 'OriginalPrice': -1, 'Title': u'Brown Orchid For Men - Eau de Parfum, 80ml', 'Url': 'http://uae.souq.com/ae-en/brown-orchid-for-men-eau-de-parfum-80ml-52782500478/u/', 'SellerRating': 91, 'SoldBy': u'dod_uae', 'Savings': 0}
+2016-08-07 17:38:44 [scrapy] DEBUG: Scraped from <200 http://uae.souq.com/ae-en/calvin-klein-euphoria-for-women-eau-de-parfum-100ml-50194900478/u/>
+{'Category': u'Perfumes & Fragrances', 'CurrentPrice': u'\n                        ', 'Discounted': False, 'OriginalPrice': -1, 'Title': u'Calvin Klein Euphoria for Women, Eau de Parfum, 100ml', 'Url': 'http://uae.souq.com/ae-en/calvin-klein-euphoria-for-women-eau-de-parfum-100ml-50194900478/u/', 'SellerRating': 91, 'SoldBy': u'dod_uae', 'Savings': 0}
+2016-08-07 17:38:44 [scrapy] DEBUG: Scraped from <200 http://uae.souq.com/ae-en/mn-cosmetics-makeup-matte-kiss-proof-lipstick-set-of-12-pieces-p13016-22731400295/u/>
+{'Category': u'Makeup', 'CurrentPrice': u'\n                        ', 'Discounted': False, 'OriginalPrice': -1, 'Title': u'Mn Cosmetics Makeup Matte Kiss Proof lipstick, set of 12 pieces - P13016', 'Url': 'http://uae.souq.com/ae-en/mn-cosmetics-makeup-matte-kiss-proof-lipstick-set-of-12-pieces-p13016-22731400295/u/', 'SellerRating': 83, 'SoldBy': u'Elegance-Fashion', 'Savings': 0}
+2016-08-07 17:38:44 [scrapy] INFO: Closing spider (finished)
+2016-08-07 17:38:44 [scrapy] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 27208,
+ 'downloader/request_count': 61,
+ 'downloader/request_method_count/GET': 61,
+ 'downloader/response_bytes': 1374934,
+ 'downloader/response_count': 61,
+ 'downloader/response_status_count/200': 31,
+ 'downloader/response_status_count/301': 30,
+ 'dupefilter/filtered': 1,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2016, 8, 7, 9, 38, 44, 911000),
+ 'item_scraped_count': 30,
+ 'log_count/DEBUG': 198,
+ 'log_count/INFO': 7,
+ 'request_depth_max': 1,
+ 'response_received_count': 31,
+ 'scheduler/dequeued': 61,
+ 'scheduler/dequeued/memory': 61,
+ 'scheduler/enqueued': 61,
+ 'scheduler/enqueued/memory': 61,
+ 'start_time': datetime.datetime(2016, 8, 7, 9, 38, 26, 438000)}
+2016-08-07 17:38:44 [scrapy] INFO: Spider closed (finished)

@@ -10,3 +10,9 @@ m = p.match(teststring)
 print m.group()
 
 
+# string replace
+import re
+s = "start foo end"
+# s = re.sub("foo.*", "replaced", s)
+s = re.sub("foo|en", "replaced", s)
+print s # output is 'foo repalced'
