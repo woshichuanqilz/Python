@@ -21,6 +21,18 @@ if 5 != now.day:
 # Init WScript
 wsh= comclt.Dispatch("WScript.Shell")
 
+# Init Logger File 
+logger = logging.getLogger('spam_application')
+logger.setLevel(logging.DEBUG)
+fh = logging.FileHandler('colorxy.log')
+fh.setLevel(logging.DEBUG)
+# Enable Or Disable The Logger
+# logger.disabled = True
+# Format The Logger
+formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+fh.setFormatter(formatter)
+logger.addHandler(fh)
+
 # Hex to Decimal
 _NUMERALS = '0123456789abcdefABCDEF'
 _HEXDEC = {v: int(v, 16) for v in (x+y for x in _NUMERALS for y in _NUMERALS)}
@@ -29,7 +41,6 @@ LOWERCASE, UPPERCASE = 'x', 'X'
 def rgb(triplet):
     return _HEXDEC[triplet[0:2]], _HEXDEC[triplet[2:4]], _HEXDEC[triplet[4:6]]
 def triplet(rgb, lettercase=LOWERCASE):
-
     return format(rgb[0]<<16 | rgb[1]<<8 | rgb[2], '06'+lettercase)
 
 #  read the json file

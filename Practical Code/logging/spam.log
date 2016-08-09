@@ -1,0 +1,42 @@
+2016-08-08 16:46:48,910 - spam_application - INFO - creating an instance of auxiliary_module.Auxiliary
+2016-08-08 16:46:48,911 - spam_application.auxiliary.Auxiliary - INFO - creating an instance of Auxiliary
+2016-08-08 16:46:48,911 - spam_application - INFO - created an instance of auxiliary_module.Auxiliary
+2016-08-08 16:46:48,913 - spam_application - INFO - calling auxiliary_module.Auxiliary.do_something
+2016-08-08 16:46:48,913 - spam_application.auxiliary.Auxiliary - INFO - doing something
+2016-08-08 16:46:48,913 - spam_application.auxiliary.Auxiliary - INFO - done doing something
+2016-08-08 16:46:48,914 - spam_application - INFO - finished auxiliary_module.Auxiliary.do_something
+2016-08-08 16:46:48,914 - spam_application - INFO - calling auxiliary_module.some_function()
+2016-08-08 16:46:48,914 - spam_application.auxiliary - INFO - received a call to "some_function"
+2016-08-08 16:46:48,914 - spam_application - INFO - done with auxiliary_module.some_function()
+2016-08-08 16:47:56,655 - spam_application - INFO - creating an instance of auxiliary_module.Auxiliary
+2016-08-08 16:47:56,657 - spam_application - INFO - created an instance of auxiliary_module.Auxiliary
+2016-08-08 16:47:56,657 - spam_application - INFO - calling auxiliary_module.Auxiliary.do_something
+2016-08-08 16:47:56,657 - spam_application - INFO - finished auxiliary_module.Auxiliary.do_something
+2016-08-08 16:47:56,657 - spam_application - INFO - calling auxiliary_module.some_function()
+2016-08-08 16:47:56,657 - spam_application.auxiliary - INFO - received a call to "some_function"
+2016-08-08 16:47:56,658 - spam_application - INFO - done with auxiliary_module.some_function()
+2016-08-08 16:58:50,852 - spam_application.auxiliary.Auxiliary - INFO - creating an instance of Auxiliary
+2016-08-08 16:58:50,854 - spam_application.auxiliary.Auxiliary - INFO - doing something
+2016-08-08 16:58:50,854 - spam_application.auxiliary.Auxiliary - INFO - done doing something
+2016-08-08 16:58:50,855 - spam_application.auxiliary - INFO - received a call to "some_function"
+2016-08-08 16:59:00,657 - spam_application - INFO - creating an instance of auxiliary_module.Auxiliary
+2016-08-08 16:59:00,658 - spam_application.auxiliary.Auxiliary - INFO - creating an instance of Auxiliary
+2016-08-08 16:59:00,658 - spam_application - INFO - created an instance of auxiliary_module.Auxiliary
+2016-08-08 16:59:00,658 - spam_application - INFO - calling auxiliary_module.Auxiliary.do_something
+2016-08-08 16:59:00,660 - spam_application.auxiliary.Auxiliary - INFO - doing something
+2016-08-08 16:59:00,660 - spam_application.auxiliary.Auxiliary - INFO - done doing something
+2016-08-08 16:59:00,660 - spam_application - INFO - finished auxiliary_module.Auxiliary.do_something
+2016-08-08 16:59:00,661 - spam_application - INFO - calling auxiliary_module.some_function()
+2016-08-08 16:59:00,661 - spam_application.auxiliary - INFO - received a call to "some_function"
+2016-08-08 16:59:00,661 - spam_application - INFO - done with auxiliary_module.some_function()
+2016-08-08 17:15:54,280 - spam_application - INFO - creating an instance of auxiliary_module.Auxiliary
+2016-08-08 17:16:12,105 - spam_application - INFO - creating an instance of auxiliary_module.Auxiliary
+2016-08-08 17:16:12,105 - spam_application - INFO - created an instance of auxiliary_module.Auxiliary
+2016-08-08 17:16:12,105 - spam_application - INFO - calling auxiliary_module.Auxiliary.do_something
+2016-08-08 17:17:01,178 - spam_application - INFO - creating an instance of auxiliary_module.Auxiliary
+2016-08-08 17:17:01,180 - spam_application - INFO - created an instance of auxiliary_module.Auxiliary
+2016-08-08 17:17:01,180 - spam_application - INFO - calling auxiliary_module.Auxiliary.do_something
+2016-08-08 17:17:01,180 - spam_application - INFO - finished auxiliary_module.Auxiliary.do_something
+2016-08-08 17:17:01,180 - spam_application - INFO - calling auxiliary_module.some_function()
+2016-08-08 17:17:01,180 - spam_application - INFO - done with auxiliary_module.some_function()
+2016-08-08 17:54:53,802 - spam_application - WARNING - this is the lizhe's test
