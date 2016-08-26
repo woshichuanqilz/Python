@@ -1,22 +1,30 @@
-city:邯郸
+city:Why is it faster to process a sorted array than an unsorted array?
 
-date:08-09		day:局部多云(29°C )		night:局部多云( 23°C)
+city:What does “use strict” do in JavaScript, and what is the reasoning behind it?
 
-date:08-10		day:晴(33°C )		night:晴( 24°C)
+city:How to check if an element is hidden in jQuery?
 
-date:08-11		day:局部多云(34°C )		night:少云( 26°C)
+city:How to check if one string contains another substring in JavaScript?
 
-date:08-12		day:局部多云(34°C )		night:少云( 26°C)
+city:How to undo 'git add' before commit?
 
-date:08-13		day:雷雨(33°C )		night:雷雨( 25°C)
+city:What and where are the stack and heap?
 
-date:08-14		day:零散雷雨(29°C )		night:雷雨( 22°C)
+city:What does the “yield” keyword do in Python?
 
-date:08-15		day:零散阵雨(26°C )		night:零散阵雨( 21°C)
+city:How to redirect to another page in jQuery?
 
-date:08-16		day:局部多云(26°C )		night:零散阵雨( 20°C)
+city:What is the name of the “-->” operator in C++?
 
-date:08-17		day:阴天(27°C )		night:局部多云( 19°C)
+city:How do JavaScript closures work?
 
-date:08-18		day:局部多云(27°C )		night:局部多云( 19°C)
+city:What are the differences between 'git pull' and 'git fetch'?
+
+city:What is the correct JSON content type?
+
+city:Edit an incorrect commit message in Git
+
+city:How to undo last commit(s) in Git?
+
+city:How to delete a Git branch both locally and remotely?
 

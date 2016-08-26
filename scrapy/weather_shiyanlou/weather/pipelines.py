@@ -16,28 +16,28 @@ class WeatherPipeline(object):
         
         date = item['date']
 
-        desc = item['dayDesc']
-        dayDesc = desc[1::2]
-        nightDesc = desc[0::2]
+        # desc = item['dayDesc']
+        # dayDesc = desc[1::2]
+        # nightDesc = desc[0::2]
+        #
+        # dayTemp = item['dayTemp']
 
-        dayTemp = item['dayTemp']
-
-        weaitem = zip(date, dayDesc, nightDesc, dayTemp)
+        # weaitem = zip(date, dayDesc, nightDesc, dayTemp)
         
-        for i in range(len(weaitem)):
-            item = weaitem[i]
-            d = item[0]
-            dd = item[1]
-            nd = item[2]
-            ta = item[3].split('/')
-            dt = ta[0]
-            nt = ta[1]
-            txt = 'date:{0}\t\tday:{1}({2})\t\tnight:{3}({4})\n\n'.format(
-                d,
-                dd.encode('utf-8'),
-                dt.encode('utf-8'),
-                nd.encode('utf-8'),
-                nt.encode('utf-8')
-            )
-            self.file.write(txt)
+        # for i in range(len(weaitem)):
+        #     item = weaitem[i]
+        #     d = item[0]
+        #     dd = item[1]
+        #     nd = item[2]
+        #     ta = item[3].split('/')
+        #     dt = ta[0]
+        #     nt = ta[1]
+        #     txt = 'date:{0}\t\tday:{1}({2})\t\tnight:{3}({4})\n\n'.format(
+        #         d,
+        #         dd.encode('utf-8'),
+        #         dt.encode('utf-8'),
+        #         nd.encode('utf-8'),
+        #         nt.encode('utf-8')
+        #     )
+        #     self.file.write(txt)
         return item
