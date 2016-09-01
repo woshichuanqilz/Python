@@ -3,13 +3,16 @@
 import thread
 import time
 
+totalCnt = 0
 # Define a function for the thread
 def print_time( threadName, delay):
-   count = 0
-   while count < 5:
-      time.sleep(delay)
-      count += 1
-      print "%s: %s" % ( threadName, time.ctime(time.time()) )
+    global totalCnt
+    count = 0
+    while count < 5:
+        totalCnt += 1
+        time.sleep(delay)
+        count += 1
+        print "%s: %s : total Cnt %d" % ( threadName, time.ctime(time.time()), totalCnt )
 
 # Create two threads as follows
 try:

@@ -18,7 +18,3 @@ class StackOverflowSpider(scrapy.Spider):
             'tags': response.css('.question .post-tag::text').extract(),
             'link': response.url,
         }
-
-		
-		
-		

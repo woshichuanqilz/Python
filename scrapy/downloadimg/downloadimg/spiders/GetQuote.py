@@ -3,7 +3,6 @@ import scrapy
 import subprocess
 from selenium import webdriver
 
-
 class ProductSpider(scrapy.Spider):
     name = "quotespider"
     start_urls = ['http://news.iciba.com/views/dailysentence/daily.html#!/']

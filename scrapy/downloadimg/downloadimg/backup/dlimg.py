@@ -8,7 +8,8 @@ class DownloadingImg(scrapy.Spider):
     start_urls = ['https://www.pexels.com/']
 
     # DB info
-    db = MySQLdb.connect(host="192.168.1.107",user="lizhe",passwd="", db="test") 
+    # db = MySQLdb.connect(host="192.168.1.107",user="lizhe",passwd="", db="test") 
+    db = MySQLdb.connect(host="192.168.1.122",user="lizhe",passwd="", db="test") 
     cur = db.cursor()
 
     def parse(self, response):
