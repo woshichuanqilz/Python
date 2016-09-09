@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html>  
+    <head>  
+        <title>Rose</title>  
+    </head>  
+    <!-- <body style="margin-left:200px">   -->
+    <body >  
+        <div style="text-align: center"> 
+            <canvas id="c" width="1000" height="1000"></canvas> 
+        </div>
+
+        <script type="text/javascript">
+            function surface(a, b) {
+                var angle = a * Math.PI * 2,
+                radius = 100,
+                x0 = 200
+                y0 = 100
+
+                console.log("x = " + Math.cos(angle) )
+                console.log("y = " + Math.sin(angle) )
+                return {
+                    x: Math.cos(angle) * radius + x0,
+                    y: Math.sin(angle) * radius + y0,
+                };
+            }
+            <!-- var canvas = document.body.appendChild(document.createElement("canvas")), -->
+            var canvas = document.getElementById("c");
+            <!-- var canvasNode = document.createElement('canvas'); -->
+            canvas.width = 500;
+            canvas.height = 500;
+            context = canvas.getContext("2d");
+            for (a = 0; a <= 1; a += .001) {
+                    if (point = surface(a, 0)) {
+                        context.fillRect(point.x, point.y, 1, 1);
+                    }
+                }
+        </script>
+    </body>  
+</html>

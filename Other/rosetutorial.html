@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html>  
+    <head>  
+        <title>Rose</title>  
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">  
+    </head>  
+    <body style="margin-left:200px">  
+        <div style="text-align: center"> 
+            <canvas id="c"></canvas> 
+        </div>
+
+        <script type="text/javascript">
+            function surface(a, b) {
+                var x = a * 100,
+                y = b * 100,
+                radius = 50,
+                x0 = 50,
+                y0 = 50;
+
+                if ((x - x0) * (x - x0) + (y - y0) * (y - y0) < radius * radius) {
+                    return {
+                        x: x,
+                        y: y * (1 + b) / 2 // 变形
+                    };
+                } else {
+                    return null;
+                }
+            }
+            var canvas = document.body.appendChild(document.createElement("canvas")),
+            context = canvas.getContext("2d"),
+            a, b, position;
+
+            for (a = 0; a < 1; a += .001) {
+                for (b = 0; b < 1; b += .001) {
+                    position = surface(a, b);
+                    if (position = surface(a, b)) {
+                        context.fillRect(position.x, position.y, 1, 1);
+                    }
+                }
+            }
+        </script>
+
+    </body>  
+</html>

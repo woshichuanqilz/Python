@@ -7,10 +7,10 @@ def image_to_scratch(im, scratch_image_name):
 	im.save(scratch_image_name, dpi=(200,200))
 
 def	retrieve_text(scratch_text_name_root):
-	inf = file(scratch_text_name_root + '.txt')
-	text = inf.read()
-	inf.close()
-	return text
+    inf = file(scratch_text_name_root + '.txt')
+    text = inf.read()
+    inf.close()
+    return text
 
 def perform_cleanup(scratch_image_name, scratch_text_name_root):
 	"""Clean up temporary files from disk"""

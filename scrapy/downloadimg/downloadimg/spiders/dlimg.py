@@ -9,6 +9,7 @@ class DownloadingImg(scrapy.Spider):
 
     # DB info
     # db = MySQLdb.connect(host="192.168.1.107",user="lizhe",passwd="", db="test") 
+    # db = MySQLdb.connect(host="192.168.1.122",user="lizhe",passwd="", db="test") 
     db = MySQLdb.connect(host="127.0.0.1",user="root",passwd="woshichuanqilz72", db="mydata") 
     cur = db.cursor()
 
@@ -28,11 +29,11 @@ class DownloadingImg(scrapy.Spider):
     def insert_data(self, name, full_url):    
         # print 'name ' + name + 'full_url ' + full_url
         statement = "INSERT INTO imgstore (imgname, imgurl) VALUES ('{}', '{}');".format(name, full_url)
-        print statement
+        # print statement
 
-        self.cur.execute(statement)
-        self.db.commit()
-        print 'insert success'
-        # self.cur.execute("SELECT * FROM imginfo")
-        # for row in self.cur.fetchall():
-            # print str(row)
+        # self.cur.execute(statement)
+        # self.db.commit()
+        # print 'insert success'
+        self.cur.execute("SELECT * FROM imginfo")
+        for row in self.cur.fetchall():
+            print str(row)
