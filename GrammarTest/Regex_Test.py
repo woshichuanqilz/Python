@@ -10,7 +10,6 @@ m = p.match(teststring)
 print m.group(0)
 
 # string replace
-import re
 s = "start foo end"
 # s = re.sub("foo.*", "replaced", s)
 s = re.sub("foo|en", "replaced", s)
