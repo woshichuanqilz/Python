@@ -14,9 +14,10 @@ while True:
 
     # ss.send('byebye')
     ra = ss.recv(512)
-    if ra == 'just kidding':
-	ss.send('authentication success program start')
+    if ra is not None:
+	ss.send('Hello There!')
 	print 'authentication success'
+        print ra
 	ss.close()
 	
 

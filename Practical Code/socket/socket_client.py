@@ -12,7 +12,7 @@ s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 s.connect(address)
 
 # pack a package here
-s.send("just kidding")
+s.send("Hello There!")
 data = s.recv(512)
 if data == 'authentication success program start':
 	print 'signal matched work start'
