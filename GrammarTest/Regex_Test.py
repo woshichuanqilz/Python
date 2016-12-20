@@ -20,3 +20,9 @@ print '---------------------------'
 s = "alpha.Customer[cus_Y4o9qMEZAugtnW] ..."
 m = re.search(r"\[([A-Za-z0-9_]+)\]", s)
 print m.group(1)
+
+# If And Search By The Regex
+s = '98787This is correct'
+for words in ['This is correct', 'This', 'is', 'correct']:
+    if re.search(r'\b' + words + r'\b', s):
+        print('{0} found'.format(words))

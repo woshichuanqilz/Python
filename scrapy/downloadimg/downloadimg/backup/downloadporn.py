@@ -41,7 +41,7 @@ class ProxyCrawler(scrapy.Spider):
         filename = href.split('/')[-1] + '.html'
         # full_url = 'www.porn.com' + href
         full_url = href
-        # print full_url 
+        print full_url 
         downloadCMD = r'wget.exe -O E:\\scrapyVideo\\' + filename + ' ' + full_url
         # print downloadCMD
         os.system(downloadCMD)
