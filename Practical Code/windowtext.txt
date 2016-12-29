@@ -1,0 +1,555 @@
+讯飞语音悬浮窗 size 111, 131
+任务切换 size 1024, 229
+ size 1366, 246
+ size 315, 95
+ size 97, 22
+ size 37, 22
+ size 0, 0
+ size 0, 0
+ size 0, 0
+ size 0, 0
+开始 size 54, 40
+ size 1366, 40
+CiceroUIWndFrame size 200, 200
+ size 322, 240
+VimfindSnippetTrigger size 400, 50
+ size 0, 0
+ size 0, 0
+ size 132, 38
+ size 0, 0
+Administrator size 64, 64
+「开始」菜单 size 491, 594
+ size 0, 0
+ size 0, 0
+ size 162, 203
+tcmatch64.exe size 230, 30
+DropWindow size 20, 20
+YoudaoDictStrokeIcon size 30, 30
+TillaGoto.ahk size 0, 0
+ size 169, 56
+ size 0, 0
+ size 0, 0
+YdPopupWnd size 16, 16
+ size 14, 14
+ size 14, 14
+ size 0, 0
+YDMainMenuLayerWnd size 0, 0
+YDMAINMENUFOOTER size 0, 0
+YDMAINMENUHEADER size 0, 0
+YDMainMenuLayerWnd size 0, 0
+ size 0, 0
+ size 0, 0
+ size 0, 0
+ size 0, 0
+ size 0, 0
+YdListBox size 288, 0
+YdDictMiniWnd size 288, 65
+YDMAINMENUFOOTER size 0, 0
+YDMAINMENUHEADER size 0, 0
+YDMainMenuLayerWnd size 0, 0
+ size 0, 0
+ size 0, 0
+YoudaoStrokeWnd size 0, 0
+YDMainMenuLayerWnd size 0, 0
+YDMAINMENUFOOTER size 0, 0
+YDMAINMENUHEADER size 0, 0
+YDMainMenuLayerWnd size 0, 0
+ size 0, 0
+ size 0, 0
+ size 0, 0
+ size 0, 0
+ size 14, 14
+ size 14, 14
+YodaoDictSCRTRLWnd size 200, 200
+ size 0, 0
+ size 0, 0
+ size 0, 0
+ size 0, 0
+Network Flyout size 0, 0
+ size 132, 38
+登录电脑管家 size 397, 276
+ size 0, 0
+Synergy size 1, 1
+ size 0, 0
+CiceroUIWndFrame size 200, 200
+TF_FloatingLangBar_WndTitle size 0, 6
+ size 0, 0
+ size 0, 0
+管理员: cmd - python  getWindowCoondinate.py   size 650, 648
+ size 52, 22
+ size 0, 0
+ size 0, 0
+管理员: cmd - python  getWindowCoondinate.py (Admin) size 150, 150
+管理员: cmd - python  getWindowCoondinate.py   size 683, 728
+ size 0, 0
+e:\GitCode\Python\Practical Code\getWindowCoondinate.py - GVIM size 1382, 744
+ size 0, 0
+ size 0, 0
+ size 455, 64
+	GETTING STARTED – Evernote Help & Learning - Google Chrome : Location: (-8, -8)
+	 GETTING STARTED – Evernote Help & Learning - Google Chrome Size: (1382, 744)
+---------------
+GETTING STARTED – Evernote Help & Learning - Google Chrome size 1382, 744
+ size 0, 0
+ size 0, 0
+ size 0, 0
+ size 0, 0
+ size 0, 0
+ size 0, 0
+GVIM size 100, 100
+Total Commander (x64) 8.51a - NOT REGISTERED size 1024, 668
+ size 0, 0
+ size 0, 0
+ size 213, 22
+ size 420, 250
+ALTRun size 0, 0
+ size 0, 0
+ size 0, 0
+ size 132, 38
+ size 0, 0
+ size 0, 0
+ size 0, 0
+ size 0, 0
+ size 0, 0
+ size 0, 0
+ size 132, 38
+ size 132, 38
+ size 0, 0
+ size 0, 0
+GDI+ Window size 1, 1
+ size 0, 0
+ size 0, 0
+ size 0, 0
+ size 0, 0
+ size 0, 0
+ size 0, 0
+ size 0, 0
+ size 0, 0
+ size 0, 0
+ size 0, 0
+ size 0, 0
+ size 0, 0
+ size 0, 0
+ size 0, 0
+ size 0, 0
+ size 0, 0
+ size 0, 0
+ size 0, 0
+ size 0, 0
+ size 0, 0
+tcmatch64.exe size 0, 0
+tcmatch64.exe size 0, 0
+D:\SyncProgram\totalcmd\tcmatch64.exe size 1025, 526
+ size 200, 50
+ size 150, 86
+ size 110, 14
+ size 110, 50
+ size 0, 0
+ size 0, 0
+ size 0, 0
+ size 0, 0
+GDI+ Window size 1, 1
+Total Commander size 0, 0
+watchdirwindow size 132, 38
+ size 49, 130
+ size 49, 130
+ size 669, 16
+D:\SyncProgram\ALTRun\AHK\ReRunAhk.exe size 1025, 526
+D:\SyncProgram\ALTRun\AHK\VimD\vimd.exe size 1025, 526
+D:\SyncProgram\ALTRun\AHK\AutoCorrect.exe size 1025, 526
+D:\SyncProgram\ALTRun\AHK\StringRep.exe size 1025, 526
+ size 0, 0
+ size 0, 0
+D:\SyncProgram\ALTRun\AHK\ReinforceHotKeyRep.exe size 1025, 526
+D:\Program files\AHK\SciTE\tools\TillaGoto.ahk - AutoHotkey v1.1.16.05 size 1025, 526
+DDE Server Window size 0, 0
+D:\Program files\AHK\SciTE\toolbar\Toolbar.ahk - AutoHotkey v1.1.16.05 size 1025, 526
+DirectorExtension size 132, 38
+ size 300, 53
+ size 300, 53
+ size 902, 53
+DDE Server Window size 0, 0
+ size 0, 0
+ size 0, 0
+ size 0, 0
+ size 0, 0
+ size 0, 0
+ size 0, 0
+ size 0, 0
+ size 0, 0
+ size 0, 0
+ size 0, 0
+ size 0, 0
+ size 0, 0
+GameReportWnd size 10, 10
+ size 0, 0
+ size 0, 0
+ size 0, 0
+ size 0, 0
+ size 0, 0
+ size 0, 0
+D:\SyncProgram\ALTRun\AHK\ToggleProcess.exe size 1025, 526
+ size 0, 0
+ size 0, 0
+ size 0, 0
+ size 0, 0
+TRAY_WINDOW_{346073DF-4150-4fbf-8509-8F8AC4EB98E9} size 0, 0
+ size 143, 22
+ size 148, 22
+MCI command handling window size 132, 38
+62558AD3-5226-8788-7545-87B6BA58A32C size 132, 100
+ size 0, 0
+ size 0, 0
+ size 132, 38
+{68415E0B-C49E-49a9-B125-26B8C92311A5}0010 size 132, 38
+ size 0, 0
+ size 132, 38
+ size 1025, 526
+ size 0, 0
+ size 132, 38
+QQ size 304, 709
+ size 14, 14
+38B6F1A3-93D7-22D1-1A4E-D426C518963B size 132, 100
+搜狗壁纸 size 880, 610
+ size 0, 0
+ size 0, 0
+ size 0, 0
+ size 132, 38
+ size 0, 0
+网易精选 size 132, 38
+notify proxy size 132, 38
+notify proxy size 132, 38
+ size 1025, 526
+ size 50, 2
+ size 150, 2
+Communication Engine Client size 1025, 526
+QQPET_50DAEA75-095D-463f-9077-A483D097CCF4 size 132, 100
+{ABBCC161-8095-4206-9CC8-BB6C5662AEE3} size 132, 38
+Wnd_A840DFB8-1F0E-41A9-A9E6-1F99646D06CD size 0, 0
+qqexchangewnd_shortcut_prefix_513278236 size 132, 100
+DesktopMonitorNotifyWnd_Name size 132, 100
+Game<-->QQ Exchange Dlg size 132, 100
+ size 0, 0
+ size 0, 0
+ size 1025, 526
+参考例句 size 300, 300
+ size 0, 82
+tooltip_view_ size 132, 38
+ size 0, 0
+ size 0, 0
+ size 132, 38
+ToasterListenerWindow size 1025, 526
+RegisteredProductsWindow size 1025, 526
+MyWing size 0, 0
+MyWing size 0, 0
+MyWing size 0, 0
+HandInput size 300, 300
+有道词典模块下载 size 297, 231
+Evernote Update size 627, 470
+MiniHTTPQueryHandler size 132, 100
+NoWordStrokeProcManager size 132, 100
+ScreenTranslation size 132, 100
+ size 0, 0
+ size 0, 0
+ size 18, 69
+ size 18, 69
+ size 0, 0
+有道词典 size 672, 578
+notify proxy size 132, 38
+ size 132, 38
+notify proxy size 132, 38
+notify proxy size 132, 38
+notify proxy size 132, 38
+ size 132, 38
+ size 0, 0
+ size 0, 0
+ size 1025, 526
+ size 1025, 526
+ size 1025, 526
+ size 1025, 526
+ size 1025, 526
+ size 1025, 526
+ size 1025, 526
+ size 0, 0
+notify proxy size 132, 38
+ size 100, 100
+MyWing size 0, 0
+ size 1025, 526
+ size 1025, 526
+ size 1025, 526
+ size 1025, 526
+ size 1025, 526
+TXMenuWindow size 14, 14
+ size 0, 0
+4B59FF7B-1D1C-4224-ACDB-EC6CC404562F size 0, 0
+21F765F0-1C83-4B61-A35F-7FC9C8760F0E size 0, 0
+WndForAero size 132, 100
+Socket Notification Sink size 132, 38
+notify proxy size 132, 38
+ size 0, 0
+ENListenerWindow size 0, 0
+ size 0, 0
+notify proxy size 132, 38
+notify proxy size 132, 38
+notify proxy size 132, 38
+MyWing size 0, 0
+ size 100, 100
+ size 14, 14
+E72C6EAA-E6A2-404D-B469-5574831884D1 size 132, 38
+ size 14, 14
+P1RIMdsdfEMawND size 132, 38
+im event window size 132, 100
+C777F873-4A84-48DC-9AEE-64B62558A62A size 132, 100
+aPRsIdMEMwND size 132, 38
+C777F873-4A84-48DC-9AEE-64B62558A62A_3832 size 132, 100
+807189C9-A8A2-4B2D-BC8C-6D1B33153FEF size 132, 100
+C626F873-5966-9677-EE99-69763329792A size 132, 100
+##0BEF3EC8-5F63-48c7-9448-C32DA8995168## size 10, 10
+HiddenFaxWindow size 1025, 526
+MyWing size 0, 0
+MyWing size 0, 0
+ size 150, 185
+ size 14, 14
+ size 150, 185
+ size 14, 14
+欢迎使用百度网盘 size 900, 650
+ size 1025, 526
+dummyLayeredWnd size 10, 10
+ size 0, 0
+欢迎使用百度网盘 size 662, 442
+ size 800, 600
+ size 0, 0
+ size 100, 100
+ size 1025, 526
+notify proxy size 132, 38
+ size 0, 0
+notify proxy size 132, 38
+有道单词本 size 755, 530
+notify proxy size 132, 38
+Socket Notification Sink size 132, 38
+ size 1025, 526
+GDI+ Window size 1, 1
+GDI+ Window size 1, 1
+ size 80, 80
+ size 90, 54
+ size 90, 28
+ size 132, 38
+ size 0, 0
+BluetoothNotificationAreaIconWindowClass size 132, 38
+MS_WebcheckMonitor size 1025, 526
+ size 132, 38
+ size 0, 0
+电池指示器 size 14, 14
+ size 132, 38
+##0C39A3BB-E8F3-4493-86F7-E5180F5DFD21## size 10, 10
+ size 0, 0
+ size 132, 38
+ size 0, 0
+notify proxy size 132, 38
+IEContainer size 1025, 526
+notify proxy size 132, 38
+notify proxy size 132, 38
+ size 0, 0
+GDI+ Window size 1, 1
+TrayIcon size 0, 0
+WordBookHandlerWrapper size 132, 38
+notify proxy size 132, 38
+ size 0, 0
+ size 0, 0
+ size 0, 0
+ size 0, 0
+ size 0, 0
+ size 0, 0
+ size 0, 0
+ size 0, 0
+ size 0, 0
+##0C39A3BB-E8F3-4493-86F7-E5180F5DFD22## size 10, 10
+TXMenuWindow size 14, 14
+TXMenuWindow size 14, 14
+UDisk.X64.TrayIconMgr size 0, 0
+UDiskVirtualWindow size 132, 38
+{39F5E8C5-2BA9-48df-B58E-D30D58E271ED} size 132, 38
+ size 132, 38
+ size 0, 0
+Window_tsvulfw_man_window_0 size 1, 1
+ size 0, 0
+ size 132, 38
+ size 132, 38
+ size 0, 0
+ size 0, 0
+ size 0, 0
+ size 0, 0
+ size 0, 0
+ size 0, 0
+ size 0, 0
+ size 0, 0
+ size 0, 0
+{B3F3857E-BA7F-4ca3-A990-775DA870AE6A} size 132, 38
+ size 0, 0
+ size 0, 0
+ size 0, 0
+ size 0, 0
+ size 0, 0
+ size 0, 0
+ size 0, 0
+ size 0, 0
+C:\Program Files\Apoint2K\Apntex.exe size 677, 442
+ size 1025, 526
+Elara size 1025, 526
+ size 0, 0
+Synergy Task Bar size 1, 1
+ size 132, 38
+Europa size 1025, 526
+DDE Server Window size 0, 0
+ApMsgFwdWindow size 320, 240
+ size 0, 0
+ size 132, 38
+ size 132, 38
+ size 132, 38
+跳转列表 size 16, 16
+ size 132, 38
+ size 132, 38
+GDI+ Window size 1, 1
+ size 132, 38
+ size 394, 178
+ size 0, 0
+ size 0, 0
+ size 344, 0
+ size 132, 38
+AppBarDetectFullScreen size 132, 38
+TRAYAGENTWINDOW size 0, 0
+{808FEAC0-485B-4b37-897F-4FF44C85D909} size 132, 38
+TRAYWINDOW size 0, 0
+ size 0, 0
+ size 132, 38
+ size 0, 0
+QMDesktopGC_{8185F443-3D8E-4e0e-B0D8-828777F38BC9} size 0, 0
+DDE Server Window size 0, 0
+ size 50, 50
+##0C39A3BB-E8F3-4493-86F7-E5180F5DFD20## size 10, 10
+ size 0, 0
+ size 0, 0
+MCI command handling window size 132, 38
+Task Host Window size 1025, 556
+AMD EEU Client size 0, 0
+ size 132, 38
+DWM Notification Window size 160, 27
+ size 0, 0
+ size 0, 0
+ size 0, 0
+ size 125, 22
+ size 0, 0
+ size 0, 0
+ size 0, 0
+ size 0, 0
+ size 0, 0
+D:\SyncProgram\ALTRun\AHK\ReinforceHotKeyRep.ahk - SciTE4AutoHotkey [2 of 6] size 160, 27
+youtube-dl ; cd ./bdy/; bypy upload; cd - size 160, 27
+SogouWallPaperToolWnd001 size 449, 40
+ size 0, 0
+ size 0, 0
+ size 0, 0
+ size 0, 0
+ size 0, 0
+ size 0, 0
+ size 0, 0
+ size 0, 0
+ size 0, 0
+ size 0, 0
+ size 0, 0
+ size 0, 0
+ size 0, 0
+ size 0, 0
+ size 0, 0
+ size 0, 0
+ size 0, 0
+ size 0, 0
+tmprhg13m.BMP - Windows 照片查看器 size 160, 27
+tooltip_view_ size 132, 38
+All Notebooks - 513278236@qq.com - Evernote size 160, 27
+SynergyDesk size 1, 1
+ size 1366, 768
+Program Manager size 1366, 768
+MSCTFIME UI size 0, 0
+Default IME size 0, 0
+MSCTFIME UI size 0, 0
+Default IME size 0, 0
+Default IME size 0, 0
+MSCTFIME UI size 0, 0
+Default IME size 0, 0
+Default IME size 0, 0
+Default IME size 0, 0
+MSCTFIME UI size 0, 0
+Default IME size 0, 0
+MSCTFIME UI size 0, 0
+Default IME size 0, 0
+MSCTFIME UI size 0, 0
+Default IME size 0, 0
+MSCTFIME UI size 0, 0
+Default IME size 0, 0
+MSCTFIME UI size 0, 0
+Default IME size 0, 0
+MSCTFIME UI size 0, 0
+Default IME size 0, 0
+Default IME size 0, 0
+Default IME size 0, 0
+Default IME size 0, 0
+Default IME size 0, 0
+Default IME size 0, 0
+Default IME size 0, 0
+Default IME size 0, 0
+Default IME size 0, 0
+Default IME size 0, 0
+Default IME size 0, 0
+Default IME size 0, 0
+Default IME size 0, 0
+Default IME size 0, 0
+Default IME size 0, 0
+Default IME size 0, 0
+Default IME size 0, 0
+Default IME size 0, 0
+Default IME size 0, 0
+Default IME size 0, 0
+Default IME size 0, 0
+Default IME size 0, 0
+Default IME size 0, 0
+Default IME size 0, 0
+Default IME size 0, 0
+Default IME size 0, 0
+Default IME size 0, 0
+Default IME size 0, 0
+Default IME size 0, 0
+Default IME size 0, 0
+Default IME size 0, 0
+Default IME size 0, 0
+Default IME size 0, 0
+Default IME size 0, 0
+Default IME size 0, 0
+Default IME size 0, 0
+Default IME size 0, 0
+Default IME size 0, 0
+Default IME size 0, 0
+Default IME size 0, 0
+Default IME size 0, 0
+Default IME size 0, 0
+Default IME size 0, 0
+Default IME size 0, 0
+Default IME size 0, 0
+Default IME size 0, 0
+Default IME size 0, 0
+Default IME size 0, 0
+Default IME size 0, 0
+Default IME size 0, 0
+Default IME size 0, 0
+MSCTFIME UI size 0, 0
+Default IME size 0, 0
+MSCTFIME UI size 0, 0
+Default IME size 0, 0
+MSCTFIME UI size 0, 0
+Default IME size 0, 0
+MSCTFIME UI size 0, 0
+Default IME size 0, 0
+MSCTFIME UI size 0, 0
+Default IME size 0, 0
+MSCTFIME UI size 0, 0
+Default IME size 0, 0

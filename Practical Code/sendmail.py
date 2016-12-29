@@ -4,6 +4,9 @@ import smtplib
 # Import the email modules we'll need
 from email.mime.text import MIMEText
 
+import sys
+sys.argv[1]
+
 # Open a plain text file for reading.  For this example, assume that
 # the text file contains only ASCII characters.
 textfile = 'sendmail.py'
