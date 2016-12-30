@@ -1,6 +1,7 @@
 import os
 import re
 import sys
+import time
 import win32gui
 import subprocess
 import pyscreenshot as ImageGrab
@@ -35,11 +36,17 @@ def callback(hwnd, extra):
         print "---------------"
 
 if __name__ == '__main__':
+# Set workdir
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    os.chdir(script_dir)
+
     WindowX = 0
     WindowY = 0
     WindowW = 0
     WindowH = 0
 
+    time.sleep(0.1)
+    
     win32gui.EnumWindows(callback, None)
     # part of the screen
     print str(WindowX)+ " " + str(WindowY) + " " + str(WindowW) + " " + str(WindowH)
