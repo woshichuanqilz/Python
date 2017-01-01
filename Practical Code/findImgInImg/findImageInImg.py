@@ -25,6 +25,8 @@ def subimg(img1,img2):
             pic=img2[y1:y2,x1:x2]
             test=pic==img1
 
+            # if test == False:
+                # return False
             if test.all():
                 return x1, y1
 
